@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WitnessBC — Coming Soon</title>
+  <meta name="description" content="WitnessBC — independent, artful, fact‑driven journalism. Support our launch with a tip or membership.">
+  <meta property="og:title" content="WitnessBC — Coming Soon">
+  <meta property="og:description" content="Independent, artful, fact‑driven journalism. Support our launch with a tip or membership.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://witnessbc.org">
+  <meta property="og:image" content="https://witnessbc.org/og.png">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128'%3E%3Crect width='100%25' height='100%25' rx='24' fill='%2338bdf8'/%3E%3Cpath d='M36 40h56v12H36zM36 60h40v12H36zM36 80h56v12H36z' fill='%23001018'/%3E%3C/svg%3E">
+  <style>
+    :root{
+      --bg:#0b1020; --fg:#e6edf5; --muted:#9fb0c5; --brand:#38bdf8; --brand-2:#60a5fa;
+      --card:#0f172a; --border:#1e293b; --accent:#10b981; --warn:#f59e0b; --danger:#ef4444;
+      --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.28);
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f8fafc; --fg:#0f172a; --muted:#475569; --card:#ffffff; --border:#e2e8f0;}
+      body::before{opacity:.06 !important;}
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Noto Sans,Arial,sans-serif}
+    body{min-height:100svh;display:flex;flex-direction:column;align-items:center}
+    /* Subtle animated gradient background */
+    body::before{
+      content:"";position:fixed;inset:-20%;z-index:-1;
+      background:radial-gradient(40% 40% at 20% 20%, rgba(56,189,248,.20) 0%, rgba(56,189,248,0) 60%),
+                 radial-gradient(35% 35% at 80% 30%, rgba(96,165,250,.18) 0%, rgba(96,165,250,0) 60%),
+                 radial-gradient(30% 30% at 60% 80%, rgba(16,185,129,.14) 0%, rgba(16,185,129,0) 60%);
+      filter: blur(40px);
+      animation: float 18s ease-in-out infinite;
+      opacity:.14;
+    }
+    @keyframes float{
+      0%,100%{transform:translate3d(0,0,0) scale(1)}
+      50%{transform:translate3d(0,-10px,0) scale(1.03)}
+    }
+    .wrap{max-width:1060px;width:100%;padding:28px}
+    header{padding:16px 0 8px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:var(--shadow);position:relative}
+    .logo::after{content:"";position:absolute;inset:8px;border-radius:9px;border:1px solid rgba(255,255,255,.35)}
+    .title{display:flex;flex-direction:column;gap:2px}
+    h1{margin:0;font-size:28px;letter-spacing:-.2px}
+    .tag{color:var(--muted);font-size:14px}
+    .hero{margin-top:22px;display:grid;gap:22px;background:rgba(255,255,255,.03);border:1px solid var(--border);padding:24px;border-radius:var(--radius)}
+    .hero h2{margin:0;font-size:24px;letter-spacing:-.2px}
+    .hero p{margin:0}
+    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+    .btn{appearance:none;border:none;border-radius:12px;padding:12px 18px;font-weight:600;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:.2s all;border:1px solid transparent}
+    .btn:hover{transform:translateY(-1px)}
+    .btn:active{transform:translateY(0)}
+    .btn-brand{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#001018}
+    .btn-ghost{background:transparent;color:var(--fg);border-color:var(--border)}
+    .note{font-size:13px;color:var(--muted)}
+    .grid{display:grid;gap:18px;margin-top:22px}
+    @media(min-width:900px){ .grid{grid-template-columns:1.2fr .8fr} }
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .card h3{margin:0 0 8px}
+    ul{margin:0 0 0 1rem;padding:0}
+    li{margin:.3rem 0}
+    .list-clean{list-style:none;padding:0;margin:0}
+    .newsletter input[type="email"]{
+      width:100%;padding:12px;border-radius:12px;border:1px solid var(--border);background:transparent;color:var(--fg)
+    }
+    .newsletter button{margin-top:10px}
+    footer{margin:34px 0 12px;color:var(--muted);font-size:13px;display:flex;flex-direction:column;gap:6px;align-items:center}
+    footer .links{display:flex;gap:12px;flex-wrap:wrap}
+    a{color:inherit}
+    .btn:focus-visible, a:focus-visible{outline:3px solid var(--brand-2);outline-offset:3px}
+    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);border-radius:999px;padding:6px 10px;color:var(--muted);font-size:12px}
+    code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:rgba(255,255,255,.06);padding:2px 6px;border-radius:8px;border:1px solid var(--border)}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"WitnessBC",
+    "url":"https://witnessbc.org",
+    "logo":"https://witnessbc.org/logo.png",
+    "sameAs":["https://witnessbc.com"]
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand" aria-label="Brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="title">
+          <h1>WitnessBC</h1>
+          <div class="tag">Independent • Artful • Fact‑driven journalism</div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero" aria-label="Coming soon">
+      <div class="badge" aria-hidden="true">Launching soon</div>
+      <h2>Truth‑first stories. Community‑powered.</h2>
+      <p>We’re building a clean, transparent home for independent journalism. If you’d like to support the launch, drop a small tip or become a member.</p>
+      <div class="cta">
+        <!-- Replace with your real Stripe Payment Link -->
+        <a class="btn btn-brand" href="https://buy.stripe.com/test_14AfZheov3gWfGlf33eIw00" target="_blank" rel="noopener">Support / Tip (Stripe)</a>
+        <!-- Replace with your real PayPal Link -->
+        <a class="btn btn-ghost" href="https://www.paypal.com/ncp/payment/PLACEHOLDER" target="_blank" rel="noopener">Support via PayPal</a>
+        <!-- Optional membership (Stripe) -->
+        <a class="btn btn-ghost" href="https://buy.stripe.com/test_MEMBERSHIP" target="_blank" rel="noopener">Membership (Monthly)</a>
+      </div>
+      <div class="note">No charitable tax receipt. Tips are not tax‑deductible. Membership/perks are taxable services under Canadian rules.</div>
+    </section>
+
+    <main class="grid">
+      <section class="card" aria-label="Manifesto">
+        <h3>Short Manifesto</h3>
+        <p>We do not serve parties or governments. We serve readers. Our approach: rigorous sources, respectful tone, and public‑interest priorities.</p>
+        <ul>
+          <li>Zero hidden ads. Zero hate speech.</li>
+          <li>Transparent sourcing and on‑record corrections.</li>
+          <li>Community governance (trusted anchors + public participation).</li>
+        </ul>
+      </section>
+
+      <aside class="card newsletter" aria-label="Newsletter signup">
+        <h3>Join the list</h3>
+        <p class="note">Be first to know when we launch and publish investigations.</p>
+        <!-- Replace action with your ESP form (Mailchimp, etc.) -->
+        <form action="#" method="post" onsubmit="alert('Thanks! (demo) Replace this with your newsletter provider form.'); return false;">
+          <label for="email">Email</label><br>
+          <input id="email" name="email" type="email" placeholder="name@example.com" required>
+          <button class="btn btn-brand" type="submit" style="width:100%;margin-top:10px">Subscribe</button>
+        </form>
+        <p class="note" style="margin-top:8px">We keep data to the minimum necessary for payments and support. You can request deletion any time.</p>
+      </aside>
+
+      <section class="card" style="grid-column:1 / -1" aria-label="FAQ">
+        <h3>Quick FAQ</h3>
+        <ul class="list-clean">
+          <li><strong>Is this an investment or token sale?</strong> No. We do not sell tokens, shares, or offer returns.</li>
+          <li><strong>Are tips tax‑deductible?</strong> No. We are not a registered charity.</li>
+          <li><strong>How do I reach you?</strong> <a href="mailto:hello@witnessbc.com">hello@witnessbc.com</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <span id="y"></span> WitnessBC. All rights reserved.</div>
+      <div class="links"><a href="#" aria-label="Terms">Terms</a> · <a href="#" aria-label="Privacy">Privacy</a> · <a href="mailto:support@witnessbc.com" aria-label="Support">Support</a></div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
