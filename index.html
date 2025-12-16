@@ -1,37 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>WitnessBC — Coming Soon</title>
-  <meta name="description" content="WitnessBC — independent, artful, fact‑driven journalism. Support our launch with a tip or membership.">
-  <meta property="og:title" content="WitnessBC — Coming Soon">
-  <meta property="og:description" content="Independent, artful, fact‑driven journalism. Support our launch with a tip or membership.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://witnessbc.org">
-  <meta property="og:image" content="https://witnessbc.org/og.png">
-  <meta name="theme-color" content="#0f172a">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128'%3E%3Crect width='100%25' height='100%25' rx='24' fill='%2338bdf8'/%3E%3Cpath d='M36 40h56v12H36zM36 60h40v12H36zM36 80h56v12H36z' fill='%23001018'/%3E%3C/svg%3E">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WitnessBC — Launching Soon</title>
+
+  <meta name="description" content="WitnessBC is building an independent, public-interest newsroom for British Columbia. Launching soon. Support the build with a tip or founding membership." />
+  <link rel="canonical" href="https://www.witnessbc.com/" />
+
+  <meta property="og:site_name" content="WitnessBC" />
+  <meta property="og:title" content="WitnessBC — Launching Soon" />
+  <meta property="og:description" content="Independent, public-interest journalism for British Columbia. Launching soon. Support the build with a tip or founding membership." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.witnessbc.com/" />
+  <meta property="og:image" content="https://www.witnessbc.com/assets/og/og-witnessbc.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0b1020" />
+
+  <!-- Lightweight inline icon (replace with real favicon files when available) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128'%3E%3Crect width='100%25' height='100%25' rx='24' fill='%2338bdf8'/%3E%3Cpath d='M36 40h56v12H36zM36 60h40v12H36zM36 80h56v12H36z' fill='%23001018'/%3E%3C/svg%3E" />
+
   <style>
     :root{
-      --bg:#0b1020; --fg:#e6edf5; --muted:#9fb0c5; --brand:#38bdf8; --brand-2:#60a5fa;
-      --card:#0f172a; --border:#1e293b; --accent:#10b981; --warn:#f59e0b; --danger:#ef4444;
-      --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.28);
+      --bg:#0b1020; --fg:#e6edf5; --muted:#9fb0c5;
+      --brand:#38bdf8; --brand2:#60a5fa;
+      --card:rgba(15,23,42,.92); --border:rgba(148,163,184,.18);
+      --radius:16px; --shadow:0 18px 48px rgba(0,0,0,.38);
+      --max:1060px;
     }
     @media (prefers-color-scheme: light){
-      :root{ --bg:#f8fafc; --fg:#0f172a; --muted:#475569; --card:#ffffff; --border:#e2e8f0;}
+      :root{ --bg:#f8fafc; --fg:#0f172a; --muted:#475569; --card:#ffffff; --border:#e2e8f0; }
       body::before{opacity:.06 !important;}
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Noto Sans,Arial,sans-serif}
-    body{min-height:100svh;display:flex;flex-direction:column;align-items:center}
-    /* Subtle animated gradient background */
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
+    a{color:inherit}
+    .wrap{max-width:var(--max);margin:0 auto;padding:28px 18px}
+    /* Subtle ambient background */
     body::before{
-      content:"";position:fixed;inset:-20%;z-index:-1;
-      background:radial-gradient(40% 40% at 20% 20%, rgba(56,189,248,.20) 0%, rgba(56,189,248,0) 60%),
-                 radial-gradient(35% 35% at 80% 30%, rgba(96,165,250,.18) 0%, rgba(96,165,250,0) 60%),
-                 radial-gradient(30% 30% at 60% 80%, rgba(16,185,129,.14) 0%, rgba(16,185,129,0) 60%);
-      filter: blur(40px);
+      content:""; position:fixed; inset:-20%; z-index:-1;
+      background:
+        radial-gradient(40% 40% at 18% 18%, rgba(56,189,248,.16) 0%, rgba(56,189,248,0) 62%),
+        radial-gradient(35% 35% at 82% 28%, rgba(96,165,250,.14) 0%, rgba(96,165,250,0) 60%),
+        radial-gradient(30% 30% at 62% 84%, rgba(16,185,129,.10) 0%, rgba(16,185,129,0) 60%);
+      filter: blur(44px);
       animation: float 18s ease-in-out infinite;
       opacity:.14;
     }
@@ -39,121 +52,274 @@
       0%,100%{transform:translate3d(0,0,0) scale(1)}
       50%{transform:translate3d(0,-10px,0) scale(1.03)}
     }
-    .wrap{max-width:1060px;width:100%;padding:28px}
-    header{padding:16px 0 8px}
-    .brand{display:flex;align-items:center;gap:14px}
-    .logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:var(--shadow);position:relative}
-    .logo::after{content:"";position:absolute;inset:8px;border-radius:9px;border:1px solid rgba(255,255,255,.35)}
-    .title{display:flex;flex-direction:column;gap:2px}
-    h1{margin:0;font-size:28px;letter-spacing:-.2px}
-    .tag{color:var(--muted);font-size:14px}
-    .hero{margin-top:22px;display:grid;gap:22px;background:rgba(255,255,255,.03);border:1px solid var(--border);padding:24px;border-radius:var(--radius)}
-    .hero h2{margin:0;font-size:24px;letter-spacing:-.2px}
-    .hero p{margin:0}
-    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
-    .btn{appearance:none;border:none;border-radius:12px;padding:12px 18px;font-weight:600;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:.2s all;border:1px solid transparent}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 0 6px}
+    .brand{display:flex;align-items:center;gap:12px;min-width:0}
+    .logo{
+      width:44px;height:44px;border-radius:14px;
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      box-shadow:var(--shadow); position:relative; flex:0 0 auto;
+    }
+    .logo::after{content:"";position:absolute;inset:8px;border-radius:11px;border:1px solid rgba(255,255,255,.34)}
+    .title{display:flex;flex-direction:column;gap:2px;min-width:0}
+    .title h1{margin:0;font-size:20px;letter-spacing:-.2px}
+    .title .tag{color:var(--muted);font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+    .toplinks{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+    .toplinks a{color:var(--muted);text-decoration:none;font-size:13px}
+    .toplinks a:hover{text-decoration:underline}
+
+    .hero{
+      margin-top:18px;
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--border);
+      padding:24px;
+      border-radius:var(--radius);
+    }
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.02);
+      border-radius:999px;
+      padding:6px 10px;
+      color:var(--muted);
+      font-size:12px;
+    }
+    .hero h2{margin:10px 0 0;font-size:28px;line-height:1.15;letter-spacing:-.3px}
+    .hero p{margin:10px 0 0;max-width:70ch;color:rgba(230,237,245,.92)}
+    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:12px 16px;border-radius:12px;border:1px solid transparent;
+      text-decoration:none;font-weight:650; cursor:pointer;
+      transition:transform .15s ease, border-color .15s ease;
+    }
     .btn:hover{transform:translateY(-1px)}
     .btn:active{transform:translateY(0)}
-    .btn-brand{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#001018}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#001018}
     .btn-ghost{background:transparent;color:var(--fg);border-color:var(--border)}
-    .note{font-size:13px;color:var(--muted)}
-    .grid{display:grid;gap:18px;margin-top:22px}
-    @media(min-width:900px){ .grid{grid-template-columns:1.2fr .8fr} }
-    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
-    .card h3{margin:0 0 8px}
-    ul{margin:0 0 0 1rem;padding:0}
-    li{margin:.3rem 0}
-    .list-clean{list-style:none;padding:0;margin:0}
-    .newsletter input[type="email"]{
-      width:100%;padding:12px;border-radius:12px;border:1px solid var(--border);background:transparent;color:var(--fg)
+    .fineprint{margin-top:10px;color:var(--muted);font-size:12px}
+
+    .grid{display:grid;gap:18px;margin-top:18px}
+    @media(min-width:920px){ .grid{grid-template-columns:1.25fr .75fr} }
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:var(--shadow);
     }
-    .newsletter button{margin-top:10px}
-    footer{margin:34px 0 12px;color:var(--muted);font-size:13px;display:flex;flex-direction:column;gap:6px;align-items:center}
-    footer .links{display:flex;gap:12px;flex-wrap:wrap}
-    a{color:inherit}
-    .btn:focus-visible, a:focus-visible{outline:3px solid var(--brand-2);outline-offset:3px}
-    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);border-radius:999px;padding:6px 10px;color:var(--muted);font-size:12px}
-    code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:rgba(255,255,255,.06);padding:2px 6px;border-radius:8px;border:1px solid var(--border)}
+    .card h3{margin:0 0 10px;font-size:16px;letter-spacing:-.1px}
+    .card p{margin:0;color:rgba(230,237,245,.92)}
+    .muted{color:var(--muted)}
+    ul{margin:10px 0 0 1.1rem;padding:0}
+    li{margin:.35rem 0}
+    .klist{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+    .kitem{border:1px solid var(--border);border-radius:14px;padding:12px;background:rgba(255,255,255,.02)}
+    .kitem strong{display:block;margin-bottom:4px}
+
+    details{border:1px solid var(--border);border-radius:14px;padding:12px;background:rgba(255,255,255,.02)}
+    details + details{margin-top:10px}
+    summary{cursor:pointer;font-weight:650}
+    summary::-webkit-details-marker{display:none}
+    summary:focus-visible{outline:3px solid var(--brand2);outline-offset:3px}
+
+    .field{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+    .input,.textarea{
+      width:100%;padding:12px;border-radius:12px;border:1px solid var(--border);
+      background:transparent;color:var(--fg);outline:none;font-size:14px;
+    }
+    .textarea{min-height:110px;resize:vertical}
+    .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+
+    footer{
+      margin:26px 0 10px;
+      color:var(--muted);
+      font-size:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      align-items:center;
+      text-align:center;
+    }
+    .footerlinks{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+    .footerlinks a{color:var(--muted);text-decoration:none}
+    .footerlinks a:hover{text-decoration:underline}
+    .btn:focus-visible, a:focus-visible, .input:focus-visible, .textarea:focus-visible{
+      outline:3px solid var(--brand2); outline-offset:3px;
+    }
   </style>
+
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"Organization",
+    "@type":"NewsMediaOrganization",
     "name":"WitnessBC",
-    "url":"https://witnessbc.org",
-    "logo":"https://witnessbc.org/logo.png",
-    "sameAs":["https://witnessbc.com"]
+    "url":"https://www.witnessbc.com/",
+    "foundingLocation":"British Columbia, Canada",
+    "publishingPrinciples":"https://www.witnessbc.com/#principles",
+    "sameAs":["https://www.witnessbc.com"],
+    "contactPoint":[{
+      "@type":"ContactPoint",
+      "contactType":"editorial",
+      "email":"hello@witnessbc.com",
+      "availableLanguage":["en"]
+    }]
   }
   </script>
 </head>
+
 <body>
   <div class="wrap">
     <header>
-      <div class="brand" aria-label="Brand">
+      <div class="brand" aria-label="WitnessBC">
         <div class="logo" aria-hidden="true"></div>
         <div class="title">
           <h1>WitnessBC</h1>
-          <div class="tag">Independent • Artful • Fact‑driven journalism</div>
+          <div class="tag">Independent • Public-interest • Fact-checked reporting</div>
         </div>
       </div>
+      <nav class="toplinks" aria-label="Top links">
+        <a href="#support">Support</a>
+        <a href="#principles">Principles</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
-    <section class="hero" aria-label="Coming soon">
-      <div class="badge" aria-hidden="true">Launching soon</div>
-      <h2>Truth‑first stories. Community‑powered.</h2>
-      <p>We’re building a clean, transparent home for independent journalism. If you’d like to support the launch, drop a small tip or become a member.</p>
-      <div class="cta">
-        <!-- Replace with your real Stripe Payment Link -->
-        <a class="btn btn-brand" href="https://buy.stripe.com/test_14AfZheov3gWfGlf33eIw00" target="_blank" rel="noopener">Support / Tip (Stripe)</a>
-        <!-- Replace with your real PayPal Link -->
-        <a class="btn btn-ghost" href="https://www.paypal.com/ncp/payment/PLACEHOLDER" target="_blank" rel="noopener">Support via PayPal</a>
-        <!-- Optional membership (Stripe) -->
-        <a class="btn btn-ghost" href="https://buy.stripe.com/test_MEMBERSHIP" target="_blank" rel="noopener">Membership (Monthly)</a>
+    <section class="hero" aria-label="Launching soon">
+      <div class="badge">Launching soon</div>
+      <h2>Independent reporting for British Columbia — built to be trusted.</h2>
+      <p>
+        WitnessBC is building a clean, transparent home for investigations, local accountability, and public-interest storytelling.
+        Early support funds basic capacity: reporting time, verification, editing, and publishing infrastructure.
+      </p>
+
+      <div class="cta" id="support">
+        <!-- Replace these with real links; buttons remain visible only if href is not "#" -->
+        <a class="btn btn-primary" data-live-link href="https://buy.stripe.com/REPLACE_WITH_REAL_LINK" target="_blank" rel="noopener">Support / Tip (Stripe)</a>
+        <a class="btn btn-ghost" data-live-link href="https://www.paypal.com/REPLACE_WITH_REAL_LINK" target="_blank" rel="noopener">Support via PayPal</a>
+        <a class="btn btn-ghost" data-live-link href="https://buy.stripe.com/REPLACE_WITH_MEMBERSHIP_LINK" target="_blank" rel="noopener">Founding Membership (Monthly)</a>
       </div>
-      <div class="note">No charitable tax receipt. Tips are not tax‑deductible. Membership/perks are taxable services under Canadian rules.</div>
+
+      <div class="fineprint">
+        No investment offer. No token sale. Tips are not tax-deductible. WitnessBC is not a registered charity.
+        Membership may be subject to applicable taxes.
+      </div>
     </section>
 
-    <main class="grid">
-      <section class="card" aria-label="Manifesto">
-        <h3>Short Manifesto</h3>
-        <p>We do not serve parties or governments. We serve readers. Our approach: rigorous sources, respectful tone, and public‑interest priorities.</p>
+    <main class="grid" aria-label="Main content">
+      <section class="card" aria-label="What to expect">
+        <h3>What to expect</h3>
+        <p class="muted">Launch is staged. The goal is quality and accountability, not volume.</p>
         <ul>
-          <li>Zero hidden ads. Zero hate speech.</li>
-          <li>Transparent sourcing and on‑record corrections.</li>
-          <li>Community governance (trusted anchors + public participation).</li>
+          <li><strong>Investigations:</strong> public-interest issues, with verification and corrections.</li>
+          <li><strong>Explainers:</strong> clear context on systems and local decisions.</li>
+          <li><strong>Documented updates:</strong> sources, timelines, and what changed.</li>
         </ul>
       </section>
 
-      <aside class="card newsletter" aria-label="Newsletter signup">
-        <h3>Join the list</h3>
-        <p class="note">Be first to know when we launch and publish investigations.</p>
-        <!-- Replace action with your ESP form (Mailchimp, etc.) -->
-        <form action="#" method="post" onsubmit="alert('Thanks! (demo) Replace this with your newsletter provider form.'); return false;">
-          <label for="email">Email</label><br>
-          <input id="email" name="email" type="email" placeholder="name@example.com" required>
-          <button class="btn btn-brand" type="submit" style="width:100%;margin-top:10px">Subscribe</button>
+      <aside class="card" aria-label="Get launch updates">
+        <h3>Get launch updates (privacy-first)</h3>
+        <p class="muted">This form does not collect or transmit data. It prepares an email draft in your email client.</p>
+
+        <form id="update-form" class="field">
+          <label for="u_email" class="muted">Email (optional)</label>
+          <input id="u_email" class="input" type="email" placeholder="name@example.com" />
+
+          <label for="u_note" class="muted">Note (optional)</label>
+          <textarea id="u_note" class="textarea" placeholder="What topics matter most? (no sensitive identifiers)"></textarea>
+
+          <div class="btnrow">
+            <button class="btn btn-primary" type="submit">Prepare email</button>
+            <a class="btn btn-ghost" href="mailto:hello@witnessbc.com?subject=WitnessBC%20%E2%80%94%20Launch%20updates">Email directly</a>
+          </div>
         </form>
-        <p class="note" style="margin-top:8px">We keep data to the minimum necessary for payments and support. You can request deletion any time.</p>
+
+        <div class="fineprint">Tip: avoid sharing names, addresses, or case details in first contact.</div>
       </aside>
 
-      <section class="card" style="grid-column:1 / -1" aria-label="FAQ">
-        <h3>Quick FAQ</h3>
-        <ul class="list-clean">
-          <li><strong>Is this an investment or token sale?</strong> No. We do not sell tokens, shares, or offer returns.</li>
-          <li><strong>Are tips tax‑deductible?</strong> No. We are not a registered charity.</li>
-          <li><strong>How do I reach you?</strong> <a href="mailto:hello@witnessbc.com">hello@witnessbc.com</a></li>
+      <section class="card" id="principles" style="grid-column:1 / -1" aria-label="Principles">
+        <h3>Publishing principles</h3>
+        <ul class="klist">
+          <li class="kitem"><strong>Independence</strong><span class="muted">No party alignment. No paid influence. Readers come first.</span></li>
+          <li class="kitem"><strong>Verification</strong><span class="muted">Multiple sources when possible. Clear distinction between fact, analysis, and opinion.</span></li>
+          <li class="kitem"><strong>Corrections</strong><span class="muted">Corrections are visible and time-stamped. Mistakes are acknowledged.</span></li>
+          <li class="kitem"><strong>Safety and dignity</strong><span class="muted">No doxxing. No hate. No sensationalized “trauma marketing”.</span></li>
+          <li class="kitem"><strong>Transparency</strong><span class="muted">Clear funding disclosures and clear separation of editorial decisions.</span></li>
         </ul>
+      </section>
+
+      <section class="card" style="grid-column:1 / -1" aria-label="FAQ">
+        <h3>FAQ</h3>
+
+        <details>
+          <summary>Is this an investment, token, or equity offering?</summary>
+          <div class="muted" style="margin-top:10px;">No. WitnessBC does not offer investments, tokens, or returns.</div>
+        </details>
+
+        <details>
+          <summary>Are tips or memberships tax-deductible?</summary>
+          <div class="muted" style="margin-top:10px;">No. WitnessBC is not a registered charity.</div>
+        </details>
+
+        <details id="contact">
+          <summary>How do I reach you?</summary>
+          <div class="muted" style="margin-top:10px;">Email: <a href="mailto:hello@witnessbc.com">hello@witnessbc.com</a></div>
+        </details>
       </section>
     </main>
 
-    <footer>
-      <div>© <span id="y"></span> WitnessBC. All rights reserved.</div>
-      <div class="links"><a href="#" aria-label="Terms">Terms</a> · <a href="#" aria-label="Privacy">Privacy</a> · <a href="mailto:support@witnessbc.com" aria-label="Support">Support</a></div>
+    <footer aria-label="Footer">
+      <div>© <span id="y"></span> WitnessBC.</div>
+      <div class="footerlinks">
+        <a href="mailto:hello@witnessbc.com">Editorial</a>
+        <a href="mailto:support@witnessbc.com">Support</a>
+        <a href="/privacy/" aria-label="Privacy">Privacy</a>
+        <a href="/terms/" aria-label="Terms">Terms</a>
+      </div>
     </footer>
   </div>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Hide placeholder payment buttons if links are not yet configured
+    (function () {
+      var links = document.querySelectorAll("[data-live-link]");
+      for (var i = 0; i < links.length; i++) {
+        var href = (links[i].getAttribute("href") || "").trim();
+        if (!href || href === "#" || href.indexOf("REPLACE_") !== -1) {
+          links[i].style.display = "none";
+        }
+      }
+    })();
+
+    // Email-draft update form (privacy-first)
+    (function () {
+      var form = document.getElementById("update-form");
+      if (!form) return;
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var email = (document.getElementById("u_email").value || "").trim();
+        var note = (document.getElementById("u_note").value || "").trim();
+
+        var subject = "WitnessBC — Launch updates";
+        var body = [];
+        body.push("Hello WitnessBC,");
+        body.push("");
+        body.push("Please add this email to launch updates.");
+        if (email) body.push("Email: " + email);
+        if (note) { body.push(""); body.push("Topics / note:"); body.push(note); }
+        body.push("");
+        body.push("(Please avoid sensitive identifiers in first contact.)");
+
+        window.location.href =
+          "mailto:hello@witnessbc.com" +
+          "?subject=" + encodeURIComponent(subject) +
+          "&body=" + encodeURIComponent(body.join("\n"));
+      });
+    })();
   </script>
 </body>
 </html>
