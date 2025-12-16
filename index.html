@@ -18,7 +18,6 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#0b1020" />
 
-  <!-- Lightweight inline icon (replace with real favicon files when available) -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128'%3E%3Crect width='100%25' height='100%25' rx='24' fill='%2338bdf8'/%3E%3Cpath d='M36 40h56v12H36zM36 60h40v12H36zM36 80h56v12H36z' fill='%23001018'/%3E%3C/svg%3E" />
 
   <style>
@@ -37,7 +36,7 @@
     html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
     a{color:inherit}
     .wrap{max-width:var(--max);margin:0 auto;padding:28px 18px}
-    /* Subtle ambient background */
+
     body::before{
       content:""; position:fixed; inset:-20%; z-index:-1;
       background:
@@ -86,13 +85,15 @@
       font-size:12px;
     }
     .hero h2{margin:10px 0 0;font-size:28px;line-height:1.15;letter-spacing:-.3px}
-    .hero p{margin:10px 0 0;max-width:70ch;color:rgba(230,237,245,.92)}
-    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+    .hero p{margin:10px 0 0;max-width:72ch;color:rgba(230,237,245,.92)}
+
+    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px;align-items:center}
     .btn{
       display:inline-flex;align-items:center;justify-content:center;gap:10px;
       padding:12px 16px;border-radius:12px;border:1px solid transparent;
       text-decoration:none;font-weight:650; cursor:pointer;
       transition:transform .15s ease, border-color .15s ease;
+      white-space:nowrap;
     }
     .btn:hover{transform:translateY(-1px)}
     .btn:active{transform:translateY(0)}
@@ -110,19 +111,9 @@
       box-shadow:var(--shadow);
     }
     .card h3{margin:0 0 10px;font-size:16px;letter-spacing:-.1px}
-    .card p{margin:0;color:rgba(230,237,245,.92)}
     .muted{color:var(--muted)}
     ul{margin:10px 0 0 1.1rem;padding:0}
     li{margin:.35rem 0}
-    .klist{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-    .kitem{border:1px solid var(--border);border-radius:14px;padding:12px;background:rgba(255,255,255,.02)}
-    .kitem strong{display:block;margin-bottom:4px}
-
-    details{border:1px solid var(--border);border-radius:14px;padding:12px;background:rgba(255,255,255,.02)}
-    details + details{margin-top:10px}
-    summary{cursor:pointer;font-weight:650}
-    summary::-webkit-details-marker{display:none}
-    summary:focus-visible{outline:3px solid var(--brand2);outline-offset:3px}
 
     .field{display:flex;flex-direction:column;gap:8px;margin-top:10px}
     .input,.textarea{
@@ -131,6 +122,11 @@
     }
     .textarea{min-height:110px;resize:vertical}
     .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+
+    details{border:1px solid var(--border);border-radius:14px;padding:12px;background:rgba(255,255,255,.02)}
+    details + details{margin-top:10px}
+    summary{cursor:pointer;font-weight:650}
+    summary::-webkit-details-marker{display:none}
 
     footer{
       margin:26px 0 10px;
@@ -145,9 +141,13 @@
     .footerlinks{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
     .footerlinks a{color:var(--muted);text-decoration:none}
     .footerlinks a:hover{text-decoration:underline}
-    .btn:focus-visible, a:focus-visible, .input:focus-visible, .textarea:focus-visible{
+
+    .btn:focus-visible, a:focus-visible, .input:focus-visible, .textarea:focus-visible, summary:focus-visible{
       outline:3px solid var(--brand2); outline-offset:3px;
     }
+
+    /* Optional: make the primary Tip CTA feel “anchor” without being salesy */
+    .cta .btn-primary{box-shadow:0 16px 40px rgba(56,189,248,.18)}
   </style>
 
   <script type="application/ld+json">
@@ -158,7 +158,6 @@
     "url":"https://www.witnessbc.com/",
     "foundingLocation":"British Columbia, Canada",
     "publishingPrinciples":"https://www.witnessbc.com/#principles",
-    "sameAs":["https://www.witnessbc.com"],
     "contactPoint":[{
       "@type":"ContactPoint",
       "contactType":"editorial",
@@ -179,6 +178,7 @@
           <div class="tag">Independent • Public-interest • Fact-checked reporting</div>
         </div>
       </div>
+
       <nav class="toplinks" aria-label="Top links">
         <a href="#support">Support</a>
         <a href="#principles">Principles</a>
@@ -191,14 +191,20 @@
       <h2>Independent reporting for British Columbia — built to be trusted.</h2>
       <p>
         WitnessBC is building a clean, transparent home for investigations, local accountability, and public-interest storytelling.
-        Early support funds basic capacity: reporting time, verification, editing, and publishing infrastructure.
+        Early support funds reporting time, verification, editing, and publishing infrastructure.
       </p>
 
       <div class="cta" id="support">
-        <!-- Replace these with real links; buttons remain visible only if href is not "#" -->
-        <a class="btn btn-primary" data-live-link href="https://buy.stripe.com/REPLACE_WITH_REAL_LINK" target="_blank" rel="noopener">Support / Tip (Stripe)</a>
-        <a class="btn btn-ghost" data-live-link href="https://www.paypal.com/REPLACE_WITH_REAL_LINK" target="_blank" rel="noopener">Support via PayPal</a>
-        <a class="btn btn-ghost" data-live-link href="https://buy.stripe.com/REPLACE_WITH_MEMBERSHIP_LINK" target="_blank" rel="noopener">Founding Membership (Monthly)</a>
+        <!-- LIVE Stripe tip link (provided) -->
+        <a class="btn btn-primary"
+           href="https://buy.stripe.com/test_14AfZheov3gWfGlf33eIw00"
+           target="_blank" rel="noopener">
+          Support / Tip (Stripe)
+        </a>
+
+        <!-- Optional: keep these as placeholders until you provide links -->
+        <a class="btn btn-ghost" href="#" id="paypalBtn" aria-disabled="true">Support via PayPal</a>
+        <a class="btn btn-ghost" href="#" id="memberBtn" aria-disabled="true">Founding Membership (Monthly)</a>
       </div>
 
       <div class="fineprint">
@@ -227,7 +233,7 @@
           <input id="u_email" class="input" type="email" placeholder="name@example.com" />
 
           <label for="u_note" class="muted">Note (optional)</label>
-          <textarea id="u_note" class="textarea" placeholder="What topics matter most? (no sensitive identifiers)"></textarea>
+          <textarea id="u_note" class="textarea" placeholder="What topics matter most? (avoid sensitive identifiers)"></textarea>
 
           <div class="btnrow">
             <button class="btn btn-primary" type="submit">Prepare email</button>
@@ -240,12 +246,12 @@
 
       <section class="card" id="principles" style="grid-column:1 / -1" aria-label="Principles">
         <h3>Publishing principles</h3>
-        <ul class="klist">
-          <li class="kitem"><strong>Independence</strong><span class="muted">No party alignment. No paid influence. Readers come first.</span></li>
-          <li class="kitem"><strong>Verification</strong><span class="muted">Multiple sources when possible. Clear distinction between fact, analysis, and opinion.</span></li>
-          <li class="kitem"><strong>Corrections</strong><span class="muted">Corrections are visible and time-stamped. Mistakes are acknowledged.</span></li>
-          <li class="kitem"><strong>Safety and dignity</strong><span class="muted">No doxxing. No hate. No sensationalized “trauma marketing”.</span></li>
-          <li class="kitem"><strong>Transparency</strong><span class="muted">Clear funding disclosures and clear separation of editorial decisions.</span></li>
+        <ul>
+          <li><strong>Independence:</strong> no paid influence. Readers come first.</li>
+          <li><strong>Verification:</strong> clear distinction between fact, analysis, and opinion.</li>
+          <li><strong>Corrections:</strong> visible, time-stamped, and accountable.</li>
+          <li><strong>Safety and dignity:</strong> no doxxing. No hate. No sensationalized “trauma marketing”.</li>
+          <li><strong>Transparency:</strong> clear funding disclosures and separation of editorial decisions.</li>
         </ul>
       </section>
 
@@ -283,15 +289,18 @@
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
 
-    // Hide placeholder payment buttons if links are not yet configured
+    // Disable placeholder buttons (clean UX, no dead external navigation)
     (function () {
-      var links = document.querySelectorAll("[data-live-link]");
-      for (var i = 0; i < links.length; i++) {
-        var href = (links[i].getAttribute("href") || "").trim();
-        if (!href || href === "#" || href.indexOf("REPLACE_") !== -1) {
-          links[i].style.display = "none";
-        }
+      function disable(btnId) {
+        var el = document.getElementById(btnId);
+        if (!el) return;
+        el.setAttribute("tabindex", "-1");
+        el.style.opacity = ".55";
+        el.style.pointerEvents = "none";
+        el.title = "Link not configured yet.";
       }
+      disable("paypalBtn");
+      disable("memberBtn");
     })();
 
     // Email-draft update form (privacy-first)
