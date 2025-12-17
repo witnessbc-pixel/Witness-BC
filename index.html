@@ -1,84 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>WitnessBC — Launching Soon</title>
-  <meta name="description" content="WitnessBC is building an independent, fact-driven home for public-interest reporting in BC. Support the build with a tip and get launch updates.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="canonical" href="https://www.witnessbc.com/">
-  <meta property="og:site_name" content="WitnessBC">
-  <meta property="og:title" content="WitnessBC — Launching Soon">
-  <meta property="og:description" content="Independent, fact-driven public-interest reporting. Support the build with a tip and get launch updates.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.witnessbc.com/">
-  <meta property="og:image" content="https://www.witnessbc.com/og.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#0f172a">
+  <title>WitnessBC — Launching Soon</title>
+  <meta name="description" content="WitnessBC is building an independent, fact-driven journalism outlet. Support the launch with a tip, or follow updates as the first stories publish." />
+  <meta name="robots" content="index,follow" />
+
+  <link rel="canonical" href="https://www.witnessbc.com/" />
+
+  <meta property="og:site_name" content="WitnessBC" />
+  <meta property="og:title" content="WitnessBC — Launching Soon" />
+  <meta property="og:description" content="Independent, fact-driven journalism. Support the launch with a tip, or follow updates as the first stories publish." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.witnessbc.com/" />
+  <meta property="og:image" content="https://www.witnessbc.com/og.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Self-contained favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128'%3E%3Crect width='100%25' height='100%25' rx='24' fill='%2338bdf8'/%3E%3Cpath d='M36 40h56v12H36zM36 60h40v12H36zM36 80h56v12H36z' fill='%23001018'/%3E%3C/svg%3E">
 
   <style>
     :root{
-      --bg:#0b1020; --fg:#e6edf5; --muted:#9fb0c5; --brand:#38bdf8; --brand-2:#60a5fa;
-      --card:#0f172a; --border:#1e293b; --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.28);
+      --bg:#0b1020; --fg:#e6edf5; --muted:#9fb0c5;
+      --brand:#38bdf8; --brand2:#60a5fa; --card:#0f172a; --border:#1e293b;
+      --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.28);
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f8fafc; --fg:#0f172a; --muted:#475569; --card:#ffffff; --border:#e2e8f0; }
+      body::before{opacity:.06 !important;}
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Noto Sans,Arial,sans-serif}
     body{min-height:100svh;display:flex;flex-direction:column;align-items:center}
 
+    /* subtle animated background */
     body::before{
       content:"";position:fixed;inset:-20%;z-index:-1;
       background:
         radial-gradient(40% 40% at 20% 20%, rgba(56,189,248,.20) 0%, rgba(56,189,248,0) 60%),
         radial-gradient(35% 35% at 80% 30%, rgba(96,165,250,.18) 0%, rgba(96,165,250,0) 60%),
-        radial-gradient(30% 30% at 60% 80%, rgba(16,185,129,.12) 0%, rgba(16,185,129,0) 60%);
-      filter: blur(40px);
+        radial-gradient(30% 30% at 60% 80%, rgba(56,189,248,.10) 0%, rgba(56,189,248,0) 60%);
+      filter: blur(44px);
       animation: float 18s ease-in-out infinite;
       opacity:.14;
     }
-    @keyframes float{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(0,-10px,0) scale(1.03)}}
+    @keyframes float{
+      0%,100%{transform:translate3d(0,0,0) scale(1)}
+      50%{transform:translate3d(0,-10px,0) scale(1.03)}
+    }
 
-    .wrap{max-width:1060px;width:100%;padding:28px}
-    header{padding:16px 0 8px}
-    .brand{display:flex;align-items:center;gap:14px}
-    .logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:var(--shadow);position:relative}
+    .wrap{max-width:1080px;width:100%;padding:28px}
+    header{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit}
+    .logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand2));box-shadow:var(--shadow);position:relative}
     .logo::after{content:"";position:absolute;inset:8px;border-radius:9px;border:1px solid rgba(255,255,255,.35)}
+    .title{display:flex;flex-direction:column;gap:2px}
     h1{margin:0;font-size:28px;letter-spacing:-.2px}
     .tag{color:var(--muted);font-size:14px}
 
-    .hero{margin-top:22px;display:grid;gap:14px;background:rgba(255,255,255,.03);border:1px solid var(--border);padding:24px;border-radius:var(--radius)}
-    .hero h2{margin:0;font-size:24px;letter-spacing:-.2px}
-    .hero p{margin:0}
+    .toplinks{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+    .toplinks a{color:var(--muted);text-decoration:none;font-size:13px}
+    .toplinks a:hover{color:var(--fg);text-decoration:underline}
 
-    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);border-radius:999px;padding:6px 10px;color:var(--muted);font-size:12px;width:max-content}
-    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+    .hero{
+      margin-top:18px;
+      display:grid;gap:16px;
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--border);
+      padding:24px;
+      border-radius:var(--radius);
+    }
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      padding:6px 10px;
+      color:var(--muted);
+      font-size:12px;
+      width:max-content;
+    }
+    .hero h2{margin:0;font-size:26px;letter-spacing:-.2px;line-height:1.2}
+    .hero p{margin:0;color:var(--muted)}
+    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:4px}
 
-    .btn{appearance:none;border:none;border-radius:12px;padding:12px 18px;font-weight:650;cursor:pointer;text-decoration:none;
-      display:inline-flex;align-items:center;gap:10px;transition:.2s all;border:1px solid transparent}
+    .btn{
+      appearance:none;border:none;border-radius:12px;
+      padding:12px 16px;font-weight:650;
+      cursor:pointer;text-decoration:none;
+      display:inline-flex;align-items:center;gap:10px;
+      transition:.2s all;border:1px solid transparent;
+    }
     .btn:hover{transform:translateY(-1px)}
     .btn:active{transform:translateY(0)}
-    .btn-brand{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#001018}
+    .btn-brand{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#001018}
     .btn-ghost{background:transparent;color:var(--fg);border-color:var(--border)}
-    .note{font-size:13px;color:var(--muted);margin-top:6px}
 
-    .grid{display:grid;gap:18px;margin-top:22px}
+    .note{font-size:13px;color:var(--muted)}
+    .grid{display:grid;gap:18px;margin-top:18px}
     @media(min-width:900px){ .grid{grid-template-columns:1.2fr .8fr} }
 
-    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:var(--shadow);
+    }
     .card h3{margin:0 0 8px}
     ul{margin:0 0 0 1rem;padding:0}
-    li{margin:.3rem 0}
-    .list-clean{list-style:none;padding:0;margin:0}
+    li{margin:.35rem 0;color:var(--muted)}
+    strong{color:var(--fg)}
 
-    .input{
-      width:100%;padding:12px;border-radius:12px;border:1px solid var(--border);
-      background:transparent;color:var(--fg)
-    }
+    .faq{grid-column:1 / -1}
+    .faq ul{list-style:none;margin:0;padding:0}
+    .faq li{margin:.55rem 0;color:var(--muted)}
+    .faq a{color:inherit}
 
-    footer{margin:34px 0 12px;color:var(--muted);font-size:13px;display:flex;flex-direction:column;gap:6px;align-items:center}
-    .links{display:flex;gap:12px;flex-wrap:wrap}
-    .btn:focus-visible,a:focus-visible{outline:3px solid var(--brand-2);outline-offset:3px}
-    a{color:inherit}
-    code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:rgba(255,255,255,.06);padding:2px 6px;border-radius:8px;border:1px solid var(--border)}
+    footer{margin:28px 0 10px;color:var(--muted);font-size:13px;display:flex;flex-direction:column;gap:6px;align-items:center}
+    footer .links{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+    footer .links a{color:inherit;text-decoration:none}
+    footer .links a:hover{text-decoration:underline}
+
+    .btn:focus-visible, a:focus-visible{outline:3px solid var(--brand2);outline-offset:3px}
   </style>
 
   <script type="application/ld+json">
@@ -87,7 +134,7 @@
     "@type":"Organization",
     "name":"WitnessBC",
     "url":"https://www.witnessbc.com/",
-    "sameAs":["https://www.witnessbc.com/"]
+    "sameAs":[]
   }
   </script>
 </head>
@@ -95,81 +142,80 @@
 <body>
   <div class="wrap">
     <header>
-      <div class="brand" aria-label="Brand">
+      <a class="brand" href="/" aria-label="WitnessBC home">
         <div class="logo" aria-hidden="true"></div>
-        <div>
+        <div class="title">
           <h1>WitnessBC</h1>
           <div class="tag">Independent • Fact-driven • Public-interest reporting</div>
         </div>
-      </div>
+      </a>
+
+      <nav class="toplinks" aria-label="Site">
+        <a href="/principles/">Principles</a>
+        <a href="/corrections/">Corrections</a>
+        <a href="/funding-independence/">Funding</a>
+        <a href="mailto:hello@witnessbc.com?subject=WitnessBC%20—%20Enquiry">Email</a>
+      </nav>
     </header>
 
     <section class="hero" aria-label="Launching soon">
       <div class="badge">Launching soon</div>
-      <h2>Truth-first reporting. Built with public trust.</h2>
+
+      <h2>Truth-first reporting. Reader-supported.</h2>
       <p>
-        WitnessBC is building a clean, accountable home for independent reporting in British Columbia.
-        Support helps fund setup, publishing infrastructure, and basic operations — with clear editorial independence.
+        WitnessBC is building a clean, accountable home for independent journalism. Early support funds infrastructure:
+        research time, production, and publishing basics—without compromising editorial independence.
       </p>
 
       <div class="cta">
         <a class="btn btn-brand"
            href="https://buy.stripe.com/test_14AfZheov3gWfGlf33eIw00"
            target="_blank" rel="noopener">
-          Support the build (Tip via Stripe)
+          Support the launch (Tip via Stripe)
         </a>
-
-        <a class="btn btn-ghost"
-           href="mailto:hello@witnessbc.com?subject=WitnessBC%20Support%20/%20Enquiry">
-          Contact
-        </a>
-
-        <a class="btn btn-ghost" href="#updates">Get launch updates</a>
+        <a class="btn btn-ghost" href="/funding-independence/">How support works</a>
+        <a class="btn btn-ghost" href="mailto:hello@witnessbc.com?subject=WitnessBC%20—%20Launch%20updates">Get updates</a>
       </div>
 
       <div class="note">
-        No charitable tax receipt. Support does not buy coverage, outcomes, or influence editorial decisions.
+        No charitable tax receipt. Support does not buy coverage, outcomes, or favourable treatment.
       </div>
     </section>
 
-    <main class="grid">
-      <section class="card" aria-label="Principles">
-        <h3>Editorial principles (short)</h3>
+    <main class="grid" aria-label="Main">
+      <section class="card" aria-label="What to expect">
+        <h3>What to expect</h3>
         <ul>
-          <li><strong>Public-interest first.</strong> No party alignment. No government alignment.</li>
-          <li><strong>Evidence discipline.</strong> Clear sourcing, clear updates, clear corrections.</li>
-          <li><strong>Respectful tone.</strong> No sensationalism. No harassment. No hate.</li>
-          <li><strong>Independence.</strong> Support is welcome; editorial decisions remain independent.</li>
+          <li><strong>Documented reporting</strong> with clear sourcing and correction discipline.</li>
+          <li><strong>Respectful tone</strong> and identity-safe handling when risk exists.</li>
+          <li><strong>Public-interest priorities</strong> over outrage, hype, or partisan framing.</li>
         </ul>
-        <p class="note" style="margin-top:10px">
-          Early launch policy pages recommended next: <code>Corrections</code>, <code>Funding & Independence</code>, <code>Privacy</code>.
-        </p>
       </section>
 
-      <aside class="card" id="updates" aria-label="Launch updates">
-        <h3>Get launch updates</h3>
-        <p class="note">Email-only, minimal data. No forms stored on this site.</p>
-
-        <label for="email">Email</label><br>
-        <input id="email" class="input" type="email" placeholder="name@example.com" required>
-
-        <div style="margin-top:10px">
-          <a class="btn btn-brand" id="subscribeBtn" href="#">
-            Subscribe via email
+      <aside class="card" aria-label="What tips fund">
+        <h3>What tips fund</h3>
+        <ul>
+          <li><strong>Publishing infrastructure:</strong> hosting, tooling, and production.</li>
+          <li><strong>Reporting capacity:</strong> time to verify, document, and write.</li>
+          <li><strong>Accountability:</strong> correction handling and transparency pages.</li>
+        </ul>
+        <div class="cta" style="margin-top:12px">
+          <a class="btn btn-brand"
+             href="https://buy.stripe.com/test_14AfZheov3gWfGlf33eIw00"
+             target="_blank" rel="noopener">
+            Tip via Stripe
           </a>
+          <a class="btn btn-ghost" href="/principles/">Editorial principles</a>
         </div>
-
-        <p class="note" style="margin-top:10px">
-          Clicking subscribe opens your email client. You can request deletion at any time.
-        </p>
       </aside>
 
-      <section class="card" style="grid-column:1 / -1" aria-label="FAQ">
+      <section class="card faq" aria-label="Quick FAQ">
         <h3>Quick FAQ</h3>
-        <ul class="list-clean">
-          <li><strong>Is this an investment?</strong> No. No shares, tokens, or returns.</li>
-          <li><strong>Are tips tax-deductible?</strong> No. Not a registered charity.</li>
-          <li><strong>How do I reach you?</strong> <a href="mailto:hello@witnessbc.com">hello@witnessbc.com</a></li>
+        <ul>
+          <li><strong>Is this an investment or token sale?</strong> No. No tokens, shares, or promised returns.</li>
+          <li><strong>Are tips tax-deductible?</strong> No. This is not a registered charity.</li>
+          <li><strong>How can someone suggest a story?</strong> Email <a href="mailto:hello@witnessbc.com?subject=Story%20tip%20—%20WitnessBC">hello@witnessbc.com</a> (keep first contact brief).</li>
+          <li><strong>How are errors handled?</strong> See <a href="/corrections/">Corrections</a>.</li>
         </ul>
       </section>
     </main>
@@ -177,38 +223,16 @@
     <footer>
       <div>© <span id="y"></span> WitnessBC.</div>
       <div class="links">
-        <a href="#" aria-label="Terms">Terms</a> ·
-        <a href="#" aria-label="Privacy">Privacy</a> ·
-        <a href="mailto:support@witnessbc.com" aria-label="Support">Support</a>
+        <a href="/principles/">Principles</a>
+        <a href="/corrections/">Corrections</a>
+        <a href="/funding-independence/">Funding & Independence</a>
+        <a href="mailto:support@witnessbc.com?subject=WitnessBC%20—%20Support">Support</a>
       </div>
     </footer>
   </div>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Privacy-first subscribe: opens mail client, no site submission
-    (function(){
-      var btn = document.getElementById('subscribeBtn');
-      var email = document.getElementById('email');
-      btn.addEventListener('click', function(e){
-        e.preventDefault();
-        var v = (email.value || '').trim();
-        var subject = 'WitnessBC — Subscribe to launch updates';
-        var body = [
-          'Hello WitnessBC,',
-          '',
-          'Please add this email to launch updates:',
-          v ? ('Email: ' + v) : 'Email: [paste email]',
-          '',
-          'Thank you.'
-        ].join('\n');
-
-        window.location.href =
-          'mailto:hello@witnessbc.com?subject=' + encodeURIComponent(subject) +
-          '&body=' + encodeURIComponent(body);
-      });
-    })();
+    document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
