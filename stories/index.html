@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Stories – WitnessBC</title>
-  <meta name="description" content="Stories and publish notes from WitnessBC. Short, evidence-forward posts. Corrections visible when needed." />
+  <meta name="description" content="Short, evidence-forward posts from WitnessBC. Pattern-level notes, explainers, and publish updates. Corrections are visible when needed." />
   <link rel="canonical" href="https://www.witnessbc.com/stories/" />
 
   <meta property="og:site_name" content="WitnessBC" />
@@ -19,14 +20,19 @@
 
   <link rel="stylesheet" href="/assets/css/witness-shell.css?v=2025-12-16" />
 
-  <!-- Structured data: Collection + example items (works even if JS also renders feed) -->
+  <!-- Structured data: CollectionPage (feed rendered by JS is still valid) -->
   <script type="application/ld+json" id="stories-schema">
   {
     "@context":"https://schema.org",
     "@type":"CollectionPage",
     "name":"Stories – WitnessBC",
     "url":"https://www.witnessbc.com/stories/",
-    "description":"Stories and publish notes from WitnessBC. Short, evidence-forward posts. Corrections visible when needed.",
+    "description":"Short, evidence-forward posts from WitnessBC. Pattern-level notes, explainers, and publish updates. Corrections are visible when needed.",
+    "isPartOf":{
+      "@type":"WebSite",
+      "name":"WitnessBC",
+      "url":"https://www.witnessbc.com/"
+    },
     "publisher":{
       "@type":"Organization",
       "name":"WitnessBC",
@@ -34,6 +40,17 @@
     }
   }
   </script>
+
+  <style>
+    /* Page-local upgrades that stay compatible with witness-shell.css */
+    .stories-top{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;justify-content:space-between}
+    .stories-cta{display:flex;gap:10px;flex-wrap:wrap}
+    .stories-status{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+    .stories-markers{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+    .stories-controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+    .stories-controls .group{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
 </head>
 
 <body data-active="/stories/">
@@ -45,91 +62,101 @@
       <div class="wrap">
         <div class="kicker"><span class="kdot"></span><span>Stories</span></div>
 
-        <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:flex-end; justify-content:space-between;">
-          <div style="min-width:260px; flex:1;">
-            <h1 class="h1">Daily publishing feed.</h1>
-            <p class="lead">Short, shareable posts. Evidence-forward tone. Corrections visible when needed.</p>
+        <div class="stories-top">
+          <div style="min-width:260px;flex:1;">
+            <h1 class="h1">Publishing feed.</h1>
+            <p class="lead">
+              Short posts, evidence-forward tone, pattern-level framing. Corrections are visible when needed.
+            </p>
           </div>
 
-          <!-- Top CTAs (keep conversion inside /stories) -->
-          <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <!-- Your working Stripe tip link -->
+          <div class="stories-cta">
+            <!-- Use “Support” (better than “Tip”) -->
             <a class="btn btn--primary"
                href="https://buy.stripe.com/test_14AfZheov3gWfGlf33eIw00"
                target="_blank" rel="noopener"
-               aria-label="Support WitnessBC via Stripe">Support / Tip</a>
+               aria-label="Support WitnessBC via Stripe">
+              Support publishing
+            </a>
 
             <a class="btn btn--ghost"
                href="mailto:hello@witnessbc.com?subject=Story%20tip%20%E2%80%94%20WitnessBC"
-               aria-label="Suggest a story via email">Suggest a story</a>
+               aria-label="Suggest a story via email">
+              Suggest a story
+            </a>
           </div>
         </div>
 
-        <!-- System status + trust markers -->
+        <!-- Trust markers + compliance notes -->
         <div class="card" style="margin-top:16px">
-          <div class="meta" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
+          <div class="stories-status meta">
             <div>Latest update: <span id="stories-updated">—</span></div>
-            <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <div class="stories-markers">
               <span class="pill">Corrections visible</span>
               <span class="pill">Privacy-first tips</span>
               <span class="pill">No investment offer</span>
             </div>
           </div>
+
           <div class="meta" style="margin-top:10px;">
-            Note: Tips are not charitable donations and are not tax-deductible. No tokens, shares, or returns are offered.
+            Support is not a charitable donation and is not tax-deductible. No tokens, shares, or returns are offered.
           </div>
         </div>
 
-        <!-- If JS fails, show a clean fallback list -->
+        <!-- Controls (optional, works as enhancement) -->
+        <div class="card" style="margin-top:14px">
+          <div class="stories-controls">
+            <div class="group">
+              <label class="meta" for="q">Search</label>
+              <input id="q" class="input" type="search" placeholder="Search titles / tags" style="max-width:360px;" />
+            </div>
+
+            <div class="group">
+              <label class="meta" for="tag">Filter</label>
+              <!-- filter values should match tags used in stories.json OR data-tags rendered by stories.js -->
+              <select id="tag" class="select" style="max-width:240px;">
+                <option value="">All</option>
+                <option value="Publish notes">Publish notes</option>
+                <option value="Explainers">Explainers</option>
+                <option value="Patterns">Patterns</option>
+                <option value="Corrections">Corrections</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="meta" style="margin-top:10px;">
+            Publish standard: scope → sources/links → corrections block (if needed) → one next-step action.
+          </div>
+        </div>
+
+        <!-- No-JS fallback -->
         <noscript>
           <div class="card" style="margin-top:14px">
             <div class="meta">
-              JavaScript is required to load the live feed. Email
+              JavaScript is required to load the feed. Email
               <a href="mailto:hello@witnessbc.com?subject=Stories%20request%20%E2%80%94%20WitnessBC">hello@witnessbc.com</a>
               to request the latest posts.
             </div>
           </div>
         </noscript>
 
-        <!-- Controls (optional; works if your CSS defines input/select styles) -->
-        <div class="card" style="margin-top:14px">
-          <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
-            <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
-              <label class="meta" for="q" style="min-width:120px;">Search</label>
-              <input id="q" class="input" type="search" placeholder="Search titles / tags" style="max-width:340px;" />
-            </div>
-
-            <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
-              <label class="meta" for="tag" style="min-width:120px;">Filter</label>
-              <select id="tag" class="select" style="max-width:220px;">
-                <option value="">All</option>
-                <option value="publish-note">Publish notes</option>
-                <option value="explainer">Explainers</option>
-                <option value="investigation">Investigations</option>
-                <option value="correction">Corrections</option>
-              </select>
-            </div>
-          </div>
-          <div class="meta" style="margin-top:10px;">
-            Publish standard: short post → sources/links → corrections block (if needed) → next-step actions.
-          </div>
-        </div>
-
         <!-- Feed container (rendered by /assets/js/stories.js) -->
-        <div id="stories" class="storygrid" style="margin-top:14px"></div>
+        <div id="stories" class="storygrid" style="margin-top:14px" aria-live="polite"></div>
 
         <!-- Footer CTAs + safe-tip guidance -->
         <div class="card" style="margin-top:14px">
           <div class="meta">
-            Want to suggest a story? Email
+            Suggest a story: email
             <a href="mailto:hello@witnessbc.com?subject=Story%20tip%20%E2%80%94%20WitnessBC">hello@witnessbc.com</a>.
             Please avoid identifying details in first contact (full names, addresses, workplace identifiers).
           </div>
 
-          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;">
             <a class="btn btn--primary"
                href="https://buy.stripe.com/test_14AfZheov3gWfGlf33eIw00"
-               target="_blank" rel="noopener">Support / Tip</a>
+               target="_blank" rel="noopener">
+              Support publishing
+            </a>
             <a class="btn btn--ghost" href="/privacy/">Privacy</a>
             <a class="btn btn--ghost" href="/about/">About</a>
           </div>
@@ -142,11 +169,9 @@
   <div id="site-footer"></div>
 
   <script src="/assets/js/witness-shell.js?v=2025-12-16"></script>
-
-  <!-- Your existing feed logic -->
   <script src="/assets/js/stories.js?v=2025-12-16"></script>
 
-  <!-- Lightweight client-side filtering (does not require changes to stories.js; best-effort) -->
+  <!-- Best-effort filtering without changing stories.js -->
   <script>
     (function () {
       var q = document.getElementById('q');
@@ -160,13 +185,18 @@
         var query = norm(q.value);
         var t = norm(tag.value);
 
+        // Expect stories.js to render each item with: data-story, data-title, data-tags
         var cards = grid.querySelectorAll('[data-story]');
-        if (!cards.length) return; // stories.js not rendered yet
+        if (!cards.length) return;
 
         cards.forEach(function (el) {
-          var hay = norm(el.getAttribute('data-title')) + ' ' + norm(el.getAttribute('data-tags')) + ' ' + norm(el.textContent);
+          var title = norm(el.getAttribute('data-title'));
+          var tags = norm(el.getAttribute('data-tags'));
+          var hay = (title + ' ' + tags + ' ' + norm(el.textContent)).trim();
+
           var okQ = !query || hay.indexOf(query) !== -1;
-          var okT = !t || norm(el.getAttribute('data-tags')).split(',').map(function(x){return norm(x);}).indexOf(t) !== -1;
+          var okT = !t || tags.split(',').map(function(x){return norm(x);}).indexOf(t) !== -1;
+
           el.style.display = (okQ && okT) ? '' : 'none';
         });
       }
@@ -174,12 +204,12 @@
       q.addEventListener('input', applyFilters);
       tag.addEventListener('change', applyFilters);
 
-      // Re-apply after feed loads
+      // re-apply after feed loads
       var tries = 0;
       var timer = setInterval(function () {
         tries++;
         applyFilters();
-        if (grid.querySelectorAll('[data-story]').length || tries > 20) clearInterval(timer);
+        if (grid.querySelectorAll('[data-story]').length || tries > 24) clearInterval(timer);
       }, 250);
     })();
   </script>
