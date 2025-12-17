@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Corrections — WitnessBC</title>
+  <meta name="description" content="WitnessBC corrections policy: how to request a correction, review process, and how updates are recorded.">
+
+  <link rel="canonical" href="https://www.witnessbc.com/corrections/">
+  <meta property="og:site_name" content="WitnessBC">
+  <meta property="og:title" content="Corrections — WitnessBC">
+  <meta property="og:description" content="Clear correction requests, fast review, and public record updates when the facts change.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.witnessbc.com/corrections/">
+  <meta property="og:image" content="https://www.witnessbc.com/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0f172a">
+
+  <style>
+    :root{--bg:#0b1020;--fg:#e6edf5;--muted:#9fb0c5;--brand:#38bdf8;--brand-2:#60a5fa;--card:#0f172a;--border:#1e293b;--radius:16px;--shadow:0 12px 30px rgba(0,0,0,.28);}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    body{min-height:100svh;display:flex;flex-direction:column;align-items:center}
+    body::before{content:"";position:fixed;inset:-20%;z-index:-1;background:radial-gradient(40% 40% at 20% 20%, rgba(56,189,248,.18) 0%, rgba(56,189,248,0) 60%),radial-gradient(35% 35% at 80% 30%, rgba(96,165,250,.16) 0%, rgba(96,165,250,0) 60%),radial-gradient(30% 30% at 60% 80%, rgba(16,185,129,.10) 0%, rgba(16,185,129,0) 60%);filter:blur(40px);animation:float 18s ease-in-out infinite;opacity:.14;}
+    @keyframes float{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(0,-10px,0) scale(1.03)}}
+    a{color:inherit}
+    .wrap{max-width:1060px;width:100%;padding:28px}
+    header{padding:16px 0 8px}
+    .brand{display:flex;align-items:center;gap:14px;justify-content:space-between}
+    .brandLeft{display:flex;align-items:center;gap:14px}
+    .logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:var(--shadow);position:relative}
+    .logo::after{content:"";position:absolute;inset:8px;border-radius:9px;border:1px solid rgba(255,255,255,.35)}
+    h1{margin:0;font-size:28px;letter-spacing:-.2px}
+    .tag{color:var(--muted);font-size:14px}
+    .nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .btn{appearance:none;border:none;border-radius:12px;padding:10px 14px;font-weight:650;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:.2s all;border:1px solid transparent}
+    .btn:hover{transform:translateY(-1px)} .btn:active{transform:translateY(0)}
+    .btn-ghost{background:transparent;color:var(--fg);border-color:var(--border)}
+    .btn-brand{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#001018}
+    .hero{margin-top:18px;display:grid;gap:10px;background:rgba(255,255,255,.03);border:1px solid var(--border);padding:24px;border-radius:var(--radius)}
+    .hero h2{margin:0;font-size:24px;letter-spacing:-.2px}
+    .note{font-size:13px;color:var(--muted)}
+    .grid{display:grid;gap:18px;margin-top:18px}
+    @media(min-width:900px){.grid{grid-template-columns:1.2fr .8fr}}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .card h3{margin:0 0 8px}
+    ul{margin:0 0 0 1rem;padding:0}
+    li{margin:.35rem 0}
+    .kicker{display:inline-flex;gap:8px;align-items:center;color:var(--muted);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+    .kdot{width:8px;height:8px;border-radius:99px;background:rgba(56,189,248,.9);box-shadow:0 0 18px rgba(56,189,248,.35)}
+    .input,.textarea{width:100%;padding:12px;border-radius:12px;border:1px solid var(--border);background:transparent;color:var(--fg)}
+    .textarea{min-height:120px;resize:vertical}
+    footer{margin:28px 0 12px;color:var(--muted);font-size:13px;display:flex;flex-direction:column;gap:6px;align-items:center}
+    .links{display:flex;gap:12px;flex-wrap:wrap}
+    .btn:focus-visible,a:focus-visible{outline:3px solid var(--brand-2);outline-offset:3px}
+    code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:rgba(255,255,255,.06);padding:2px 6px;border-radius:8px;border:1px solid var(--border)}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="brandLeft">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <h1>WitnessBC</h1>
+            <div class="tag">Independent • Fact-driven • Public-interest reporting</div>
+          </div>
+        </div>
+        <nav class="nav" aria-label="Primary">
+          <a class="btn btn-ghost" href="/">Home</a>
+          <a class="btn btn-ghost" href="/principles/">Principles</a>
+          <a class="btn btn-ghost" href="/funding-independence/">Funding & Independence</a>
+          <a class="btn btn-brand" href="https://buy.stripe.com/test_14AfZheov3gWfGlf33eIw00" target="_blank" rel="noopener">Support (Tip)</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="kicker"><span class="kdot"></span><span>Corrections policy</span></div>
+      <h2>Corrections and updates</h2>
+      <p>
+        When the record is wrong, it is corrected. When new facts change the meaning materially, the story is updated with a clear note.
+        Corrections do not depend on support, relationships, or pressure.
+      </p>
+      <div class="note">Last updated: 2025-12-16</div>
+    </section>
+
+    <main class="grid">
+      <section class="card">
+        <h3>What qualifies</h3>
+        <ul>
+          <li><strong>Factual error:</strong> dates, names, figures, quotes, locations, or descriptions that materially misstate facts.</li>
+          <li><strong>Misleading framing:</strong> material omission or phrasing that changes meaning in a way the evidence does not support.</li>
+          <li><strong>Attribution issue:</strong> incorrect attribution, missing context for a quote, or source identification errors.</li>
+        </ul>
+
+        <h3 style="margin-top:16px">How corrections appear</h3>
+        <ul>
+          <li><strong>Correction note:</strong> appended to the story with what changed and the date/time.</li>
+          <li><strong>Update note:</strong> used for new material facts added after publication.</li>
+          <li><strong>Clarification note:</strong> used when wording is improved without changing the underlying facts.</li>
+        </ul>
+
+        <p class="note" style="margin-top:12px">
+          Tip: include the exact URL and the sentence(s) you believe are wrong. If you have evidence, link it.
+        </p>
+      </section>
+
+      <aside class="card">
+        <h3>Request a correction</h3>
+        <p class="note" style="margin-top:0">
+          Privacy-first: keep first contact short. Avoid unnecessary identifiers.
+        </p>
+
+        <form id="cform" style="margin-top:10px">
+          <label class="note" for="curl">Article URL</label>
+          <input class="input" id="curl" type="text" placeholder="Paste the URL">
+
+          <div style="height:10px"></div>
+
+          <label class="note" for="cissue">What is incorrect (short)</label>
+          <textarea class="textarea" id="cissue" placeholder="Quote the line(s) and explain what’s wrong"></textarea>
+
+          <div style="height:10px"></div>
+
+          <label class="note" for="cevidence">Evidence link(s) (optional)</label>
+          <input class="input" id="cevidence" type="text" placeholder="Paste link(s)">
+
+          <div style="margin-top:10px">
+            <a class="btn btn-ghost" id="cbtn" href="#">Prepare email</a>
+          </div>
+        </form>
+
+        <p class="note" style="margin-top:10px">
+          Or email directly: <a href="mailto:hello@witnessbc.com?subject=WitnessBC%20—%20Correction%20request">hello@witnessbc.com</a>
+        </p>
+      </aside>
+
+      <section class="card" style="grid-column:1 / -1">
+        <h3>Review process (simple)</h3>
+        <ul>
+          <li>Requests are logged internally with timestamp and URL.</li>
+          <li>Evidence is checked; sources are re-reviewed where applicable.</li>
+          <li>If a correction is needed, the public story is updated with a dated note.</li>
+          <li>If disputed or unclear, an explanation is provided and the record remains as published.</li>
+        </ul>
+
+        <p class="note" style="margin-top:12px">
+          Related: <a href="/principles/">Principles</a> · <a href="/funding-independence/">Funding & Independence</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <span id="y"></span> WitnessBC.</div>
+      <div class="links">
+        <a href="/principles/">Principles</a> ·
+        <a href="/corrections/">Corrections</a> ·
+        <a href="/funding-independence/">Funding & Independence</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    (function(){
+      var btn = document.getElementById('cbtn');
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        var url = (document.getElementById('curl').value || '').trim();
+        var issue = (document.getElementById('cissue').value || '').trim();
+        var ev = (document.getElementById('cevidence').value || '').trim();
+
+        var subject = 'WitnessBC — Correction request';
+        var body = [];
+        body.push('Hello WitnessBC,');
+        body.push('');
+        body.push('I am requesting a correction / clarification.');
+        body.push('');
+        if (url) body.push('Article URL: ' + url);
+        if (issue) { body.push(''); body.push('Issue:'); body.push(issue); }
+        if (ev) { body.push(''); body.push('Evidence link(s): ' + ev); }
+        body.push('');
+        body.push('Thank you.');
+
+        window.location.href =
+          'mailto:hello@witnessbc.com?subject=' + encodeURIComponent(subject) +
+          '&body=' + encodeURIComponent(body.join('\n'));
+      });
+    })();
+  </script>
+</body>
+</html>
