@@ -1,43 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Stories – WitnessBC</title>
-  <meta name="description" content="Daily stories and publish notes from WitnessBC." />
+  <meta name="description" content="A controlled publishing feed from WitnessBC: short, shareable posts with an evidence-forward tone and visible corrections when needed." />
   <link rel="canonical" href="https://www.witnessbc.com/stories/" />
+
   <meta property="og:site_name" content="WitnessBC" />
   <meta property="og:title" content="Stories – WitnessBC" />
-  <meta property="og:description" content="Daily stories and publish notes." />
+  <meta property="og:description" content="A controlled publishing feed: short, shareable posts with an evidence-forward tone and visible corrections when needed." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.witnessbc.com/stories/" />
   <meta property="og:image" content="https://www.witnessbc.com/assets/img/og.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#fbfcfe" />
+  <meta name="robots" content="index,follow" />
+
   <link rel="stylesheet" href="/assets/css/witness-shell.css?v=2025-12-16" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"Stories – WitnessBC",
+    "url":"https://www.witnessbc.com/stories/",
+    "isPartOf":{
+      "@type":"WebSite",
+      "name":"WitnessBC",
+      "url":"https://www.witnessbc.com/"
+    }
+  }
+  </script>
 </head>
 
 <body data-active="/stories/">
+  <a href="#main" class="skiplink">Skip to content</a>
+
   <div class="bg-veil" aria-hidden="true"></div>
   <div id="site-header"></div>
 
-  <main>
+  <main id="main">
     <section class="section">
       <div class="wrap">
         <div class="kicker"><span class="kdot"></span><span>Stories</span></div>
-        <h1 class="h1">Daily publishing feed.</h1>
-        <p class="lead">Short, shareable posts. Evidence-forward tone. Corrections visible when needed.</p>
+
+        <h1 class="h1">Controlled publishing feed.</h1>
+        <p class="lead">
+          Short, shareable posts. Evidence-forward tone. Pattern-level by default.
+          Corrections are visible when needed.
+        </p>
+
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">
+          <a class="btn primary" href="/send-a-tip/">Send a tip</a>
+          <a class="btn ghost" href="/principles/">Principles</a>
+          <a class="btn ghost" href="/corrections/">Corrections</a>
+        </div>
 
         <div class="card" style="margin-top:16px">
-          <div class="meta">Latest update: <span id="stories-updated">—</span></div>
+          <div class="meta">
+            Latest update: <span id="stories-updated">—</span>
+            <span aria-hidden="true"> · </span>
+            <span class="meta">Shareable summaries, not dossiers.</span>
+          </div>
+
+          <div class="hr"></div>
+
+          <div class="grid" style="gap:12px">
+            <div>
+              <label class="kicker" for="story-search"><span class="kdot"></span><span>Search</span></label>
+              <input id="story-search" class="input" type="search" placeholder="Search titles, excerpts, tags" autocomplete="off" />
+            </div>
+
+            <div class="grid" style="gap:12px;grid-template-columns:repeat(12,minmax(0,1fr))">
+              <div style="grid-column:span 8">
+                <label class="kicker" for="story-tag"><span class="kdot"></span><span>Tag</span></label>
+                <select id="story-tag" class="select">
+                  <option value="">All tags</option>
+                </select>
+              </div>
+              <div style="grid-column:span 4">
+                <label class="kicker" for="story-sort"><span class="kdot"></span><span>Sort</span></label>
+                <select id="story-sort" class="select">
+                  <option value="newest">Newest first</option>
+                  <option value="oldest">Oldest first</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="meta" id="story-count" aria-live="polite">—</div>
+          </div>
         </div>
+
+        <noscript>
+          <div class="card" style="margin-top:14px">
+            <div class="meta">
+              JavaScript is required to load the feed from <code>/assets/data/stories.json</code>.
+              You can still contact: <a href="mailto:hello@witnessbc.com?subject=Story%20tip%20—%20WitnessBC">hello@witnessbc.com</a>.
+            </div>
+          </div>
+        </noscript>
 
         <div id="stories" class="storygrid" style="margin-top:14px"></div>
 
         <div class="card" style="margin-top:14px">
           <div class="meta">
-            Want to suggest a story? Email <a href="mailto:hello@witnessbc.com?subject=Story%20tip%20—%20WitnessBC">hello@witnessbc.com</a>.
+            Want to suggest a story? Email
+            <a href="mailto:hello@witnessbc.com?subject=Story%20tip%20—%20WitnessBC">hello@witnessbc.com</a>.
             Please avoid identifying details in first contact.
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <div class="meta">
+            Reader support does not buy coverage, outcomes, or favourable treatment. No charitable tax receipt.
           </div>
         </div>
 
@@ -46,8 +123,129 @@
   </main>
 
   <div id="site-footer"></div>
+
   <script src="/assets/js/witness-shell.js?v=2025-12-16"></script>
   <script src="/assets/js/stories.js?v=2025-12-16"></script>
+
+  <!-- Optional: lightweight client-side filtering that does not depend on stories.js internals -->
+  <script>
+    (function () {
+      function uniq(arr) {
+        var seen = Object.create(null), out = [];
+        for (var i = 0; i < arr.length; i++) {
+          var k = String(arr[i] || "").trim();
+          if (!k) continue;
+          var key = k.toLowerCase();
+          if (seen[key]) continue;
+          seen[key] = true;
+          out.push(k);
+        }
+        return out;
+      }
+
+      function parseDate(s) {
+        // Expect YYYY-MM-DD; fallback to 0
+        if (!s) return 0;
+        var t = Date.parse(s);
+        return isNaN(t) ? 0 : t;
+      }
+
+      function getStoryNodes() {
+        var root = document.getElementById("stories");
+        if (!root) return [];
+        return Array.prototype.slice.call(root.children || []);
+      }
+
+      function extractTagsFromNode(node) {
+        // Prefer explicit attributes if stories.js provides them; fallback to scanning text
+        var attr = (node.getAttribute && (node.getAttribute("data-tags") || node.getAttribute("data-tag"))) || "";
+        if (attr) return attr.split(",").map(function (t) { return t.trim(); }).filter(Boolean);
+        return [];
+      }
+
+      function extractDateFromNode(node) {
+        var d = (node.getAttribute && node.getAttribute("data-date")) || "";
+        return parseDate(d);
+      }
+
+      function refreshTagOptions() {
+        var sel = document.getElementById("story-tag");
+        if (!sel) return;
+
+        var tags = [];
+        getStoryNodes().forEach(function (n) {
+          extractTagsFromNode(n).forEach(function (t) { tags.push(t); });
+        });
+
+        var u = uniq(tags).sort(function (a, b) { return a.localeCompare(b); });
+
+        // Keep first option ("All tags")
+        while (sel.options.length > 1) sel.remove(1);
+        u.forEach(function (t) {
+          var opt = document.createElement("option");
+          opt.value = t;
+          opt.textContent = t;
+          sel.appendChild(opt);
+        });
+      }
+
+      function applyFilterAndSort() {
+        var q = (document.getElementById("story-search") || {}).value || "";
+        q = q.trim().toLowerCase();
+
+        var tag = (document.getElementById("story-tag") || {}).value || "";
+        var sort = (document.getElementById("story-sort") || {}).value || "newest";
+
+        var nodes = getStoryNodes();
+
+        // Sort (best-effort, only if data-date exists)
+        nodes.sort(function (a, b) {
+          var da = extractDateFromNode(a);
+          var db = extractDateFromNode(b);
+          return sort === "oldest" ? (da - db) : (db - da);
+        });
+
+        // Re-append in new order (no-op if no dates)
+        var root = document.getElementById("stories");
+        if (root) nodes.forEach(function (n) { root.appendChild(n); });
+
+        var shown = 0;
+        nodes.forEach(function (n) {
+          var text = (n.textContent || "").toLowerCase();
+          var tags = extractTagsFromNode(n);
+
+          var okQ = !q || text.indexOf(q) !== -1;
+          var okT = !tag || tags.indexOf(tag) !== -1;
+
+          var show = okQ && okT;
+          n.style.display = show ? "" : "none";
+          if (show) shown++;
+        });
+
+        var count = document.getElementById("story-count");
+        if (count) {
+          count.textContent = shown + " item" + (shown === 1 ? "" : "s") + " shown";
+        }
+      }
+
+      // Wait for stories.js to render content
+      function boot() {
+        refreshTagOptions();
+        applyFilterAndSort();
+
+        ["story-search", "story-tag", "story-sort"].forEach(function (id) {
+          var el = document.getElementById(id);
+          if (!el) return;
+          el.addEventListener("input", applyFilterAndSort);
+          el.addEventListener("change", applyFilterAndSort);
+        });
+      }
+
+      // Give stories.js a beat; then initialize controls.
+      window.addEventListener("load", function () {
+        setTimeout(boot, 60);
+      });
+    })();
+  </script>
 </body>
 </html>
-
