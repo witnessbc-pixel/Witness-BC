@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Corrections – WitnessBC</title>
-  <meta name="description" content="Corrections policy, update notes, and a privacy-first correction request channel." />
-  <link rel="canonical" href="https://www.witnessbc.com/corrections/" />
+  <meta name="description" content="Corrections and updates policy. Request a correction with the article URL and supporting evidence. Privacy-first contact." />
 
+  <link rel="canonical" href="https://www.witnessbc.com/corrections/" />
   <meta property="og:site_name" content="WitnessBC" />
   <meta property="og:title" content="Corrections – WitnessBC" />
-  <meta property="og:description" content="When the record is wrong, it is corrected. When new facts change the meaning materially, a dated update is added." />
+  <meta property="og:description" content="Corrections and updates policy. Privacy-first requests. Transparent change notes." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.witnessbc.com/corrections/" />
   <meta property="og:image" content="https://www.witnessbc.com/assets/img/og.png" />
@@ -17,54 +17,41 @@
   <meta name="theme-color" content="#fbfcfe" />
 
   <link rel="stylesheet" href="/assets/css/witness-shell.css?v=2025-12-16" />
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebPage",
-    "name":"Corrections",
-    "url":"https://www.witnessbc.com/corrections/",
-    "isPartOf":{"@type":"WebSite","name":"WitnessBC","url":"https://www.witnessbc.com/"}
-  }
-  </script>
 </head>
 
 <body data-active="/corrections/">
   <div class="bg-veil" aria-hidden="true"></div>
-
   <div id="site-header"></div>
 
   <main>
-    <!-- HERO -->
     <section class="section">
       <div class="wrap">
-        <div class="kicker"><span class="kdot"></span><span>Corrections policy</span></div>
-        <h1 class="h1">Corrections, updates, and a clean record.</h1>
+        <div class="kicker"><span class="kdot"></span><span>Corrections · updates · accountability</span></div>
+        <h1 class="h1">Corrections, updates, and the public record.</h1>
         <p class="lead">
-          When the record is wrong, it is corrected. When new facts change the meaning materially, the story is updated with a clear note.
+          When the record is wrong, it is corrected. When new facts materially change meaning, the story is updated with a clear note.
           Corrections do not depend on support, relationships, or pressure.
         </p>
 
-        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:16px">
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">
           <a class="btn primary" href="#request">Request a correction</a>
           <a class="btn ghost" href="/principles/">Principles</a>
-          <a class="btn ghost" href="/send-a-tip/">Support (Tip)</a>
+          <a class="btn ghost" href="https://buy.stripe.com/test_14AfZheov3gWfGlf33eIw00" target="_blank" rel="noopener">Support (Tip)</a>
         </div>
 
         <div class="meta" style="margin-top:10px">
-          Last updated: <strong>2025-12-16</strong>
+          Privacy-first: keep first contact short. Avoid unnecessary identifiers. If safety is at risk, do not include identifying details.
         </div>
       </div>
     </section>
 
-    <!-- CONTENT -->
     <section class="section sm">
       <div class="wrap grid cols-2">
         <article class="card">
           <h3 style="margin:0 0 6px">What qualifies</h3>
           <ul class="ul">
             <li><strong>Factual error:</strong> dates, names, figures, quotes, locations, or descriptions that materially misstate facts.</li>
-            <li><strong>Misleading framing:</strong> material omission or phrasing that changes meaning in a way the evidence does not support.</li>
+            <li><strong>Misleading framing:</strong> omission or wording that changes meaning in a way the evidence does not support.</li>
             <li><strong>Attribution issue:</strong> incorrect attribution, missing context for a quote, or source identification errors.</li>
           </ul>
 
@@ -72,9 +59,9 @@
 
           <h3 style="margin:0 0 6px">How corrections appear</h3>
           <ul class="ul">
-            <li><strong>Correction note:</strong> appended to the story with what changed and the date/time.</li>
+            <li><strong>Correction note:</strong> appended to the story with what changed + date/time.</li>
             <li><strong>Update note:</strong> used for new material facts added after publication.</li>
-            <li><strong>Clarification note:</strong> used when wording is improved without changing the underlying facts.</li>
+            <li><strong>Clarification note:</strong> used when wording improves without changing underlying facts.</li>
           </ul>
 
           <div class="hr"></div>
@@ -87,16 +74,14 @@
         <aside class="card" id="request">
           <h3 style="margin:0 0 6px">Request a correction</h3>
           <p class="meta" style="margin-top:0">
-            Privacy-first: keep first contact short. Avoid unnecessary identifiers.
-            This form does not transmit data; it opens your email client with structured text.
+            This form does not transmit data. It opens your email client with structured text.
           </p>
 
-          <form id="corrections-form" style="margin-top:10px">
-            <div style="display:flex; flex-direction:column; gap:10px">
+          <form id="corrections-form" style="margin-top:12px">
+            <div style="display:flex;flex-direction:column;gap:10px">
               <input class="input" id="c_url" type="url" placeholder="Article URL (required)" required />
-              <textarea class="textarea" id="c_what" rows="4" placeholder="What is incorrect (short) — include the sentence(s)" required></textarea>
-              <input class="input" id="c_evidence" type="text" placeholder="Evidence link(s) (optional)" />
-              <input class="input" id="c_name" type="text" placeholder="Name (optional / first name only)" />
+              <textarea class="textarea" id="c_what" rows="4" placeholder="What is incorrect (short, specific)"></textarea>
+              <input class="input" id="c_evidence" type="url" placeholder="Evidence link(s) (optional)" />
               <button class="btn ghost" type="submit">Prepare email</button>
             </div>
           </form>
@@ -105,15 +90,14 @@
 
           <div class="meta">
             Or email directly:
-            <a href="mailto:hello@witnessbc.com?subject=Correction%20request%20—%20WitnessBC">hello@witnessbc.com</a>
+            <a href="mailto:hello@witnessbc.com?subject=Correction%20request%20%E2%80%94%20WitnessBC">hello@witnessbc.com</a>
           </div>
         </aside>
       </div>
     </section>
 
-    <!-- PROCESS + OPTIONAL LEDGER -->
     <section class="section sm">
-      <div class="wrap grid cols-2">
+      <div class="wrap">
         <article class="card">
           <h3 style="margin:0 0 6px">Review process (simple)</h3>
           <ul class="ul">
@@ -125,21 +109,15 @@
 
           <div class="hr"></div>
 
-          <div class="meta">
-            Related: <a href="/principles/">Principles</a> · <a href="/funding-independence/">Funding &amp; Independence</a>
+          <h3 style="margin:0 0 6px">Published correction notes</h3>
+          <p class="meta" style="margin-top:0">
+            Optional: if <code>/assets/data/corrections.json</code> exists, it will render here.
+          </p>
+
+          <div id="corrections-list" class="meta" style="margin-top:10px">
+            No published corrections posted yet.
           </div>
         </article>
-
-        <aside class="card">
-          <h3 style="margin:0 0 6px">Corrections log (optional)</h3>
-          <p class="meta" style="margin-top:0">
-            If/when a public log is published, it should list: story URL, type (correction/update/clarification), date/time, and summary — without exposing sources.
-          </p>
-          <div class="hr"></div>
-          <div class="meta">
-            Implementation note: can be generated from <code>/assets/data/stories.json</code> (e.g., a <code>corrections[]</code> field per story) using <code>/assets/js/stories.js</code>.
-          </div>
-        </aside>
       </div>
     </section>
   </main>
@@ -149,37 +127,59 @@
   <script src="/assets/js/witness-shell.js?v=2025-12-16"></script>
   <script>
     (function () {
+      // Mailto builder (privacy-first; no submission)
       var form = document.getElementById("corrections-form");
-      if (!form) return;
+      if (form) {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var url = (document.getElementById("c_url").value || "").trim();
+          var what = (document.getElementById("c_what").value || "").trim();
+          var evidence = (document.getElementById("c_evidence").value || "").trim();
 
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
+          var subject = "Correction request — WitnessBC";
+          var body = [];
+          body.push("Hello WitnessBC,");
+          body.push("");
+          body.push("Requesting a correction / clarification.");
+          body.push("");
+          body.push("Article URL: " + (url || "[paste URL]"));
+          if (what) { body.push(""); body.push("What appears incorrect:"); body.push(what); }
+          if (evidence) { body.push(""); body.push("Evidence link(s):"); body.push(evidence); }
+          body.push("");
+          body.push("Note: Privacy-first. Avoiding unnecessary identifiers in first contact.");
+          window.location.href =
+            "mailto:hello@witnessbc.com" +
+            "?subject=" + encodeURIComponent(subject) +
+            "&body=" + encodeURIComponent(body.join("\n"));
+        });
+      }
 
-        var url = (document.getElementById("c_url").value || "").trim();
-        var what = (document.getElementById("c_what").value || "").trim();
-        var evidence = (document.getElementById("c_evidence").value || "").trim();
-        var name = (document.getElementById("c_name").value || "").trim();
+      // Optional corrections feed (if you add /assets/data/corrections.json later)
+      var target = document.getElementById("corrections-list");
+      if (target) {
+        fetch("/assets/data/corrections.json", { cache: "no-store" })
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (data) {
+            if (!data || !Array.isArray(data.items) || data.items.length === 0) return;
 
-        var subject = "Correction request — " + (url ? url : "WitnessBC");
-        var body = [];
-        body.push("Hello WitnessBC,");
-        body.push("");
-        body.push("Requesting a correction.");
-        body.push("");
-        if (url) body.push("Article URL: " + url);
-        body.push("");
-        body.push("What is incorrect:");
-        body.push(what || "[describe the issue]");
-        if (evidence) { body.push(""); body.push("Evidence link(s):"); body.push(evidence); }
-        if (name) { body.push(""); body.push("Name (optional): " + name); }
-        body.push("");
-        body.push("(Privacy-first: first contact kept short; no unnecessary identifiers.)");
-
-        window.location.href =
-          "mailto:hello@witnessbc.com" +
-          "?subject=" + encodeURIComponent(subject) +
-          "&body=" + encodeURIComponent(body.join("\n"));
-      });
+            var html = '<div style="display:grid;gap:10px;margin-top:10px">';
+            data.items.slice(0, 12).forEach(function (it) {
+              var date = it.date ? String(it.date) : "";
+              var title = it.title ? String(it.title) : "Correction note";
+              var link = it.url ? String(it.url) : "";
+              var note = it.note ? String(it.note) : "";
+              html += '<div class="card" style="box-shadow:none;padding:14px">';
+              html += '<div class="kicker"><span class="kdot"></span><span>' + (date || "Update") + '</span></div>';
+              html += '<div style="font-weight:700;margin-top:6px">' + title + '</div>';
+              if (link) html += '<div class="meta" style="margin-top:4px"><a href="' + link + '">' + link + '</a></div>';
+              if (note) html += '<div class="meta" style="margin-top:6px">' + note + '</div>';
+              html += '</div>';
+            });
+            html += "</div>";
+            target.innerHTML = html;
+          })
+          .catch(function(){ /* silent */ });
+      }
     })();
   </script>
 </body>
