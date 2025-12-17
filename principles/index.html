@@ -1,198 +1,109 @@
-<!-- /principles/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Principles – WitnessBC</title>
-  <meta name="description" content="WitnessBC editorial principles: verification, fairness, independence, privacy discipline, and corrections." />
-  <link rel="canonical" href="https://www.witnessbc.com/principles/" />
+  <meta name="description" content="Principles for independent, public-interest reporting: sourcing discipline, calm tone, corrections, privacy, and editorial independence." />
 
+  <link rel="canonical" href="https://www.witnessbc.com/principles/" />
   <meta property="og:site_name" content="WitnessBC" />
   <meta property="og:title" content="Principles – WitnessBC" />
-  <meta property="og:description" content="Verification, independence, privacy discipline, fairness, and corrections." />
+  <meta property="og:description" content="Independence, documented sourcing, correction discipline, and privacy-first handling." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.witnessbc.com/principles/" />
-  <meta property="og:image" content="https://www.witnessbc.com/og.png" />
+  <meta property="og:image" content="https://www.witnessbc.com/assets/img/og.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="theme-color" content="#0f172a" />
+  <meta name="theme-color" content="#fbfcfe" />
 
-  <style>
-    :root{
-      --bg:#0b1020; --fg:#e6edf5; --muted:#9fb0c5;
-      --brand:#38bdf8; --brand2:#60a5fa; --card:#0f172a; --border:#1e293b;
-      --radius:16px; --shadow:0 12px 30px rgba(0,0,0,.28);
-    }
-    @media (prefers-color-scheme: light){
-      :root{ --bg:#f8fafc; --fg:#0f172a; --muted:#475569; --card:#ffffff; --border:#e2e8f0; }
-      body::before{opacity:.06 !important;}
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Noto Sans,Arial,sans-serif}
-    body{min-height:100svh;display:flex;flex-direction:column;align-items:center}
-    body::before{
-      content:"";position:fixed;inset:-20%;z-index:-1;
-      background:
-        radial-gradient(40% 40% at 20% 20%, rgba(56,189,248,.18) 0%, rgba(56,189,248,0) 60%),
-        radial-gradient(35% 35% at 80% 30%, rgba(96,165,250,.16) 0%, rgba(96,165,250,0) 60%),
-        radial-gradient(30% 30% at 60% 80%, rgba(16,185,129,.10) 0%, rgba(16,185,129,0) 60%);
-      filter: blur(44px);
-      animation: float 18s ease-in-out infinite;
-      opacity:.14;
-    }
-    @keyframes float{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(0,-10px,0) scale(1.03)}}
-
-    a{color:inherit}
-    .wrap{max-width:1020px;width:100%;padding:28px}
-    header{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:10px 0}
-    .brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit}
-    .logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand2));box-shadow:var(--shadow);position:relative}
-    .logo::after{content:"";position:absolute;inset:8px;border-radius:9px;border:1px solid rgba(255,255,255,.35)}
-    .toplinks{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-    .toplinks a{color:var(--muted);text-decoration:none;font-size:13px}
-    .toplinks a:hover{color:var(--fg);text-decoration:underline}
-
-    .hero{margin-top:14px;background:rgba(255,255,255,.03);border:1px solid var(--border);padding:22px;border-radius:var(--radius)}
-    .kicker{color:var(--muted);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
-    .lead{margin:10px 0 0;color:var(--muted);max-width:72ch}
-    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
-    .btn{
-      appearance:none;border:none;border-radius:12px;padding:12px 16px;font-weight:650;cursor:pointer;
-      text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:.2s all;border:1px solid transparent
-    }
-    .btn:hover{transform:translateY(-1px)}
-    .btn:active{transform:translateY(0)}
-    .btn-brand{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#001018}
-    .btn-ghost{background:transparent;color:var(--fg);border-color:var(--border)}
-    .btn:focus-visible, a:focus-visible{outline:3px solid var(--brand2);outline-offset:3px}
-
-    .grid{display:grid;gap:14px;margin-top:14px}
-    @media(min-width:900px){ .grid{grid-template-columns:1fr 1fr} }
-    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
-    .card h2{margin:0 0 8px;font-size:18px}
-    .card p{margin:0;color:var(--muted)}
-    ul{margin:8px 0 0 1rem;padding:0}
-    li{margin:.35rem 0;color:var(--muted)}
-    strong{color:var(--fg)}
-    .full{grid-column:1 / -1}
-
-    .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-    .pill{font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.03);color:var(--muted)}
-    .note{font-size:13px;color:var(--muted);margin-top:12px}
-    footer{margin:22px 0 10px;color:var(--muted);font-size:13px;display:flex;flex-direction:column;gap:6px;align-items:center}
-  </style>
+  <link rel="stylesheet" href="/assets/css/witness-shell.css?v=2025-12-16" />
 </head>
 
-<body>
-  <div class="wrap">
-    <header>
-      <a class="brand" href="/" aria-label="WitnessBC home">
-        <div class="logo" aria-hidden="true"></div>
-        <div style="display:flex;flex-direction:column;line-height:1.15">
-          <div style="font-weight:750">WitnessBC</div>
-          <div style="color:var(--muted);font-size:13px">Independent · Fact-driven · Privacy-aware</div>
+<body data-active="/principles/">
+  <div class="bg-veil" aria-hidden="true"></div>
+  <div id="site-header"></div>
+
+  <main>
+    <section class="section">
+      <div class="wrap">
+        <div class="kicker"><span class="kdot"></span><span>Principles · editorial standards</span></div>
+        <h1 class="h1">Principles for public-interest reporting.</h1>
+        <p class="lead">
+          The goal is accountable reporting with a calm tone: documented sourcing, visible corrections,
+          and privacy-aware handling when risk exists.
+        </p>
+
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">
+          <a class="btn primary" href="/stories/">Stories</a>
+          <a class="btn ghost" href="/corrections/">Corrections</a>
+          <a class="btn ghost" href="https://buy.stripe.com/test_14AfZheov3gWfGlf33eIw00" target="_blank" rel="noopener">Support (Tip)</a>
         </div>
-      </a>
-      <nav class="toplinks" aria-label="Site">
-        <a href="/funding-independence/">Funding</a>
-        <a href="/corrections/">Corrections</a>
-        <a href="mailto:hello@witnessbc.com?subject=WitnessBC%20—%20Enquiry">Email</a>
-      </nav>
-    </header>
 
-    <section class="hero" aria-label="Principles">
-      <div class="kicker">Editorial principles</div>
-      <h1 style="margin:6px 0 0;font-size:30px;letter-spacing:-.25px">Principles</h1>
-      <p class="lead">
-        A small newsroom only works if the rules are explicit. These principles protect readers, sources, and credibility.
-      </p>
-
-      <div class="pillrow" aria-hidden="true">
-        <span class="pill">Verification</span>
-        <span class="pill">Fairness</span>
-        <span class="pill">Independence</span>
-        <span class="pill">Privacy discipline</span>
-        <span class="pill">Corrections</span>
-      </div>
-
-      <div class="cta">
-        <a class="btn btn-brand" href="https://buy.stripe.com/test_14AfZheov3gWfGlf33eIw00" target="_blank" rel="noopener">
-          Support the launch (Tip)
-        </a>
-        <a class="btn btn-ghost" href="/">Back to home</a>
-      </div>
-
-      <div class="note">
-        For safety, first contact should avoid full legal names, addresses, employer identifiers, or sensitive documents.
+        <div class="meta" style="margin-top:10px">
+          Reader support does not buy coverage, outcomes, or favourable treatment. No charitable tax receipt.
+        </div>
       </div>
     </section>
 
-    <main class="grid" aria-label="Principles detail">
-      <section class="card" aria-label="Truth and verification">
-        <h2>1) Truth and verification</h2>
-        <p>Claims are proportional to evidence. When certainty is not possible, uncertainty is stated plainly.</p>
-        <ul>
-          <li><strong>Source hierarchy:</strong> documents and on-the-record sources first.</li>
-          <li><strong>Cross-checking:</strong> at least two independent confirmations when feasible.</li>
-          <li><strong>Context:</strong> timelines, dates, and definitions are explicit.</li>
-        </ul>
-      </section>
+    <section class="section sm">
+      <div class="wrap grid cols-2">
+        <article class="card">
+          <h3 style="margin:0 0 6px">1) Independence</h3>
+          <ul class="ul">
+            <li>Not aligned to parties, governments, or private interests.</li>
+            <li>Coverage decisions are editorial, based on public-interest value.</li>
+            <li>Supporters do not receive editorial influence or preferred outcomes.</li>
+          </ul>
 
-      <section class="card" aria-label="Fairness and right of reply">
-        <h2>2) Fairness and right of reply</h2>
-        <p>Criticism is paired with a meaningful opportunity to respond, within reasonable time.</p>
-        <ul>
-          <li><strong>Accurate framing:</strong> no cherry-picking or misleading excerpts.</li>
-          <li><strong>Respect:</strong> no hate speech, no humiliation, no sensationalism.</li>
-          <li><strong>Proportionality:</strong> tone and prominence match the facts.</li>
-        </ul>
-      </section>
+          <div class="hr"></div>
 
-      <section class="card" aria-label="Independence">
-        <h2>3) Independence</h2>
-        <p>Funding does not buy coverage, outcomes, or favourable treatment.</p>
-        <ul>
-          <li><strong>No pay-for-coverage:</strong> support never guarantees a story.</li>
-          <li><strong>No editorial control:</strong> funders do not approve drafts.</li>
-          <li><strong>Conflict discipline:</strong> conflicts are disclosed or the work is declined.</li>
-        </ul>
-      </section>
+          <h3 style="margin:0 0 6px">2) Sourcing discipline</h3>
+          <ul class="ul">
+            <li>Prefer primary evidence: documents, records, direct observation.</li>
+            <li>Attribute clearly; separate what is known vs alleged vs inferred.</li>
+            <li>Keep language factual; avoid performative outrage.</li>
+          </ul>
+        </article>
 
-      <section class="card" aria-label="Privacy and safety">
-        <h2>4) Privacy and safety</h2>
-        <p>Identity protection is a default, not a special request—especially for vulnerable sources.</p>
-        <ul>
-          <li><strong>Minimize identifiers:</strong> publish the least identifying detail needed.</li>
-          <li><strong>Consent:</strong> no personal story is used as content without explicit consent.</li>
-          <li><strong>Risk assessment:</strong> publication choices consider retaliation and harm.</li>
-        </ul>
-      </section>
+        <aside class="card">
+          <h3 style="margin:0 0 6px">3) Privacy-first handling</h3>
+          <ul class="ul">
+            <li>De-identify when exposure risk exists.</li>
+            <li>Minimize unnecessary identifiers in intake and publishing.</li>
+            <li>Use consent-first handling for sensitive narratives.</li>
+          </ul>
 
-      <section class="card full" aria-label="Corrections and transparency">
-        <h2>5) Corrections and transparency</h2>
-        <p style="color:var(--muted);margin:0">
-          Errors happen. The test is how they are handled. Corrections are visible, dated, and specific.
-        </p>
-        <ul>
-          <li><strong>Corrections log:</strong> maintain a page that records changes and dates.</li>
-          <li><strong>Clear labels:</strong> “Correction”, “Clarification”, or “Update”.</li>
-          <li><strong>Reader contact:</strong> a direct channel to flag potential errors.</li>
-        </ul>
+          <div class="hr"></div>
 
-        <div class="note" style="margin-top:12px">
-          Corrections: <a href="mailto:corrections@witnessbc.com?subject=WitnessBC%20—%20Correction%20request">corrections@witnessbc.com</a>
-          · General: <a href="mailto:hello@witnessbc.com?subject=WitnessBC%20—%20Enquiry">hello@witnessbc.com</a>
-        </div>
-      </section>
-    </main>
+          <h3 style="margin:0 0 6px">4) Corrections discipline</h3>
+          <ul class="ul">
+            <li>When wrong, correct the record.</li>
+            <li>When new facts materially change meaning, update with a clear note.</li>
+            <li>Maintain a visible corrections pathway: <a href="/corrections/">/corrections/</a>.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
 
-    <footer>
-      <div>© <span id="y"></span> WitnessBC.</div>
-    </footer>
-  </div>
+    <section class="section sm">
+      <div class="wrap">
+        <article class="card">
+          <h3 style="margin:0 0 6px">Funding and independence</h3>
+          <p class="meta" style="margin-top:0">
+            Support keeps infrastructure and publishing capacity alive. It does not purchase coverage, protection, or retaliation.
+          </p>
+          <ul class="ul">
+            <li>Disclose meaningful conflicts where relevant.</li>
+            <li>Do not accept “pay-to-kill” or “pay-to-publish” arrangements.</li>
+            <li>Prefer simple, transparent support mechanisms (tips/membership) over opaque sponsorship.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  <div id="site-footer"></div>
+
+  <script src="/assets/js/witness-shell.js?v=2025-12-16"></script>
 </body>
 </html>
