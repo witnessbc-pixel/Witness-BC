@@ -1,24 +1,74 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Free Toolkit • v2025.12.25.3 -->
+  <!-- Free Toolkit (Privacy) • v2025.12.26.0 -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Privacy & De-identification (Free) – WitnessBC Toolkits</title>
-  <meta name="description" content="Free privacy checklist + safe rewrite patterns for de-identification. Educational only." />
+  <title>Privacy-First Publishing Checklist (Free) | WitnessBC</title>
+  <meta name="description" content="Free privacy-first publishing checklist + rewrite patterns to reduce accidental identification risk. Education only. Not legal advice." />
   <link rel="canonical" href="https://www.witnessbc.com/toolkits/free/privacy/" />
 
   <meta property="og:site_name" content="WitnessBC" />
-  <meta property="og:title" content="Privacy & De-identification (Free) – WitnessBC Toolkits" />
-  <meta property="og:description" content="Free privacy checklist and patterns. Educational only." />
+  <meta property="og:title" content="Privacy-First Publishing Checklist (Free) | WitnessBC" />
+  <meta property="og:description" content="A free checklist and rewrite patterns to reduce accidental identification risk. Education only. Not legal advice." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.witnessbc.com/toolkits/free/privacy/" />
   <meta property="og:image" content="https://www.witnessbc.com/assets/img/og.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#fbfcfe" />
-  <link rel="stylesheet" href="/assets/css/witness-shell.css?v=2025-12-25.3" />
+
+  <!-- Keep existing assets; do not rewrite unless necessary -->
+  <link rel="stylesheet" href="/assets/css/witness-shell.css?v=2025-12-26.2" />
+
+  <!-- Schema (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.witnessbc.com/toolkits/free/privacy/#webpage",
+        "url": "https://www.witnessbc.com/toolkits/free/privacy/",
+        "name": "Privacy-First Publishing Checklist (Free) | WitnessBC",
+        "description": "Free privacy-first publishing checklist + rewrite patterns to reduce accidental identification risk. Education only. Not legal advice.",
+        "inLanguage": "en-CA",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://www.witnessbc.com/#website",
+          "name": "WitnessBC",
+          "url": "https://www.witnessbc.com/"
+        },
+        "about": [
+          "Privacy-first publishing",
+          "De-identification",
+          "Operational security for writers",
+          "Public-interest publishing"
+        ]
+      },
+      {
+        "@type": "Article",
+        "@id": "https://www.witnessbc.com/toolkits/free/privacy/#article",
+        "headline": "Privacy-First Publishing Checklist (Free) — Redact Identifying Details Before You Post",
+        "mainEntityOfPage": { "@id": "https://www.witnessbc.com/toolkits/free/privacy/#webpage" },
+        "inLanguage": "en-CA",
+        "author": { "@type": "Organization", "name": "WitnessBC" },
+        "publisher": { "@type": "Organization", "name": "WitnessBC", "url": "https://www.witnessbc.com/" },
+        "description": "A free educational checklist and rewrite patterns for privacy-first public-interest publishing. Education only. Not legal advice."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.witnessbc.com/toolkits/free/privacy/#breadcrumbs",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Toolkits", "item": "https://www.witnessbc.com/toolkits/" },
+          { "@type": "ListItem", "position": 2, "name": "Free", "item": "https://www.witnessbc.com/toolkits/" },
+          { "@type": "ListItem", "position": 3, "name": "Privacy", "item": "https://www.witnessbc.com/toolkits/free/privacy/" }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body data-active="/toolkits/">
@@ -28,53 +78,155 @@
   <main id="main">
     <section class="section">
       <div class="wrap">
+
         <div class="kicker"><span class="kdot"></span><span>Toolkits · Free</span></div>
-        <h1 class="h1">Privacy & De-identification (Free)</h1>
-        <p class="lead">A practical checklist to reduce accidental identification risk. Educational only.</p>
+        <h1 class="h1">Privacy-First Publishing Checklist (Free)</h1>
+        <p class="lead tight">
+          A practical checklist and rewrite patterns to reduce accidental identification risk (“doxxing-by-detail”).
+          <strong>Education only. Not legal advice.</strong>
+        </p>
+
+        <div class="kv" style="margin-top:10px">
+          <span class="pill">Privacy-first</span>
+          <span class="pill">Education only</span>
+          <span class="pill">No case review</span>
+          <span class="pill">No outcomes sold</span>
+        </div>
 
         <div class="actions" style="margin-top:16px">
           <a class="btn ghost" href="/toolkits/">Back to Toolkits</a>
-          <a class="btn primary" data-buy="privacy">Buy Pro ($19)</a>
+          <a class="btn primary" data-buy="privacy">Buy Pro PDF ($19)</a>
+          <a class="btn ghost" href="/toolkits/training/">Take Privacy Training ($99)</a>
         </div>
 
+        <!-- Must keep: Do not include identifying details warning -->
         <div class="card" style="margin-top:16px">
-          <h3 style="margin:0 0 6px">Quick checklist</h3>
-          <ul style="margin:0;padding-left:18px;color:var(--muted)">
-            <li>Remove unique time + place combinations.</li>
-            <li>Remove exact job titles if they identify a single person.</li>
-            <li>Replace rare details with category-level descriptions.</li>
-            <li>Do not publish private IDs, signatures, or full addresses.</li>
-            <li>If unsure: keep the record private; publish the pattern.</li>
+          <h2 class="h2" style="margin:0 0 8px">Do not include identifying details (read first)</h2>
+          <p class="meta" style="margin:0 0 10px">
+            If unsure, publish less. Keep the detailed record private and controlled.
+            <strong>Do not send sensitive personal data.</strong>
+          </p>
+          <ul class="ul">
+            <li>Do not publish full names, addresses, phone numbers, emails, usernames, or personal IDs.</li>
+            <li>Avoid faces, license plates, signatures, unique workplace identifiers, or private threads.</li>
+            <li>Be cautious with screenshots: headers, footers, filenames, and metadata often reveal identity.</li>
+            <li>Indirect identifiers matter: time + place + role can triangulate a person even without names.</li>
           </ul>
         </div>
 
+        <!-- Must keep: existing Privacy Checklist block (upgraded, but still a checklist block) -->
         <div class="card" style="margin-top:16px">
-          <h3 style="margin:0 0 6px">Copy patterns</h3>
+          <h2 class="h2" style="margin:0 0 8px">Privacy checklist (minimum standard)</h2>
+          <p class="meta" style="margin:0 0 10px">
+            Run this before publishing. Goal: keep meaning, remove what makes someone easy to identify.
+          </p>
+          <ul class="ul">
+            <li><strong>Direct identifiers:</strong> names, addresses, phone/email, IDs, account numbers, faces/plates.</li>
+            <li><strong>Indirect identifiers:</strong> exact dates/times, precise locations, niche titles, one-of-one events.</li>
+            <li><strong>Searchability:</strong> paraphrase quotes that can be searched; avoid verbatim message text.</li>
+            <li><strong>Attachments:</strong> crop aggressively; remove headers/footers; rename files to neutral labels.</li>
+            <li><strong>Publish-safe framing:</strong> separate what is known from what is not known; label limits clearly.</li>
+            <li><strong>Default rule:</strong> keep raw evidence private; publish the pattern and defensible claims.</li>
+          </ul>
+        </div>
+
+        <div class="grid cols-2" style="margin-top:16px">
+          <div class="card">
+            <h2 class="h2" style="margin:0 0 8px">5-minute pre-publish check</h2>
+            <ul class="ul">
+              <li>Can a stranger identify a person from <em>time + place + role</em>?</li>
+              <li>Is any detail unnecessary for public understanding?</li>
+              <li>Are you publishing “proof” that also exposes private identifiers?</li>
+              <li>Does the post include minors or vulnerable people in identifiable ways?</li>
+              <li>Did you add a corrections path (how updates will be noted)?</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2 class="h2" style="margin:0 0 8px">Free vs Pro vs Training</h2>
+            <table class="table" aria-label="Free vs Pro vs Training">
+              <thead>
+                <tr>
+                  <th>Option</th>
+                  <th>Best for</th>
+                  <th>What you get</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Free (this page)</strong></td>
+                  <td>First pass, quick hygiene</td>
+                  <td>Checklist + copy patterns + one worked example</td>
+                </tr>
+                <tr>
+                  <td><strong>Pro PDF ($19)</strong></td>
+                  <td>Repeat use, printing</td>
+                  <td>Printable worksheets + expanded drills + formatted examples</td>
+                </tr>
+                <tr>
+                  <td><strong>Training ($99)</strong></td>
+                  <td>Skill-building</td>
+                  <td>Structured drills to build habits (no case handling)</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="actions" style="margin-top:12px">
+              <a class="btn primary" data-buy="privacy">Buy Pro PDF ($19)</a>
+              <a class="btn ghost" href="/toolkits/training/">Privacy Training ($99)</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h2 class="h2" style="margin:0 0 8px">Copy patterns (safe rewrite recipe)</h2>
+          <p class="meta" style="margin:0 0 10px">
+            Use these patterns to keep meaning while reducing identification risk. They are not legal guidance.
+          </p>
+
           <div class="hr"></div>
 
           <textarea id="tpl" class="textarea" aria-label="Privacy rewrite patterns">
-REWRITE PATTERNS (SAFE)
-- Exact date → “early 2025” / “mid-2025”
-- Exact location → “Lower Mainland” / “a Vancouver-area workplace”
-- Exact name → “a manager” / “a staff member”
-- Unique department → “operations team” / “admin team”
-- Specific screenshots → “a message exchange” (keep raw evidence private)
+PRIVACY-FIRST REWRITE PATTERNS (SAFE)
 
-SAFE SENTENCE FRAME
-- “A documented exchange exists. Details are de-identified to reduce risk.”
-- “Names and unique identifiers are removed. Meaning and sequence are preserved.”
+1) GENERALIZE TIME
+- Exact date/time → “early 2025” / “mid-2025” / “over several weeks”
+- A specific weekday/time → “in the morning” / “later that week”
+
+2) GENERALIZE LOCATION
+- Exact address/building → “a Vancouver-area location”
+- Unique venue → “a public place” / “a local office”
+
+3) GENERALIZE ROLE
+- Rare job title → “a staff member” / “a supervisor”
+- Unique department → “an operations team” / “an admin team”
+
+4) REDUCE SEARCHABILITY
+- Verbatim quote → paraphrase (keep the meaning)
+- Private thread screenshot → “a documented exchange exists” (retain privately)
+
+SAFE SENTENCE FRAMES
+- “Details are de-identified to reduce risk; meaning and sequence are preserved.”
+- “A documented exchange exists; identifying information is not published.”
 - “Where evidence cannot be made public safely, it is retained privately.”
+
+BOUNDARY LINES (COPY/PASTE)
+- “Education only. Not legal advice.”
+- “Do not send sensitive personal data.”
+- “No case review. No guarantees.”
+- “Support does not buy coverage or outcomes.”
           </textarea>
 
           <div class="actions">
             <button class="btn primary" type="button" data-copy="#tpl">Copy template</button>
-            <a class="btn ghost" href="/toolkits/">See all toolkits</a>
+            <a class="btn ghost" href="/principles/">Read the standards</a>
           </div>
 
           <div class="meta" style="margin-top:8px">
-            Pro version expands the checklist and includes more rewrite drills and examples.
+            Pro version expands the checklist and adds printable drills for repeated use.
           </div>
 
+          <!-- Pay-link mapping (kept in-page; binder handles placeholders) -->
           <script>
             window.WITNESS_PAY = window.WITNESS_PAY || { links: {} };
             window.WITNESS_PAY.links = Object.assign({}, window.WITNESS_PAY.links, {
@@ -84,15 +236,99 @@ SAFE SENTENCE FRAME
         </div>
 
         <div class="card" style="margin-top:16px">
-          <div class="meta">
-            Educational only. Not legal advice. Not an emergency service.
+          <h2 class="h2" style="margin:0 0 8px">Worked example (before → after)</h2>
+          <p class="meta" style="margin:0 0 10px">
+            Goal: preserve meaning while removing identifying detail-combinations.
+          </p>
+
+          <div class="grid cols-2">
+            <div class="codebox" aria-label="Before example">
+              <div class="kicker" style="margin-bottom:8px"><span class="kdot"></span><span>Before (too identifying)</span></div>
+              <div class="smallnote">
+                “On March 12, 2025 at 8:40am, I met the HR manager at the ABC Building on West 4th.
+                She told me to ‘stop complaining’ in front of two staff members. I have the email thread and a screenshot.”
+              </div>
+            </div>
+
+            <div class="codebox" aria-label="After example">
+              <div class="kicker" style="margin-bottom:8px"><span class="kdot"></span><span>After (de-identified)</span></div>
+              <div class="smallnote">
+                “In early 2025, I raised concerns in a workplace setting with a senior staff member present.
+                The response included dismissive language in front of others. Private records exist, but identifying details are not published here.”
+              </div>
+            </div>
+          </div>
+
+          <div class="hr"></div>
+          <ul class="ul">
+            <li>Exact time + place removed.</li>
+            <li>Rare title generalized to reduce one-person identification.</li>
+            <li>Evidence referenced as privately retained, not published as raw screenshots.</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h2 class="h2" style="margin:0 0 8px">Limits & safety boundaries</h2>
+          <ul class="ul">
+            <li><strong>Education only. Not legal advice.</strong></li>
+            <li><strong>No case review:</strong> no document review, no “tell me what to file,” no strategy.</li>
+            <li><strong>No guarantees:</strong> this reduces risk; it cannot eliminate risk in all contexts.</li>
+            <li><strong>Do not send sensitive personal data:</strong> avoid identifiers and private records in messages.</li>
+            <li><strong>Editorial firewall:</strong> support and purchases do not buy coverage, outcomes, or favourable treatment.</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h2 class="h2" style="margin:0 0 8px">FAQ</h2>
+
+          <h3 style="margin:0 0 6px">Is this legal advice?</h3>
+          <p class="meta" style="margin:0 0 10px">No. Education only. Not legal advice.</p>
+
+          <h3 style="margin:0 0 6px">Will WitnessBC review my case or documents?</h3>
+          <p class="meta" style="margin:0 0 10px">No. No case review and no outcomes sold.</p>
+
+          <h3 style="margin:0 0 6px">What counts as “identifying information”?</h3>
+          <p class="meta" style="margin:0 0 10px">
+            Direct identifiers (names, addresses, contacts) and indirect identifiers (time + place + role combinations) that enable triangulation.
+          </p>
+
+          <h3 style="margin:0 0 6px">Should I publish screenshots as proof?</h3>
+          <p class="meta" style="margin:0 0 10px">
+            Screenshots often contain identifiers/metadata. A safer default is to describe that records exist and retain them privately.
+          </p>
+
+          <h3 style="margin:0 0 6px">Does buying a toolkit influence coverage?</h3>
+          <p class="meta" style="margin:0 0 10px">
+            No. Purchases and support do not buy coverage, outcomes, or favourable treatment.
+          </p>
+
+          <div class="actions" style="margin-top:10px">
+            <a class="btn ghost" href="/toolkits/">Browse Toolkits</a>
+            <a class="btn ghost" href="/toolkits/training/">Browse Training</a>
+            <a class="btn ghost" href="/send-a-tip/">Support (Tip)</a>
           </div>
         </div>
+
+        <div class="card" style="margin-top:16px">
+          <h2 class="h2" style="margin:0 0 8px">Next step</h2>
+          <p class="meta" style="margin:0 0 10px">
+            If you will use this more than once, upgrade to Pro for printable worksheets.
+            If you want habit-building drills, use the training course.
+          </p>
+          <div class="actions">
+            <a class="btn primary" data-buy="privacy">Buy Pro PDF ($19)</a>
+            <a class="btn ghost" href="/toolkits/training/">Privacy Training ($99)</a>
+            <a class="btn ghost" href="/principles/">Standards & boundaries</a>
+          </div>
+        </div>
+
       </div>
     </section>
   </main>
 
   <div id="site-footer"></div>
+
+  <!-- Existing site scripts (unchanged) -->
   <script src="/assets/js/witness-shell.js?v=2025-12-25.3"></script>
   <script src="/assets/js/toolkits.js?v=2025-12-25.3"></script>
   <script src="/assets/js/toolkits-free.js?v=2025-12-25.3"></script>
