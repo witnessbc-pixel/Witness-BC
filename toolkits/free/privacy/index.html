@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Free Toolkit (Privacy) • v2025.12.26.0 -->
+  <!-- Free Toolkit (Privacy) • v2025.12.26.1 -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -81,16 +81,49 @@
 
         <div class="kicker"><span class="kdot"></span><span>Toolkits · Free</span></div>
         <h1 class="h1">Privacy-First Publishing Checklist (Free)</h1>
+
         <p class="lead tight">
           A practical checklist and rewrite patterns to reduce accidental identification risk (“doxxing-by-detail”).
           <strong>Education only. Not legal advice.</strong>
         </p>
 
-        <div class="kv" style="margin-top:10px">
-          <span class="pill">Privacy-first</span>
-          <span class="pill">Education only</span>
-          <span class="pill">No case review</span>
-          <span class="pill">No outcomes sold</span>
+        <!-- v1.1: Who it’s for / not for (clarity + policy-safe conversion) -->
+        <div class="card" style="margin-top:14px">
+          <div class="center">
+            <div class="stack" style="gap:8px;max-width:78ch">
+              <h2 class="h2" style="margin:0">Who this is for (and who it is not for)</h2>
+              <div class="meta">
+                This page helps individuals publish responsibly without unintentionally identifying themselves or others. It does not provide case-specific strategy.
+              </div>
+            </div>
+            <div class="kv" aria-label="Page tags">
+              <span class="pill">Privacy-first</span>
+              <span class="pill">Education only</span>
+              <span class="pill">No case review</span>
+              <span class="pill">No outcomes sold</span>
+            </div>
+          </div>
+
+          <div class="hr"></div>
+
+          <div class="grid cols-2">
+            <div>
+              <h3 style="margin:0 0 6px">For</h3>
+              <ul class="ul">
+                <li>Individuals who want a calm, repeatable pre-publish privacy check.</li>
+                <li>Writers/creators who need safer wording (de-identification) without losing meaning.</li>
+                <li>Anyone building a public-interest post while minimizing accidental exposure.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 style="margin:0 0 6px">Not for</h3>
+              <ul class="ul">
+                <li>Legal advice, emergency situations, or time-critical professional decisions.</li>
+                <li>Document review, “tell me what to file,” or case/outcome strategy.</li>
+                <li>Publishing raw evidence that contains identifiers (names, addresses, private IDs).</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <div class="actions" style="margin-top:16px">
@@ -114,7 +147,20 @@
           </ul>
         </div>
 
-        <!-- Must keep: existing Privacy Checklist block (upgraded, but still a checklist block) -->
+        <!-- v1.1: Redaction vs de-identification (SEO + featured snippet coverage) -->
+        <div class="card" style="margin-top:16px">
+          <h2 class="h2" style="margin:0 0 8px">Redaction vs de-identification (plain English)</h2>
+          <p class="meta" style="margin:0 0 10px">
+            These terms are often mixed up. This page uses them in a practical way for publishing safety.
+          </p>
+          <ul class="ul">
+            <li><strong>Redaction</strong> removes or blocks a specific identifier (for example, a name or address).</li>
+            <li><strong>De-identification</strong> reduces the chance someone can be identified from combined details (time + place + role).</li>
+            <li><strong>Safer default for public posts:</strong> redact direct identifiers and also generalize indirect identifiers.</li>
+          </ul>
+        </div>
+
+        <!-- Must keep: existing Privacy Checklist block -->
         <div class="card" style="margin-top:16px">
           <h2 class="h2" style="margin:0 0 8px">Privacy checklist (minimum standard)</h2>
           <p class="meta" style="margin:0 0 10px">
@@ -239,14 +285,15 @@ BOUNDARY LINES (COPY/PASTE)
           <h2 class="h2" style="margin:0 0 8px">Worked example (before → after)</h2>
           <p class="meta" style="margin:0 0 10px">
             Goal: preserve meaning while removing identifying detail-combinations.
+            <strong>This is a fictional example for education.</strong>
           </p>
 
           <div class="grid cols-2">
             <div class="codebox" aria-label="Before example">
               <div class="kicker" style="margin-bottom:8px"><span class="kdot"></span><span>Before (too identifying)</span></div>
               <div class="smallnote">
-                “On March 12, 2025 at 8:40am, I met the HR manager at the ABC Building on West 4th.
-                She told me to ‘stop complaining’ in front of two staff members. I have the email thread and a screenshot.”
+                “On March 12, 2025 at 8:40am, I met a manager at a specific building near a major street.
+                They told me to ‘stop complaining’ in front of two staff members. I have an email thread and a screenshot.”
               </div>
             </div>
 
@@ -261,8 +308,8 @@ BOUNDARY LINES (COPY/PASTE)
 
           <div class="hr"></div>
           <ul class="ul">
-            <li>Exact time + place removed.</li>
-            <li>Rare title generalized to reduce one-person identification.</li>
+            <li>Exact time + place removed (reduces triangulation risk).</li>
+            <li>Rare title generalized (reduces one-person identification).</li>
             <li>Evidence referenced as privately retained, not published as raw screenshots.</li>
           </ul>
         </div>
@@ -278,6 +325,7 @@ BOUNDARY LINES (COPY/PASTE)
           </ul>
         </div>
 
+        <!-- v1.1: Expanded FAQ set (PAA coverage + keyword capture) -->
         <div class="card" style="margin-top:16px">
           <h2 class="h2" style="margin:0 0 8px">FAQ</h2>
 
@@ -292,9 +340,24 @@ BOUNDARY LINES (COPY/PASTE)
             Direct identifiers (names, addresses, contacts) and indirect identifiers (time + place + role combinations) that enable triangulation.
           </p>
 
+          <h3 style="margin:0 0 6px">How do I remove identifying details from text without changing meaning?</h3>
+          <p class="meta" style="margin:0 0 10px">
+            Keep the public-interest point and sequence; remove direct identifiers; generalize time/location/role; paraphrase searchable quotes.
+          </p>
+
           <h3 style="margin:0 0 6px">Should I publish screenshots as proof?</h3>
           <p class="meta" style="margin:0 0 10px">
             Screenshots often contain identifiers/metadata. A safer default is to describe that records exist and retain them privately.
+          </p>
+
+          <h3 style="margin:0 0 6px">What are indirect identifiers, and why do they matter?</h3>
+          <p class="meta" style="margin:0 0 10px">
+            Small details that seem harmless alone can identify someone when combined (for example: a precise date + specific place + niche role).
+          </p>
+
+          <h3 style="margin:0 0 6px">Can I publish a timeline safely?</h3>
+          <p class="meta" style="margin:0 0 10px">
+            Often yes, if you generalize dates (“early 2025”), remove unique markers, and avoid naming people or exact locations.
           </p>
 
           <h3 style="margin:0 0 6px">Does buying a toolkit influence coverage?</h3>
@@ -306,6 +369,30 @@ BOUNDARY LINES (COPY/PASTE)
             <a class="btn ghost" href="/toolkits/">Browse Toolkits</a>
             <a class="btn ghost" href="/toolkits/training/">Browse Training</a>
             <a class="btn ghost" href="/send-a-tip/">Support (Tip)</a>
+          </div>
+        </div>
+
+        <!-- v1.1: Internal links block grouped by intent -->
+        <div class="card" style="margin-top:16px">
+          <h2 class="h2" style="margin:0 0 8px">Related links</h2>
+          <p class="meta" style="margin:0 0 10px">Choose by intent. These pages do not collect sensitive personal information.</p>
+
+          <div class="grid cols-2">
+            <div>
+              <h3 style="margin:0 0 6px">Learn</h3>
+              <ul class="ul">
+                <li><a href="/principles/">Principles (standards & boundaries)</a></li>
+                <li><a href="/corrections/">Corrections (how updates are handled)</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 style="margin:0 0 6px">Upgrade / Support</h3>
+              <ul class="ul">
+                <li><a href="/toolkits/">Toolkits (downloads)</a></li>
+                <li><a href="/toolkits/training/">Training (courses)</a></li>
+                <li><a href="/send-a-tip/">Support (tip — no influence)</a></li>
+              </ul>
+            </div>
           </div>
         </div>
 
