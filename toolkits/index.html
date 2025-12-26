@@ -1,24 +1,78 @@
+<!-- /toolkits/index.html • Toolkits • v2025.12.26.2 -->
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Toolkits • v2025.12.25.3 -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Toolkits – WitnessBC</title>
-  <meta name="description" content="Toolkits: free public templates + paid Pro downloads. Built for accountable, low-drama publishing. Educational only — not legal advice." />
+  <title>WitnessBC Toolkits — Accountability Templates (Privacy-first, Source-driven)</title>
+  <meta name="description" content="WitnessBC Toolkits: free public templates (HTML) + paid Pro downloads (PDF packs). Built for accountable, privacy-first publishing: sourcing discipline, corrections, de-identification, and record hygiene. Educational only — not legal advice." />
   <link rel="canonical" href="https://www.witnessbc.com/toolkits/" />
 
   <meta property="og:site_name" content="WitnessBC" />
-  <meta property="og:title" content="Toolkits – WitnessBC" />
-  <meta property="og:description" content="Free public templates + paid Pro downloads. Educational only." />
+  <meta property="og:title" content="WitnessBC Toolkits — Accountability Templates" />
+  <meta property="og:description" content="Free public templates + paid Pro downloads. Sourcing discipline, privacy-first publishing, visible corrections." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.witnessbc.com/toolkits/" />
   <meta property="og:image" content="https://www.witnessbc.com/assets/img/og.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#fbfcfe" />
-  <link rel="stylesheet" href="/assets/css/witness-shell.css?v=2025-12-25.3" />
+
+  <link rel="stylesheet" href="/assets/css/witness-shell.css?v=2025-12-26.2" />
+
+  <!-- Structured data: Toolkits list + offers -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "name":"WitnessBC Toolkits",
+    "url":"https://www.witnessbc.com/toolkits/",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"url":"https://www.witnessbc.com/toolkits/free/sourcing/"},
+      {"@type":"ListItem","position":2,"url":"https://www.witnessbc.com/toolkits/free/corrections/"},
+      {"@type":"ListItem","position":3,"url":"https://www.witnessbc.com/toolkits/free/privacy/"},
+      {"@type":"ListItem","position":4,"url":"https://www.witnessbc.com/toolkits/free/public-record/"},
+      {"@type":"ListItem","position":5,"url":"https://www.witnessbc.com/toolkits/free/story-template/"},
+      {"@type":"ListItem","position":6,"url":"https://www.witnessbc.com/toolkits/free/action-map/"}
+    ]
+  }
+  </script>
+
+  <!-- Structured data: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Is this legal advice?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. Toolkits and training are general-purpose education for publishing discipline. No case review and no outcomes sold."}
+      },
+      {
+        "@type":"Question",
+        "name":"Do purchases buy coverage or favourable treatment?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. Purchases do not buy coverage, outcomes, or favourable treatment."}
+      },
+      {
+        "@type":"Question",
+        "name":"What is the difference between Free and Pro?",
+        "acceptedAnswer":{"@type":"Answer","text":"Free pages provide copy/paste HTML templates. Pro downloads provide printable PDF packs and formatted sheets for repeated use."}
+      },
+      {
+        "@type":"Question",
+        "name":"How does delivery work?",
+        "acceptedAnswer":{"@type":"Answer","text":"Checkout is handled by Stripe. Delivery is digital. If delivery fails, email support and the link is resent."}
+      },
+      {
+        "@type":"Question",
+        "name":"Are refunds available?",
+        "acceptedAnswer":{"@type":"Answer","text":"Digital goods are generally non-refundable unless delivery fails."}
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body data-active="/toolkits/">
@@ -26,26 +80,30 @@
   <div id="site-header"></div>
 
   <main id="main">
+    <!-- HERO -->
     <section class="section">
       <div class="wrap">
         <div class="kicker"><span class="kdot"></span><span>Toolkits</span></div>
-        <h1 class="h1">Free public templates. Paid Pro downloads.</h1>
+        <h1 class="h1">Accountability toolkits for privacy-first, source-driven publishing.</h1>
         <p class="lead">
-          Simple, practical assets for accountable publishing. Each toolkit has a free public version (HTML) and a paid Pro download (PDF pack).
-          Educational only — not legal advice. No case review.
+          Practical assets for separating claims from evidence, reducing privacy risk, and publishing corrections cleanly.
+          Each toolkit includes a free public version (HTML) and a paid Pro download (PDF pack).
+          Educational only — not legal advice. No case review. No outcomes sold.
         </p>
 
         <div class="actions" style="margin-top:16px">
           <a class="btn primary" data-buy="pro">Buy Pro Bundle ($99)</a>
-          <a class="btn ghost" href="#toolkits">See all toolkits</a>
+          <a class="btn ghost" href="#bundles">Bundles</a>
+          <a class="btn ghost" href="#toolkits">All toolkits</a>
           <a class="btn ghost" href="/toolkits/training/">Training</a>
         </div>
 
         <div class="card" style="margin-top:16px">
           <div class="kv">
-            <span class="pill">Free pages index</span>
-            <span class="pill">Pro = downloadable PDF</span>
-            <span class="pill">No outcomes sold</span>
+            <span class="pill">Free templates (HTML)</span>
+            <span class="pill">Pro downloads (PDF packs)</span>
+            <span class="pill">Privacy-first</span>
+            <span class="pill">Visible corrections</span>
           </div>
           <div class="meta" style="margin-top:10px">
             Purchases do not buy coverage, outcomes, or favourable treatment. Email is used only for delivery.
@@ -73,7 +131,80 @@
       </div>
     </section>
 
+    <!-- WHO IT IS FOR + WHAT IT SOLVES -->
     <section class="section sm">
+      <div class="wrap grid cols-2">
+        <article class="card">
+          <h3 style="margin:0 0 6px">Who these are for</h3>
+          <ul class="ul">
+            <li>Creators and writers who publish claims and want cleaner sourcing.</li>
+            <li>Community organizations that publish statements and need privacy-first guardrails.</li>
+            <li>Small teams that want repeatable templates instead of ad-hoc “one-off” docs.</li>
+            <li>Anyone who needs a correction-ready workflow without turning publishing into chaos.</li>
+          </ul>
+          <div class="hr"></div>
+          <div class="meta">
+            Not built for emergencies or deadlines that require professional advice. These are publishing discipline assets.
+          </div>
+        </article>
+
+        <aside class="card">
+          <h3 style="margin:0 0 6px">What problems this prevents</h3>
+          <ul class="ul">
+            <li>Claims written without evidence mapping.</li>
+            <li>Sources lost over time or links dying without a private record.</li>
+            <li>Accidental identification from detail-combination leaks (time + place + role).</li>
+            <li>Silent edits and messy updates that destroy credibility later.</li>
+          </ul>
+          <div class="hr"></div>
+          <div class="meta">
+            Goal: publish what is defensible, label limits clearly, reduce avoidable risk, and correct cleanly.
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- FREE VS PRO -->
+    <section class="section sm">
+      <div class="wrap">
+        <div class="card">
+          <h3 style="margin:0 0 10px">Free vs Pro</h3>
+          <table class="table" aria-label="Free vs Pro comparison">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Free (Public HTML)</th>
+                <th>Pro (PDF pack)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Use</strong></td>
+                <td>Copy/paste templates and quick examples.</td>
+                <td>Printable sheets, formatted pages, clean variants for repeated use.</td>
+              </tr>
+              <tr>
+                <td><strong>Best for</strong></td>
+                <td>First-time setup and lightweight publishing.</td>
+                <td>Teams, recurring work, and consistent workflow quality.</td>
+              </tr>
+              <tr>
+                <td><strong>Delivery</strong></td>
+                <td>Instant (public page).</td>
+                <td>Digital download after Stripe checkout.</td>
+              </tr>
+              <tr>
+                <td><strong>Boundary</strong></td>
+                <td colspan="2">Educational only. Not legal advice. No case review. No outcomes sold.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUNDLES -->
+    <section class="section sm" id="bundles">
       <div class="wrap grid cols-2">
         <article class="card">
           <h3 style="margin:0 0 6px">Bundles</h3>
@@ -93,7 +224,11 @@
               <button class="btn ghost" type="button" data-details-toggle="starter" aria-expanded="false">What’s inside</button>
             </div>
             <div class="meta" data-details="starter" hidden style="margin-top:10px">
-              Pro downloads for: Sourcing Discipline, Privacy & De-identification, Corrections & Update Protocol.
+              <ul class="ul">
+                <li>Sourcing Discipline Pack (Pro)</li>
+                <li>Privacy & De-identification Pack (Pro)</li>
+                <li>Corrections & Update Protocol (Pro)</li>
+              </ul>
             </div>
           </div>
 
@@ -133,30 +268,31 @@
         </article>
 
         <aside class="card">
-          <h3 style="margin:0 0 6px">How it works</h3>
-          <ul style="margin:0;padding-left:18px;color:var(--muted)">
-            <li><strong>Free</strong> button opens a public HTML page (indexable).</li>
+          <h3 style="margin:0 0 6px">How checkout and delivery work</h3>
+          <ul class="ul">
+            <li><strong>Free</strong> opens a public HTML page (indexable).</li>
             <li><strong>Buy</strong> opens Stripe for the Pro PDF download.</li>
             <li>If delivery fails, email support and the link is resent.</li>
           </ul>
           <div class="hr"></div>
           <div class="meta">
-            Educational only. Not legal advice. Not an emergency service.
+            Support email:
+            <a href="mailto:hello@witnessbc.com?subject=WitnessBC%20—%20Toolkit%20delivery%20issue">hello@witnessbc.com</a>
           </div>
           <div class="hr"></div>
           <div class="meta">
-            Support email:
-            <a href="mailto:hello@witnessbc.com?subject=WitnessBC%20—%20Toolkit%20delivery%20issue">hello@witnessbc.com</a>
+            Purchases do not buy coverage, outcomes, or favourable treatment.
           </div>
         </aside>
       </div>
     </section>
 
+    <!-- ALL TOOLKITS -->
     <section class="section" id="toolkits">
       <div class="wrap">
         <h2 class="h2">All toolkits</h2>
         <p class="meta" style="margin:0 0 14px">
-          Each toolkit includes a free public version + a paid Pro download. No extra navigation. No unrelated links.
+          Each toolkit includes a free public version + a paid Pro download. The free page is the starting point. The Pro pack is for repeat use.
         </p>
 
         <div class="productgrid">
@@ -164,17 +300,22 @@
             <div class="price">
               <div>
                 <h3>Sourcing Discipline Pack</h3>
-                <div class="meta">Source log + claim/evidence split</div>
+                <div class="meta">Source log + claim/evidence map</div>
               </div>
               <strong>$19</strong>
             </div>
+            <ul>
+              <li>Separate claims from evidence.</li>
+              <li>Log sources with dates, limits, and notes.</li>
+              <li>Publish with fewer “collapse later” errors.</li>
+            </ul>
             <div class="actions">
               <a class="btn ghost" href="/toolkits/free/sourcing/">Free</a>
               <a class="btn primary" data-buy="sourcing">Buy Pro</a>
               <button class="btn ghost" type="button" data-details-toggle="sourcing" aria-expanded="false">Details</button>
             </div>
             <div class="meta" data-details="sourcing" hidden>
-              Free page: copy/paste template + quick examples. Pro: printable PDF pack and formatted sheets.
+              Free: copy/paste template + quick examples. Pro: printable PDF pack and formatted sheets for repeated use.
             </div>
           </article>
 
@@ -182,17 +323,22 @@
             <div class="price">
               <div>
                 <h3>Corrections & Update Protocol</h3>
-                <div class="meta">Correction note + change-log</div>
+                <div class="meta">Correction note + changelog pattern</div>
               </div>
               <strong>$9</strong>
             </div>
+            <ul>
+              <li>Fix the record without rewriting history.</li>
+              <li>Log changes clearly with dates and reason.</li>
+              <li>Reduce reputational damage from silent edits.</li>
+            </ul>
             <div class="actions">
               <a class="btn ghost" href="/toolkits/free/corrections/">Free</a>
               <a class="btn primary" data-buy="corrections">Buy Pro</a>
               <button class="btn ghost" type="button" data-details-toggle="corrections" aria-expanded="false">Details</button>
             </div>
             <div class="meta" data-details="corrections" hidden>
-              Free page: correction note template and a clean changelog pattern. Pro: ready-to-print protocol pack.
+              Free: correction note template + clean changelog. Pro: formatted protocol pack for different publishing formats.
             </div>
           </article>
 
@@ -204,13 +350,18 @@
               </div>
               <strong>$19</strong>
             </div>
+            <ul>
+              <li>Reduce accidental identification risk.</li>
+              <li>Avoid detail-combination leaks (time + place + role).</li>
+              <li>Publish patterns safely while retaining raw records privately.</li>
+            </ul>
             <div class="actions">
               <a class="btn ghost" href="/toolkits/free/privacy/">Free</a>
               <a class="btn primary" data-buy="privacy">Buy Pro</a>
               <button class="btn ghost" type="button" data-details-toggle="privacy" aria-expanded="false">Details</button>
             </div>
             <div class="meta" data-details="privacy" hidden>
-              Free page: de-identification checklist + safe rewrite patterns. Pro: full checklist + examples.
+              Free: de-identification checklist + safe rewrite patterns. Pro: expanded checklist and additional drills/examples.
             </div>
           </article>
 
@@ -222,13 +373,18 @@
               </div>
               <strong>$29</strong>
             </div>
+            <ul>
+              <li>Prevent “link rot” and lost files.</li>
+              <li>Keep originals clean and store notes separately.</li>
+              <li>Maintain a simple private index for future corrections.</li>
+            </ul>
             <div class="actions">
               <a class="btn ghost" href="/toolkits/free/public-record/">Free</a>
               <a class="btn primary" data-buy="publicrec">Buy Pro</a>
               <button class="btn ghost" type="button" data-details-toggle="publicrec" aria-expanded="false">Details</button>
             </div>
             <div class="meta" data-details="publicrec" hidden>
-              Free page: naming rules + what to save. Pro: full printable checklist + archiving workflow.
+              Free: naming rules + what to save. Pro: full printable workflow and deeper archiving steps.
             </div>
           </article>
 
@@ -240,13 +396,18 @@
               </div>
               <strong>$19</strong>
             </div>
+            <ul>
+              <li>Publish with a repeatable structure.</li>
+              <li>State limits clearly to reduce over-claiming.</li>
+              <li>Include privacy and corrections blocks by default.</li>
+            </ul>
             <div class="actions">
               <a class="btn ghost" href="/toolkits/free/story-template/">Free</a>
               <a class="btn primary" data-buy="storytemp">Buy Pro</a>
               <button class="btn ghost" type="button" data-details-toggle="storytemp" aria-expanded="false">Details</button>
             </div>
             <div class="meta" data-details="storytemp" hidden>
-              Free page: structured outline you can publish today. Pro: formatted template pack + examples.
+              Free: publishable structure. Pro: formatted variants (short/long) and examples.
             </div>
           </article>
 
@@ -258,23 +419,31 @@
               </div>
               <strong>$29</strong>
             </div>
+            <ul>
+              <li>Map a minimum defensible claim to next actions.</li>
+              <li>Choose what is public vs private evidence.</li>
+              <li>Set review points for updates or retractions.</li>
+            </ul>
             <div class="actions">
               <a class="btn ghost" href="/toolkits/free/action-map/">Free</a>
               <a class="btn primary" data-buy="actionmap">Buy Pro</a>
               <button class="btn ghost" type="button" data-details-toggle="actionmap" aria-expanded="false">Details</button>
             </div>
             <div class="meta" data-details="actionmap" hidden>
-              Free page: simple decision steps. Pro: full map + checklists and scripts.
+              Free: simple decision steps. Pro: fuller map, checklists, and scripts.
             </div>
           </article>
         </div>
 
+        <!-- FAQ -->
         <div class="card" style="margin-top:16px">
           <h3 style="margin:0 0 6px">FAQ</h3>
           <div class="meta">
             <strong>Is this legal advice?</strong> No. Educational only.<br/>
             <strong>Do you review cases?</strong> No.<br/>
-            <strong>Refunds?</strong> Digital goods are generally non-refundable unless delivery fails.
+            <strong>Do purchases buy coverage or favourable treatment?</strong> No.<br/>
+            <strong>Refunds?</strong> Digital goods are generally non-refundable unless delivery fails.<br/>
+            <strong>Updates?</strong> Minor edits within the same toolkit version may be updated over time. Major versions may be released as new products.
           </div>
         </div>
       </div>
@@ -283,8 +452,8 @@
 
   <div id="site-footer"></div>
 
-  <script src="/assets/js/witness-shell.js?v=2025-12-25.3"></script>
-  <script src="/assets/js/toolkits.js?v=2025-12-25.3"></script>
+  <script src="/assets/js/witness-shell.js?v=2025-12-26.2"></script>
+  <script src="/assets/js/toolkits.js?v=2025-12-26.2"></script>
 
   <script>
     (function () {
@@ -302,5 +471,3 @@
   </script>
 </body>
 </html>
-
-
