@@ -1,4 +1,4 @@
-<!-- /toolkits/index.html • Toolkits • v2025.12.26.3 -->
+<!-- /toolkits/index.html • Toolkits • v2025.12.26.4 -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -21,37 +21,50 @@
 
   <link rel="stylesheet" href="/assets/css/witness-shell.css?v=2025-12-26.3" />
 
-  <!-- Structured data: Toolkits list -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ItemList",
-    "name":"WitnessBC Toolkits",
-    "url":"https://www.witnessbc.com/toolkits/",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"url":"https://www.witnessbc.com/toolkits/free/sourcing/"},
-      {"@type":"ListItem","position":2,"url":"https://www.witnessbc.com/toolkits/free/corrections/"},
-      {"@type":"ListItem","position":3,"url":"https://www.witnessbc.com/toolkits/free/privacy/"},
-      {"@type":"ListItem","position":4,"url":"https://www.witnessbc.com/toolkits/free/public-record/"},
-      {"@type":"ListItem","position":5,"url":"https://www.witnessbc.com/toolkits/free/story-template/"},
-      {"@type":"ListItem","position":6,"url":"https://www.witnessbc.com/toolkits/free/action-map/"},
-      {"@type":"ListItem","position":7,"url":"https://www.witnessbc.com/toolkits/training/"}
-    ]
-  }
-  </script>
-
-  <!-- Structured data: Products & Offers (anchors on this page) -->
+  <!-- Structured data: WebPage + Breadcrumbs + ItemList + Products + FAQ -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@graph":[
       {
+        "@type":"WebSite",
+        "@id":"https://www.witnessbc.com/#website",
+        "name":"WitnessBC",
+        "url":"https://www.witnessbc.com/"
+      },
+      {
         "@type":"WebPage",
         "@id":"https://www.witnessbc.com/toolkits/#webpage",
         "url":"https://www.witnessbc.com/toolkits/",
         "name":"WitnessBC Toolkits — Accountability Templates & Pro PDF Packs",
-        "isPartOf":{"@id":"https://www.witnessbc.com/#website"}
+        "isPartOf":{"@id":"https://www.witnessbc.com/#website"},
+        "inLanguage":"en-CA",
+        "description":"Free public templates (HTML) + paid Pro downloads (PDF packs) for privacy-first, source-driven publishing discipline. Education only — not legal advice."
       },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://www.witnessbc.com/toolkits/#breadcrumbs",
+        "itemListElement":[
+          { "@type":"ListItem", "position":1, "name":"Home", "item":"https://www.witnessbc.com/" },
+          { "@type":"ListItem", "position":2, "name":"Toolkits", "item":"https://www.witnessbc.com/toolkits/" }
+        ]
+      },
+      {
+        "@type":"ItemList",
+        "@id":"https://www.witnessbc.com/toolkits/#itemlist",
+        "name":"WitnessBC Toolkits",
+        "url":"https://www.witnessbc.com/toolkits/",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"url":"https://www.witnessbc.com/toolkits/free/sourcing/"},
+          {"@type":"ListItem","position":2,"url":"https://www.witnessbc.com/toolkits/free/corrections/"},
+          {"@type":"ListItem","position":3,"url":"https://www.witnessbc.com/toolkits/free/privacy/"},
+          {"@type":"ListItem","position":4,"url":"https://www.witnessbc.com/toolkits/free/public-record/"},
+          {"@type":"ListItem","position":5,"url":"https://www.witnessbc.com/toolkits/free/story-template/"},
+          {"@type":"ListItem","position":6,"url":"https://www.witnessbc.com/toolkits/free/action-map/"},
+          {"@type":"ListItem","position":7,"url":"https://www.witnessbc.com/toolkits/training/"}
+        ]
+      },
+
       {
         "@type":"Product",
         "@id":"https://www.witnessbc.com/toolkits/#product-sourcing",
@@ -59,7 +72,7 @@
         "description":"Source log + claim/evidence map. Pro pack is a printable PDF workflow for repeat use.",
         "brand":{"@type":"Brand","name":"WitnessBC"},
         "url":"https://www.witnessbc.com/toolkits/#sourcing",
-        "offers":{"@type":"Offer","price":"19","priceCurrency":"CAD","availability":"https://schema.org/InStock","url":"https://www.witnessbc.com/toolkits/#sourcing"}
+        "offers":{"@type":"Offer","price":"19","priceCurrency":"CAD","availability":"https://schema.org/InStock","url":"https://buy.stripe.com/REPLACE_SOURCING_19"}
       },
       {
         "@type":"Product",
@@ -68,7 +81,7 @@
         "description":"Correction note + changelog pattern. Pro pack provides formatted variants for repeat use.",
         "brand":{"@type":"Brand","name":"WitnessBC"},
         "url":"https://www.witnessbc.com/toolkits/#corrections",
-        "offers":{"@type":"Offer","price":"9","priceCurrency":"CAD","availability":"https://schema.org/InStock","url":"https://www.witnessbc.com/toolkits/#corrections"}
+        "offers":{"@type":"Offer","price":"9","priceCurrency":"CAD","availability":"https://schema.org/InStock","url":"https://buy.stripe.com/REPLACE_CORRECTIONS_9"}
       },
       {
         "@type":"Product",
@@ -77,7 +90,7 @@
         "description":"De-identification checklist + rewrite patterns. Pro pack includes expanded drills and examples.",
         "brand":{"@type":"Brand","name":"WitnessBC"},
         "url":"https://www.witnessbc.com/toolkits/#privacy",
-        "offers":{"@type":"Offer","price":"19","priceCurrency":"CAD","availability":"https://schema.org/InStock","url":"https://www.witnessbc.com/toolkits/#privacy"}
+        "offers":{"@type":"Offer","price":"19","priceCurrency":"CAD","availability":"https://schema.org/InStock","url":"https://buy.stripe.com/REPLACE_PRIVACY_19"}
       },
       {
         "@type":"Product",
@@ -86,7 +99,7 @@
         "description":"Archiving + evidence hygiene. Pro pack provides printable workflow and deeper steps.",
         "brand":{"@type":"Brand","name":"WitnessBC"},
         "url":"https://www.witnessbc.com/toolkits/#publicrec",
-        "offers":{"@type":"Offer","price":"29","priceCurrency":"CAD","availability":"https://schema.org/InStock","url":"https://www.witnessbc.com/toolkits/#publicrec"}
+        "offers":{"@type":"Offer","price":"29","priceCurrency":"CAD","availability":"https://schema.org/InStock","url":"https://buy.stripe.com/REPLACE_PUBLICREC_29"}
       },
       {
         "@type":"Product",
@@ -95,7 +108,7 @@
         "description":"Scope → sources → limits. Pro pack provides formatted variants and examples.",
         "brand":{"@type":"Brand","name":"WitnessBC"},
         "url":"https://www.witnessbc.com/toolkits/#storytemp",
-        "offers":{"@type":"Offer","price":"19","priceCurrency":"CAD","availability":"https://schema.org/InStock","url":"https://www.witnessbc.com/toolkits/#storytemp"}
+        "offers":{"@type":"Offer","price":"19","priceCurrency":"CAD","availability":"https://schema.org/InStock","url":"https://buy.stripe.com/REPLACE_STORYTEMP_19"}
       },
       {
         "@type":"Product",
@@ -104,7 +117,7 @@
         "description":"General next steps (non-case). Pro pack includes fuller map, checklists, and scripts.",
         "brand":{"@type":"Brand","name":"WitnessBC"},
         "url":"https://www.witnessbc.com/toolkits/#actionmap",
-        "offers":{"@type":"Offer","price":"29","priceCurrency":"CAD","availability":"https://schema.org/InStock","url":"https://www.witnessbc.com/toolkits/#actionmap"}
+        "offers":{"@type":"Offer","price":"29","priceCurrency":"CAD","availability":"https://schema.org/InStock","url":"https://buy.stripe.com/REPLACE_ACTIONMAP_29"}
       },
       {
         "@type":"Product",
@@ -113,7 +126,7 @@
         "description":"Sourcing + Privacy + Corrections (Pro). Best entry bundle.",
         "brand":{"@type":"Brand","name":"WitnessBC"},
         "url":"https://www.witnessbc.com/toolkits/#bundles",
-        "offers":{"@type":"Offer","price":"39","priceCurrency":"CAD","availability":"https://schema.org/InStock","url":"https://www.witnessbc.com/toolkits/#bundles"}
+        "offers":{"@type":"Offer","price":"39","priceCurrency":"CAD","availability":"https://schema.org/InStock","url":"https://buy.stripe.com/REPLACE_STARTER_39"}
       },
       {
         "@type":"Product",
@@ -122,7 +135,7 @@
         "description":"All Toolkits v1 (Pro) in one pack for repeat use.",
         "brand":{"@type":"Brand","name":"WitnessBC"},
         "url":"https://www.witnessbc.com/toolkits/#bundles",
-        "offers":{"@type":"Offer","price":"99","priceCurrency":"CAD","availability":"https://schema.org/InStock","url":"https://www.witnessbc.com/toolkits/#bundles"}
+        "offers":{"@type":"Offer","price":"99","priceCurrency":"CAD","availability":"https://schema.org/InStock","url":"https://buy.stripe.com/REPLACE_PRO_99"}
       },
       {
         "@type":"Product",
@@ -131,47 +144,44 @@
         "description":"Internal use up to 5 people. Digital downloads only. No services included.",
         "brand":{"@type":"Brand","name":"WitnessBC"},
         "url":"https://www.witnessbc.com/toolkits/#bundles",
-        "offers":{"@type":"Offer","price":"149","priceCurrency":"CAD","availability":"https://schema.org/InStock","url":"https://www.witnessbc.com/toolkits/#bundles"}
-      }
-    ]
-  }
-  </script>
+        "offers":{"@type":"Offer","price":"149","priceCurrency":"CAD","availability":"https://schema.org/InStock","url":"https://buy.stripe.com/REPLACE_TEAM_149"}
+      },
 
-  <!-- Structured data: FAQ -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
       {
-        "@type":"Question",
-        "name":"Is this legal advice?",
-        "acceptedAnswer":{"@type":"Answer","text":"No. Toolkits and training are general-purpose education for publishing discipline. No case review and no outcomes sold."}
-      },
-      {
-        "@type":"Question",
-        "name":"Do purchases buy coverage or favourable treatment?",
-        "acceptedAnswer":{"@type":"Answer","text":"No. Purchases do not buy coverage, outcomes, or favourable treatment."}
-      },
-      {
-        "@type":"Question",
-        "name":"What is the difference between Free and Pro?",
-        "acceptedAnswer":{"@type":"Answer","text":"Free pages provide copy/paste HTML templates. Pro downloads provide printable PDF packs and formatted sheets for repeated use."}
-      },
-      {
-        "@type":"Question",
-        "name":"How does delivery work?",
-        "acceptedAnswer":{"@type":"Answer","text":"Checkout is handled by Stripe. Delivery is digital. If delivery fails, email support and the link is resent."}
-      },
-      {
-        "@type":"Question",
-        "name":"Are refunds available?",
-        "acceptedAnswer":{"@type":"Answer","text":"Digital goods are generally non-refundable unless delivery fails."}
-      },
-      {
-        "@type":"Question",
-        "name":"Do you review my case or edit my story?",
-        "acceptedAnswer":{"@type":"Answer","text":"No. WitnessBC does not provide case review, individualized advice, or outcome services. Toolkits are self-serve educational assets."}
+        "@type":"FAQPage",
+        "@id":"https://www.witnessbc.com/toolkits/#faq",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"Is this legal advice?",
+            "acceptedAnswer":{"@type":"Answer","text":"No. Toolkits and training are general-purpose education for publishing discipline. No case review and no outcomes sold."}
+          },
+          {
+            "@type":"Question",
+            "name":"Do purchases buy coverage or favourable treatment?",
+            "acceptedAnswer":{"@type":"Answer","text":"No. Purchases do not buy coverage, outcomes, or favourable treatment."}
+          },
+          {
+            "@type":"Question",
+            "name":"What is the difference between Free and Pro?",
+            "acceptedAnswer":{"@type":"Answer","text":"Free pages provide copy/paste HTML templates. Pro downloads provide printable PDF packs and formatted sheets for repeated use."}
+          },
+          {
+            "@type":"Question",
+            "name":"How does delivery work?",
+            "acceptedAnswer":{"@type":"Answer","text":"Checkout is handled by Stripe. Delivery is digital. If delivery fails, email support and the link is resent."}
+          },
+          {
+            "@type":"Question",
+            "name":"Are refunds available?",
+            "acceptedAnswer":{"@type":"Answer","text":"Digital goods are generally non-refundable unless delivery fails."}
+          },
+          {
+            "@type":"Question",
+            "name":"Do you review my case or edit my story?",
+            "acceptedAnswer":{"@type":"Answer","text":"No. WitnessBC does not provide case review, individualized advice, or outcome services. Toolkits are self-serve educational assets."}
+          }
+        ]
       }
     ]
   }
@@ -202,7 +212,7 @@
           <a class="btn ghost" href="#quickstart">Quick start</a>
           <a class="btn ghost" href="#bundles">Bundles</a>
           <a class="btn ghost" href="#toolkits">All toolkits</a>
-          <a class="btn ghost" href="/toolkits/training/">Training</a>
+          <a class="btn ghost" href="#training">Training</a>
         </div>
 
         <div class="card" style="margin-top:16px">
@@ -215,49 +225,54 @@
           </div>
 
           <div class="meta" style="margin-top:10px">
-            Purchases do not buy coverage, outcomes, or favourable treatment. Email is used only for delivery. If you need professional advice for a time-sensitive or high-risk situation, these toolkits are not a substitute.
+            Purchases do not buy coverage, outcomes, or favourable treatment. Email is used only for delivery.
+            <strong>Do not send sensitive personal data.</strong>
+            If you need professional advice for a time-sensitive or high-risk situation, these toolkits are not a substitute.
           </div>
         </div>
 
         <!-- Stripe links map (replace REPLACE_* when ready) -->
         <script>
-          window.WITNESS_PAY = {
-            links: {
-              sourcing:     "https://buy.stripe.com/REPLACE_SOURCING_19",
-              corrections:  "https://buy.stripe.com/REPLACE_CORRECTIONS_9",
-              privacy:      "https://buy.stripe.com/REPLACE_PRIVACY_19",
-              publicrec:    "https://buy.stripe.com/REPLACE_PUBLICREC_29",
-              storytemp:    "https://buy.stripe.com/REPLACE_STORYTEMP_19",
-              actionmap:    "https://buy.stripe.com/REPLACE_ACTIONMAP_29",
-              starter:      "https://buy.stripe.com/REPLACE_STARTER_39",
-              pro:          "https://buy.stripe.com/REPLACE_PRO_99",
-              team:         "https://buy.stripe.com/REPLACE_TEAM_149",
-              train_evidence101: "https://buy.stripe.com/REPLACE_TRAIN_EVIDENCE101",
-              train_privacy:     "https://buy.stripe.com/REPLACE_TRAIN_PRIVACY"
-            }
-          };
+          window.WITNESS_PAY = window.WITNESS_PAY || { links: {} };
+          window.WITNESS_PAY.links = Object.assign({}, window.WITNESS_PAY.links, {
+            sourcing:          "https://buy.stripe.com/REPLACE_SOURCING_19",
+            corrections:       "https://buy.stripe.com/REPLACE_CORRECTIONS_9",
+            privacy:           "https://buy.stripe.com/REPLACE_PRIVACY_19",
+            publicrec:         "https://buy.stripe.com/REPLACE_PUBLICREC_29",
+            storytemp:         "https://buy.stripe.com/REPLACE_STORYTEMP_19",
+            actionmap:         "https://buy.stripe.com/REPLACE_ACTIONMAP_29",
+            starter:           "https://buy.stripe.com/REPLACE_STARTER_39",
+            pro:               "https://buy.stripe.com/REPLACE_PRO_99",
+            team:              "https://buy.stripe.com/REPLACE_TEAM_149",
+            train_evidence101:  "https://buy.stripe.com/REPLACE_TRAIN_EVIDENCE101",
+            train_privacy:      "https://buy.stripe.com/REPLACE_TRAIN_PRIVACY"
+          });
         </script>
       </div>
     </section>
 
-    <!-- QUICK START (conversion + clarity) -->
+    <!-- QUICK START -->
     <section class="section sm" id="quickstart">
       <div class="wrap grid cols-2">
         <article class="card">
-          <h3 style="margin:0 0 6px">Quick start (3 steps)</h3>
+          <h2 class="h2" style="margin:0 0 8px">Quick start (3 steps)</h2>
           <ol class="ul">
-            <li><strong>Pick a starting point:</strong> open the free template page for your need (sourcing, privacy, corrections, record hygiene).</li>
-            <li><strong>Run the minimum standard:</strong> use the checklist to remove avoidable errors (over-claiming, privacy leakage, missing sources).</li>
+            <li><strong>Start free:</strong> open the free template page that matches your need.</li>
+            <li><strong>Run the minimum standard:</strong> reduce avoidable errors (over-claiming, privacy leakage, missing sources).</li>
             <li><strong>Upgrade only if you repeat the work:</strong> Pro packs are printable, consistent, and built for reuse.</li>
           </ol>
           <div class="hr"></div>
           <div class="meta">
-            Tip: If you publish more than once, start with the <strong>Starter Bundle ($39)</strong>. If you publish regularly, the <strong>Pro Bundle ($99)</strong> is the simplest default.
+            Default path: <strong>Starter Bundle</strong> (first upgrade) → <strong>Pro Bundle</strong> (if publishing regularly) → <strong>Training</strong> (habit-building).
+          </div>
+          <div class="actions" style="margin-top:12px">
+            <a class="btn primary" data-buy="starter">Buy Starter Bundle ($39)</a>
+            <a class="btn ghost" data-buy="pro">Buy Pro Bundle ($99)</a>
           </div>
         </article>
 
         <aside class="card">
-          <h3 style="margin:0 0 6px">What this prevents (in plain language)</h3>
+          <h2 class="h2" style="margin:0 0 8px">What this prevents</h2>
           <ul class="ul">
             <li><strong>Evidence drift:</strong> claims outlive the sources that supported them.</li>
             <li><strong>Link rot:</strong> important URLs die without a private index.</li>
@@ -272,50 +287,18 @@
       </div>
     </section>
 
-    <!-- WHO IT IS FOR + WHO IT IS NOT FOR -->
-    <section class="section sm">
-      <div class="wrap grid cols-2">
-        <article class="card">
-          <h3 style="margin:0 0 6px">Who these are for</h3>
-          <ul class="ul">
-            <li>Creators and writers who publish claims and want cleaner sourcing discipline.</li>
-            <li>Community organizations that publish statements and need privacy-first guardrails.</li>
-            <li>Small teams that want repeatable templates instead of ad-hoc “one-off” docs.</li>
-            <li>Anyone who wants a correction-ready workflow without turning publishing into chaos.</li>
-          </ul>
-          <div class="hr"></div>
-          <div class="meta">
-            These are self-serve assets. No managed services included.
-          </div>
-        </article>
-
-        <aside class="card">
-          <h3 style="margin:0 0 6px">Who these are not for</h3>
-          <ul class="ul">
-            <li>Emergencies or deadlines that require professional advice.</li>
-            <li>People seeking case review, representation, or “outcome” help.</li>
-            <li>Publishing that depends on sharing sensitive personal information publicly.</li>
-          </ul>
-          <div class="hr"></div>
-          <div class="meta">
-            If you are unsure what is safe to publish, default to: <strong>keep details private</strong>, publish only high-level patterns, and use corrections when needed.
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- DECISION ROUTER (high conversion from search visitors) -->
+    <!-- CHOOSER -->
     <section class="section sm" id="chooser">
       <div class="wrap">
         <div class="card">
-          <h3 style="margin:0 0 10px">Which toolkit should you start with?</h3>
+          <h2 class="h2" style="margin:0 0 8px">Which toolkit should you start with?</h2>
           <p class="meta" style="margin:0 0 12px">
-            Pick the option that matches your immediate risk. Start free. Upgrade only if you need repeatable, printable workflow sheets.
+            Pick the option that matches your immediate risk. Start free. Upgrade only if you need printable workflow sheets.
           </p>
 
           <div class="grid cols-2" style="gap:12px">
             <div class="card" style="margin:0">
-              <h4 style="margin:0 0 6px">I’m making claims and need sourcing discipline</h4>
+              <h3 style="margin:0 0 6px">I’m making claims and need sourcing discipline</h3>
               <div class="meta">Start: free Source Log template → upgrade for repeat use.</div>
               <div class="actions" style="margin-top:10px">
                 <a class="btn ghost" href="/toolkits/free/sourcing/">Open free</a>
@@ -324,7 +307,7 @@
             </div>
 
             <div class="card" style="margin:0">
-              <h4 style="margin:0 0 6px">I’m worried about privacy / identification leaks</h4>
+              <h3 style="margin:0 0 6px">I’m worried about privacy / identification leaks</h3>
               <div class="meta">Start: de-identification checklist → upgrade for drills + examples.</div>
               <div class="actions" style="margin-top:10px">
                 <a class="btn ghost" href="/toolkits/free/privacy/">Open free</a>
@@ -333,7 +316,7 @@
             </div>
 
             <div class="card" style="margin:0">
-              <h4 style="margin:0 0 6px">I need a correction-ready workflow</h4>
+              <h3 style="margin:0 0 6px">I need a correction-ready workflow</h3>
               <div class="meta">Start: correction note + changelog pattern → upgrade for variants.</div>
               <div class="actions" style="margin-top:10px">
                 <a class="btn ghost" href="/toolkits/free/corrections/">Open free</a>
@@ -342,7 +325,7 @@
             </div>
 
             <div class="card" style="margin:0">
-              <h4 style="margin:0 0 6px">I need record hygiene (files, links, archiving)</h4>
+              <h3 style="margin:0 0 6px">I need record hygiene (files, links, archiving)</h3>
               <div class="meta">Start: naming + saving rules → upgrade for printable workflow.</div>
               <div class="actions" style="margin-top:10px">
                 <a class="btn ghost" href="/toolkits/free/public-record/">Open free</a>
@@ -354,94 +337,63 @@
           <div class="hr"></div>
 
           <div class="actions">
-            <a class="btn ghost" href="/toolkits/training/">Prefer guided learning? See training</a>
             <a class="btn primary" data-buy="starter">Best entry: Starter Bundle ($39)</a>
             <a class="btn ghost" data-buy="pro">Best default: Pro Bundle ($99)</a>
+            <a class="btn ghost" href="#training">Prefer guided learning? Training</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FREE VS PRO -->
-    <section class="section sm">
+    <!-- TRAINING -->
+    <section class="section sm" id="training">
       <div class="wrap">
         <div class="card">
-          <h3 style="margin:0 0 10px">Free vs Pro</h3>
-          <table class="table" aria-label="Free vs Pro comparison">
-            <thead>
-              <tr>
-                <th>Feature</th>
-                <th>Free (Public HTML)</th>
-                <th>Pro (PDF pack)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Use</strong></td>
-                <td>Copy/paste templates and quick examples.</td>
-                <td>Printable sheets, formatted pages, clean variants for repeated use.</td>
-              </tr>
-              <tr>
-                <td><strong>Best for</strong></td>
-                <td>First-time setup and lightweight publishing.</td>
-                <td>Recurring publishing and consistent workflow quality.</td>
-              </tr>
-              <tr>
-                <td><strong>Delivery</strong></td>
-                <td>Instant (public page).</td>
-                <td>Digital download after Stripe checkout.</td>
-              </tr>
-              <tr>
-                <td><strong>Boundary</strong></td>
-                <td colspan="2">Educational only. Not legal advice. No case review. No outcomes sold.</td>
-              </tr>
-            </tbody>
-          </table>
+          <h2 class="h2" style="margin:0 0 8px">Training (async)</h2>
+          <p class="meta" style="margin:0 0 14px">
+            Two short courses designed to reduce repeat mistakes. Training is educational only — not legal advice. No case review. No outcomes sold.
+          </p>
+
+          <div class="productgrid">
+            <article class="product" style="border-color: rgba(37,99,235,.18); background: linear-gradient(180deg, rgba(37,99,235,.06), rgba(255,255,255,0));">
+              <div class="price">
+                <div>
+                  <h3 style="margin:0">Evidence Literacy 101</h3>
+                  <div class="meta">Claim/evidence discipline + sourcing hygiene</div>
+                </div>
+                <strong>$79</strong>
+              </div>
+              <div class="meta" style="margin-top:8px">
+                Best for anyone publishing claims who wants cleaner sourcing without turning publishing into a full-time job.
+              </div>
+              <div class="actions" style="margin-top:12px">
+                <a class="btn ghost" href="/toolkits/training/evidence-literacy-101/">View outline</a>
+                <a class="btn primary" data-buy="train_evidence101">Buy course</a>
+              </div>
+            </article>
+
+            <article class="product">
+              <div class="price">
+                <div>
+                  <h3 style="margin:0">Privacy-First Publishing</h3>
+                  <div class="meta">De-identification drills + safe rewrite patterns</div>
+                </div>
+                <strong>$99</strong>
+              </div>
+              <div class="meta" style="margin-top:8px">
+                Best for publishing real-world stories while reducing “doxxing-by-detail” risk (time + place + role).
+              </div>
+              <div class="actions" style="margin-top:12px">
+                <a class="btn ghost" href="/toolkits/training/privacy-first-publishing/">View outline</a>
+                <a class="btn primary" data-buy="train_privacy">Buy course</a>
+              </div>
+            </article>
+          </div>
 
           <div class="hr"></div>
 
           <div class="meta">
-            Privacy-first reminder: avoid publishing identifying combinations (time + place + role). Keep raw records private and publish high-level patterns unless you are confident it is safe.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ONE FILLED EXAMPLE (Information Gain: improves search trust + conversion) -->
-    <section class="section sm" id="example">
-      <div class="wrap">
-        <div class="card">
-          <h3 style="margin:0 0 10px">Example (before → after)</h3>
-          <p class="meta" style="margin:0 0 10px">
-            This is a generic illustration of discipline, not a real case and not advice.
-          </p>
-
-          <div class="grid cols-2" style="gap:12px">
-            <div class="card" style="margin:0">
-              <h4 style="margin:0 0 6px">Before (high-risk, low-evidence)</h4>
-              <div class="meta" style="white-space:pre-wrap">
-They lied to me and tried to cover it up.
-Everyone knows this place is corrupt.
-              </div>
-            </div>
-
-            <div class="card" style="margin:0">
-              <h4 style="margin:0 0 6px">After (defensible, limited, correction-ready)</h4>
-              <div class="meta" style="white-space:pre-wrap">
-Claim (limited): I received conflicting written statements about X on Date A and Date B.
-Evidence: Source IDs S-001 (email), S-002 (policy excerpt).
-Limit: I cannot verify intent; I can only document inconsistencies in records.
-Privacy: remove identifying details; keep originals private.
-Corrections: if new evidence changes the claim, publish a dated correction note.
-              </div>
-            </div>
-          </div>
-
-          <div class="hr"></div>
-
-          <div class="actions">
-            <a class="btn ghost" href="/toolkits/free/sourcing/">Start with free sourcing template</a>
-            <a class="btn primary" data-buy="starter">Upgrade with Starter Bundle ($39)</a>
+            Prefer templates first? Start with the free pages, then use training to build habits.
           </div>
         </div>
       </div>
@@ -451,8 +403,8 @@ Corrections: if new evidence changes the claim, publish a dated correction note.
     <section class="section sm" id="bundles">
       <div class="wrap grid cols-2">
         <article class="card">
-          <h3 style="margin:0 0 6px">Bundles</h3>
-          <div class="meta">Best value if buying more than one. Bundles are still self-serve downloads.</div>
+          <h2 class="h2" style="margin:0 0 8px">Bundles</h2>
+          <div class="meta">Best value if buying more than one. Bundles are self-serve digital downloads.</div>
           <div class="hr"></div>
 
           <div class="product" style="margin-bottom:12px">
@@ -511,38 +463,32 @@ Corrections: if new evidence changes the claim, publish a dated correction note.
           </div>
 
           <div class="hr"></div>
-
           <div class="meta">
-            Want guided, structured learning? See <a href="/toolkits/training/">Training</a> for asynchronous courses.
+            Trust & transparency: <a href="/principles/">Principles</a> · <a href="/corrections/">Corrections log</a>
           </div>
         </article>
 
         <aside class="card">
-          <h3 style="margin:0 0 6px">How checkout and delivery work</h3>
+          <h2 class="h2" style="margin:0 0 8px">Delivery + boundaries</h2>
           <ul class="ul">
             <li><strong>Free</strong> opens a public HTML page (indexable).</li>
             <li><strong>Buy</strong> opens Stripe for the Pro PDF download.</li>
             <li><strong>Delivery</strong> is digital. If delivery fails, email support and the link is resent.</li>
           </ul>
           <div class="hr"></div>
-
           <div class="meta">
             Support email:
             <a href="mailto:hello@witnessbc.com?subject=WitnessBC%20—%20Toolkit%20delivery%20issue">hello@witnessbc.com</a>
           </div>
-
           <div class="hr"></div>
-
           <div class="meta">
-            Trust & transparency:
-            <a href="/principles/">Principles</a> ·
-            <a href="/corrections/">Corrections log</a>
+            <strong>Education only.</strong> Not legal advice. No case review. No outcomes sold.
+            <br/>
+            <strong>Do not send sensitive personal data.</strong>
           </div>
-
           <div class="hr"></div>
-
           <div class="meta">
-            Purchases do not buy coverage, outcomes, or favourable treatment. If you want to support the project itself, use <a href="/send-a-tip/">Send a tip</a>.
+            If you want to support the project without influencing coverage, use <a href="/send-a-tip/">Send a tip</a>.
           </div>
         </aside>
       </div>
@@ -553,7 +499,7 @@ Corrections: if new evidence changes the claim, publish a dated correction note.
       <div class="wrap">
         <h2 class="h2">All toolkits</h2>
         <p class="meta" style="margin:0 0 14px">
-          Each toolkit includes a free public version + a paid Pro download. The free page is the starting point. The Pro pack is for repeat use.
+          Each toolkit includes a free public version + a paid Pro download. Start free. Upgrade only for repeat use.
         </p>
 
         <div class="productgrid">
@@ -593,8 +539,8 @@ Corrections: if new evidence changes the claim, publish a dated correction note.
             </div>
             <ul>
               <li>Fix the record without rewriting history.</li>
-              <li>Log changes clearly with dates and reason.</li>
-              <li>Reduce reputational damage from silent edits.</li>
+              <li>Log changes clearly with dates and reasons.</li>
+              <li>Reduce credibility loss from silent edits.</li>
             </ul>
             <div class="actions">
               <a class="btn ghost" href="/toolkits/free/corrections/">Free</a>
@@ -707,11 +653,12 @@ Corrections: if new evidence changes the claim, publish a dated correction note.
               Best when: you need a calm next-step structure without turning it into case strategy or advice.
             </div>
           </article>
+
         </div>
 
-        <!-- FAQ (expanded, scannable, conversion-safe) -->
+        <!-- FAQ -->
         <div class="card" style="margin-top:16px">
-          <h3 style="margin:0 0 10px">FAQ</h3>
+          <h2 class="h2" style="margin:0 0 8px">FAQ</h2>
 
           <div class="meta" style="line-height:1.7">
             <strong>Is this legal advice?</strong> No. Toolkits and training are general education only.<br/>
@@ -719,8 +666,7 @@ Corrections: if new evidence changes the claim, publish a dated correction note.
             <strong>Do purchases buy coverage or favourable treatment?</strong> No. Purchases do not buy coverage, outcomes, or influence.<br/>
             <strong>What’s the difference between Free and Pro?</strong> Free is copy/paste HTML. Pro is printable PDF packs and formatted sheets for repeated use.<br/>
             <strong>Refunds?</strong> Digital goods are generally non-refundable unless delivery fails.<br/>
-            <strong>Updates?</strong> Minor edits within the same toolkit version may be updated over time. Major versions may release as new products.<br/>
-            <strong>What if I’m unsure what is safe to publish?</strong> Default to reducing detail, removing identifiers, and keeping raw records private. Use corrections if you later learn something changes your claim framing.
+            <strong>What if I’m unsure what is safe to publish?</strong> Reduce detail, remove identifiers, keep raw records private, and correct cleanly when needed.
           </div>
 
           <div class="hr"></div>
