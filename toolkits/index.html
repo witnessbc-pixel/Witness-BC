@@ -1,53 +1,280 @@
-a<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
+  <!-- Toolkits • v2025.12.25.3 -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Training – WitnessBC</title>
-  <meta name="description" content="Async mini-courses: sourcing discipline, corrections, privacy-first publishing, and sources that hold up. Educational only." />
-  <link rel="canonical" href="https://www.witnessbc.com/training/" />
+
+  <title>Toolkits – WitnessBC</title>
+  <meta name="description" content="Toolkits: free public templates + paid Pro downloads. Built for accountable, low-drama publishing. Educational only — not legal advice." />
+  <link rel="canonical" href="https://www.witnessbc.com/toolkits/" />
+
+  <meta property="og:site_name" content="WitnessBC" />
+  <meta property="og:title" content="Toolkits – WitnessBC" />
+  <meta property="og:description" content="Free public templates + paid Pro downloads. Educational only." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.witnessbc.com/toolkits/" />
+  <meta property="og:image" content="https://www.witnessbc.com/assets/img/og.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#fbfcfe" />
-  <link rel="stylesheet" href="/assets/css/witness-shell.css?v=2025-12-25" />
+  <link rel="stylesheet" href="/assets/css/witness-shell.css?v=2025-12-25.3" />
 </head>
 
-<body data-active="/training/">
+<body data-active="/toolkits/">
   <div class="bg-veil" aria-hidden="true"></div>
   <div id="site-header"></div>
 
   <main id="main">
     <section class="section">
       <div class="wrap">
-        <div class="kicker"><span class="kdot"></span><span>Training</span></div>
-        <h1 class="h1">Async training.</h1>
-        <p class="lead">Short courses (video/PDF) that teach sourcing discipline, correction discipline, and privacy-first publishing. Educational only.</p>
+        <div class="kicker"><span class="kdot"></span><span>Toolkits</span></div>
+        <h1 class="h1">Free public templates. Paid Pro downloads.</h1>
+        <p class="lead">
+          Simple, practical assets for accountable publishing. Each toolkit has a free public version (HTML) and a paid Pro download (PDF pack).
+          Educational only — not legal advice. No case review.
+        </p>
 
-        <div class="productgrid" style="margin-top:14px">
+        <div class="actions" style="margin-top:16px">
+          <a class="btn primary" data-buy="pro">Buy Pro Bundle ($99)</a>
+          <a class="btn ghost" href="#toolkits">See all toolkits</a>
+          <a class="btn ghost" href="/toolkits/training/">Training</a>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <div class="kv">
+            <span class="pill">Free pages index</span>
+            <span class="pill">Pro = downloadable PDF</span>
+            <span class="pill">No outcomes sold</span>
+          </div>
+          <div class="meta" style="margin-top:10px">
+            Purchases do not buy coverage, outcomes, or favourable treatment. Email is used only for delivery.
+          </div>
+        </div>
+
+        <!-- Stripe links map (replace REPLACE_* when ready) -->
+        <script>
+          window.WITNESS_PAY = {
+            links: {
+              sourcing:     "https://buy.stripe.com/REPLACE_SOURCING_19",
+              corrections:  "https://buy.stripe.com/REPLACE_CORRECTIONS_9",
+              privacy:      "https://buy.stripe.com/REPLACE_PRIVACY_19",
+              publicrec:    "https://buy.stripe.com/REPLACE_PUBLICREC_29",
+              storytemp:    "https://buy.stripe.com/REPLACE_STORYTEMP_19",
+              actionmap:    "https://buy.stripe.com/REPLACE_ACTIONMAP_29",
+              starter:      "https://buy.stripe.com/REPLACE_STARTER_39",
+              pro:          "https://buy.stripe.com/REPLACE_PRO_99",
+              team:         "https://buy.stripe.com/REPLACE_TEAM_149",
+              train_evidence101: "https://buy.stripe.com/REPLACE_TRAIN_EVIDENCE101",
+              train_privacy:     "https://buy.stripe.com/REPLACE_TRAIN_PRIVACY"
+            }
+          };
+        </script>
+      </div>
+    </section>
+
+    <section class="section sm">
+      <div class="wrap grid cols-2">
+        <article class="card">
+          <h3 style="margin:0 0 6px">Bundles</h3>
+          <div class="meta">Best value if buying more than one.</div>
+          <div class="hr"></div>
+
+          <div class="product" style="margin-bottom:12px">
+            <div class="price">
+              <div>
+                <h3 style="margin:0">Starter Bundle</h3>
+                <div class="meta">Sourcing + Privacy + Corrections</div>
+              </div>
+              <strong>$39</strong>
+            </div>
+            <div class="actions">
+              <a class="btn primary" data-buy="starter">Buy</a>
+              <button class="btn ghost" type="button" data-details-toggle="starter" aria-expanded="false">What’s inside</button>
+            </div>
+            <div class="meta" data-details="starter" hidden style="margin-top:10px">
+              Pro downloads for: Sourcing Discipline, Privacy & De-identification, Corrections & Update Protocol.
+            </div>
+          </div>
+
+          <div class="product" style="margin-bottom:12px; border-color: rgba(37,99,235,.18); background: linear-gradient(180deg, rgba(37,99,235,.06), rgba(255,255,255,0));">
+            <div class="price">
+              <div>
+                <h3 style="margin:0">Pro Bundle</h3>
+                <div class="meta">All Toolkits v1 (recommended)</div>
+              </div>
+              <strong>$99</strong>
+            </div>
+            <div class="actions">
+              <a class="btn primary" data-buy="pro">Buy</a>
+              <button class="btn ghost" type="button" data-details-toggle="pro" aria-expanded="false">What’s inside</button>
+            </div>
+            <div class="meta" data-details="pro" hidden style="margin-top:10px">
+              All Pro downloads listed below in one pack.
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="price">
+              <div>
+                <h3 style="margin:0">Team License</h3>
+                <div class="meta">Internal use up to 5 people</div>
+              </div>
+              <strong>$149</strong>
+            </div>
+            <div class="actions">
+              <a class="btn primary" data-buy="team">Buy</a>
+              <button class="btn ghost" type="button" data-details-toggle="team" aria-expanded="false">Terms</button>
+            </div>
+            <div class="meta" data-details="team" hidden style="margin-top:10px">
+              Digital downloads only. No services included. Internal use for up to 5 people.
+            </div>
+          </div>
+        </article>
+
+        <aside class="card">
+          <h3 style="margin:0 0 6px">How it works</h3>
+          <ul style="margin:0;padding-left:18px;color:var(--muted)">
+            <li><strong>Free</strong> button opens a public HTML page (indexable).</li>
+            <li><strong>Buy</strong> opens Stripe for the Pro PDF download.</li>
+            <li>If delivery fails, email support and the link is resent.</li>
+          </ul>
+          <div class="hr"></div>
+          <div class="meta">
+            Educational only. Not legal advice. Not an emergency service.
+          </div>
+          <div class="hr"></div>
+          <div class="meta">
+            Support email:
+            <a href="mailto:hello@witnessbc.com?subject=WitnessBC%20—%20Toolkit%20delivery%20issue">hello@witnessbc.com</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="toolkits">
+      <div class="wrap">
+        <h2 class="h2">All toolkits</h2>
+        <p class="meta" style="margin:0 0 14px">
+          Each toolkit includes a free public version + a paid Pro download. No extra navigation. No unrelated links.
+        </p>
+
+        <div class="productgrid">
           <article class="product">
             <div class="price">
-              <div><h3>Evidence Literacy 101</h3><div class="meta">60–90 minutes • workbook included</div></div>
-              <strong>$79</strong>
+              <div>
+                <h3>Sourcing Discipline Pack</h3>
+                <div class="meta">Source log + claim/evidence split</div>
+              </div>
+              <strong>$19</strong>
             </div>
-            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
-              <a class="btn primary" href="https://buy.stripe.com/REPLACE_TRAIN_EVIDENCE101" target="_blank" rel="noopener">Enroll</a>
-              <a class="btn ghost" href="/toolkits/">Prefer toolkits?</a>
+            <div class="actions">
+              <a class="btn ghost" href="/toolkits/free/sourcing/">Free</a>
+              <a class="btn primary" data-buy="sourcing">Buy Pro</a>
+              <button class="btn ghost" type="button" data-details-toggle="sourcing" aria-expanded="false">Details</button>
+            </div>
+            <div class="meta" data-details="sourcing" hidden>
+              Free page: copy/paste template + quick examples. Pro: printable PDF pack and formatted sheets.
             </div>
           </article>
 
           <article class="product">
             <div class="price">
-              <div><h3>Privacy-First Publishing</h3><div class="meta">60 minutes • de-identification drills</div></div>
-              <strong>$99</strong>
+              <div>
+                <h3>Corrections & Update Protocol</h3>
+                <div class="meta">Correction note + change-log</div>
+              </div>
+              <strong>$9</strong>
             </div>
-            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
-              <a class="btn primary" href="https://buy.stripe.com/REPLACE_TRAIN_PRIVACY" target="_blank" rel="noopener">Enroll</a>
-              <a class="btn ghost" href="/principles/">Privacy rules</a>
+            <div class="actions">
+              <a class="btn ghost" href="/toolkits/free/corrections/">Free</a>
+              <a class="btn primary" data-buy="corrections">Buy Pro</a>
+              <button class="btn ghost" type="button" data-details-toggle="corrections" aria-expanded="false">Details</button>
+            </div>
+            <div class="meta" data-details="corrections" hidden>
+              Free page: correction note template and a clean changelog pattern. Pro: ready-to-print protocol pack.
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="price">
+              <div>
+                <h3>Privacy & De-identification Pack</h3>
+                <div class="meta">Checklist + rewrite patterns</div>
+              </div>
+              <strong>$19</strong>
+            </div>
+            <div class="actions">
+              <a class="btn ghost" href="/toolkits/free/privacy/">Free</a>
+              <a class="btn primary" data-buy="privacy">Buy Pro</a>
+              <button class="btn ghost" type="button" data-details-toggle="privacy" aria-expanded="false">Details</button>
+            </div>
+            <div class="meta" data-details="privacy" hidden>
+              Free page: de-identification checklist + safe rewrite patterns. Pro: full checklist + examples.
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="price">
+              <div>
+                <h3>Public Record Checklist</h3>
+                <div class="meta">Archiving + evidence hygiene</div>
+              </div>
+              <strong>$29</strong>
+            </div>
+            <div class="actions">
+              <a class="btn ghost" href="/toolkits/free/public-record/">Free</a>
+              <a class="btn primary" data-buy="publicrec">Buy Pro</a>
+              <button class="btn ghost" type="button" data-details-toggle="publicrec" aria-expanded="false">Details</button>
+            </div>
+            <div class="meta" data-details="publicrec" hidden>
+              Free page: naming rules + what to save. Pro: full printable checklist + archiving workflow.
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="price">
+              <div>
+                <h3>Accountability Story Template</h3>
+                <div class="meta">Scope → sources → limits</div>
+              </div>
+              <strong>$19</strong>
+            </div>
+            <div class="actions">
+              <a class="btn ghost" href="/toolkits/free/story-template/">Free</a>
+              <a class="btn primary" data-buy="storytemp">Buy Pro</a>
+              <button class="btn ghost" type="button" data-details-toggle="storytemp" aria-expanded="false">Details</button>
+            </div>
+            <div class="meta" data-details="storytemp" hidden>
+              Free page: structured outline you can publish today. Pro: formatted template pack + examples.
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="price">
+              <div>
+                <h3>Civic Action Map (General)</h3>
+                <div class="meta">General next steps (non-case)</div>
+              </div>
+              <strong>$29</strong>
+            </div>
+            <div class="actions">
+              <a class="btn ghost" href="/toolkits/free/action-map/">Free</a>
+              <a class="btn primary" data-buy="actionmap">Buy Pro</a>
+              <button class="btn ghost" type="button" data-details-toggle="actionmap" aria-expanded="false">Details</button>
+            </div>
+            <div class="meta" data-details="actionmap" hidden>
+              Free page: simple decision steps. Pro: full map + checklists and scripts.
             </div>
           </article>
         </div>
 
         <div class="card" style="margin-top:16px">
+          <h3 style="margin:0 0 6px">FAQ</h3>
           <div class="meta">
-            Educational only. Not legal advice. Not an emergency service. Purchases do not influence coverage.
+            <strong>Is this legal advice?</strong> No. Educational only.<br/>
+            <strong>Do you review cases?</strong> No.<br/>
+            <strong>Refunds?</strong> Digital goods are generally non-refundable unless delivery fails.
           </div>
         </div>
       </div>
@@ -55,6 +282,25 @@ a<!doctype html>
   </main>
 
   <div id="site-footer"></div>
-  <script src="/assets/js/witness-shell.js?v=2025-12-25"></script>
+
+  <script src="/assets/js/witness-shell.js?v=2025-12-25.3"></script>
+  <script src="/assets/js/toolkits.js?v=2025-12-25.3"></script>
+
+  <script>
+    (function () {
+      document.querySelectorAll("[data-details-toggle]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var key = btn.getAttribute("data-details-toggle");
+          var box = document.querySelector('[data-details="' + key + '"]');
+          if (!box) return;
+          var open = !box.hasAttribute("hidden");
+          if (open) { box.setAttribute("hidden",""); btn.setAttribute("aria-expanded","false"); }
+          else { box.removeAttribute("hidden"); btn.setAttribute("aria-expanded","true"); }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
+
+
