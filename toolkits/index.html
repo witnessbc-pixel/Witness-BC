@@ -53,15 +53,15 @@
         <script>
           window.WITNESS_PAY = {
             links: {
-              sourcing:   "https://buy.stripe.com/REPLACE_SOURCING_19",
-              corrections:"https://buy.stripe.com/REPLACE_CORRECTIONS_9",
-              privacy:    "https://buy.stripe.com/REPLACE_PRIVACY_19",
-              publicrec:  "https://buy.stripe.com/REPLACE_PUBLICREC_29",
-              storytemp:  "https://buy.stripe.com/REPLACE_STORYTEMP_19",
-              actionmap:  "https://buy.stripe.com/REPLACE_ACTIONMAP_29",
-              starter:    "https://buy.stripe.com/REPLACE_STARTER_39",
-              pro:        "https://buy.stripe.com/REPLACE_PRO_99",
-              team:       "https://buy.stripe.com/REPLACE_TEAM_149"
+              sourcing:    "https://buy.stripe.com/REPLACE_SOURCING_19",
+              corrections: "https://buy.stripe.com/REPLACE_CORRECTIONS_9",
+              privacy:     "https://buy.stripe.com/REPLACE_PRIVACY_19",
+              publicrec:   "https://buy.stripe.com/REPLACE_PUBLICREC_29",
+              storytemp:   "https://buy.stripe.com/REPLACE_STORYTEMP_19",
+              actionmap:   "https://buy.stripe.com/REPLACE_ACTIONMAP_29",
+              starter:     "https://buy.stripe.com/REPLACE_STARTER_39",
+              pro:         "https://buy.stripe.com/REPLACE_PRO_99",
+              team:        "https://buy.stripe.com/REPLACE_TEAM_149"
             }
           };
         </script>
@@ -82,9 +82,14 @@
               </div>
               <strong>$39</strong>
             </div>
+
             <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
-              <a class="btn primary" data-buy="starter" target="_blank" rel="noopener">Get Starter</a>
-              <a class="btn ghost" href="#toolkits">See all</a>
+              <a class="btn primary" data-buy="starter" target="_blank" rel="noopener">Buy</a>
+              <button class="btn ghost" type="button" data-details-toggle="starter" aria-expanded="false">Details</button>
+            </div>
+
+            <div class="meta" data-details="starter" hidden style="margin-top:10px">
+              Includes: Sourcing Discipline Pack ($19) + Privacy Pack ($19) + Corrections Protocol ($9). One download bundle.
             </div>
           </div>
 
@@ -96,9 +101,14 @@
               </div>
               <strong>$99</strong>
             </div>
+
             <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
-              <a class="btn primary" data-buy="pro" target="_blank" rel="noopener">Get Pro</a>
-              <a class="btn ghost" href="/toolkits/training/">Prefer training?</a>
+              <a class="btn primary" data-buy="pro" target="_blank" rel="noopener">Buy</a>
+              <button class="btn ghost" type="button" data-details-toggle="pro" aria-expanded="false">Details</button>
+            </div>
+
+            <div class="meta" data-details="pro" hidden style="margin-top:10px">
+              Includes: all Toolkits v1 listed below (single bundle download).
             </div>
           </div>
 
@@ -110,9 +120,14 @@
               </div>
               <strong>$149</strong>
             </div>
+
             <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
-              <a class="btn primary" data-buy="team" target="_blank" rel="noopener">Get Team</a>
-              <a class="btn ghost" href="mailto:hello@witnessbc.com?subject=WitnessBC%20—%20Team%20license%20question">Email</a>
+              <a class="btn primary" data-buy="team" target="_blank" rel="noopener">Buy</a>
+              <button class="btn ghost" type="button" data-details-toggle="team" aria-expanded="false">Details</button>
+            </div>
+
+            <div class="meta" data-details="team" hidden style="margin-top:10px">
+              License for internal team use (up to 5 people). Digital downloads only. No services.
             </div>
           </div>
         </article>
@@ -146,9 +161,14 @@
               </div>
               <strong>$19</strong>
             </div>
+
             <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
-              <a class="btn primary" data-buy="sourcing" target="_blank" rel="noopener">Get</a>
-              <a class="btn ghost" href="/principles/">Principles</a>
+              <a class="btn primary" data-buy="sourcing" target="_blank" rel="noopener">Buy</a>
+              <button class="btn ghost" type="button" data-details-toggle="sourcing" aria-expanded="false">Details</button>
+            </div>
+
+            <div class="meta" data-details="sourcing" hidden style="margin-top:10px">
+              Includes: source log template + “claim vs evidence” checklist + simple citation format.
             </div>
           </article>
 
@@ -160,9 +180,14 @@
               </div>
               <strong>$9</strong>
             </div>
+
             <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
-              <a class="btn primary" data-buy="corrections" target="_blank" rel="noopener">Get</a>
-              <a class="btn ghost" href="/corrections/">Corrections</a>
+              <a class="btn primary" data-buy="corrections" target="_blank" rel="noopener">Buy</a>
+              <button class="btn ghost" type="button" data-details-toggle="corrections" aria-expanded="false">Details</button>
+            </div>
+
+            <div class="meta" data-details="corrections" hidden style="margin-top:10px">
+              Includes: correction note templates + update/clarification rules + change-log format.
             </div>
           </article>
 
@@ -174,9 +199,14 @@
               </div>
               <strong>$19</strong>
             </div>
+
             <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
-              <a class="btn primary" data-buy="privacy" target="_blank" rel="noopener">Get</a>
-              <a class="btn ghost" href="/principles/">Principles</a>
+              <a class="btn primary" data-buy="privacy" target="_blank" rel="noopener">Buy</a>
+              <button class="btn ghost" type="button" data-details-toggle="privacy" aria-expanded="false">Details</button>
+            </div>
+
+            <div class="meta" data-details="privacy" hidden style="margin-top:10px">
+              Includes: de-identification checklist + timeline re-identification risk test + safe rewrite patterns.
             </div>
           </article>
 
@@ -188,9 +218,14 @@
               </div>
               <strong>$29</strong>
             </div>
+
             <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
-              <a class="btn primary" data-buy="publicrec" target="_blank" rel="noopener">Get</a>
-              <a class="btn ghost" href="/stories/">Stories</a>
+              <a class="btn primary" data-buy="publicrec" target="_blank" rel="noopener">Buy</a>
+              <button class="btn ghost" type="button" data-details-toggle="publicrec" aria-expanded="false">Details</button>
+            </div>
+
+            <div class="meta" data-details="publicrec" hidden style="margin-top:10px">
+              Includes: what counts as “holds up” sources + archive/link hygiene checklist + file naming discipline.
             </div>
           </article>
 
@@ -202,9 +237,14 @@
               </div>
               <strong>$19</strong>
             </div>
+
             <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
-              <a class="btn primary" data-buy="storytemp" target="_blank" rel="noopener">Get</a>
-              <a class="btn ghost" href="/stories/">Stories</a>
+              <a class="btn primary" data-buy="storytemp" target="_blank" rel="noopener">Buy</a>
+              <button class="btn ghost" type="button" data-details-toggle="storytemp" aria-expanded="false">Details</button>
+            </div>
+
+            <div class="meta" data-details="storytemp" hidden style="margin-top:10px">
+              Includes: repeatable story structure + neutral tone prompts + publish-safety checklist.
             </div>
           </article>
 
@@ -216,9 +256,14 @@
               </div>
               <strong>$29</strong>
             </div>
+
             <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
-              <a class="btn primary" data-buy="actionmap" target="_blank" rel="noopener">Get</a>
-              <a class="btn ghost" href="/send-a-tip/">Support</a>
+              <a class="btn primary" data-buy="actionmap" target="_blank" rel="noopener">Buy</a>
+              <button class="btn ghost" type="button" data-details-toggle="actionmap" aria-expanded="false">Details</button>
+            </div>
+
+            <div class="meta" data-details="actionmap" hidden style="margin-top:10px">
+              Includes: general action pathways + non-identifying messaging templates + “what to do next” decision tree.
             </div>
           </article>
         </div>
@@ -235,6 +280,30 @@
   <div id="site-footer"></div>
 
   <script src="/assets/js/witness-shell.js?v=2025-12-25"></script>
+
+  <!-- Sets href on all [data-buy] from window.WITNESS_PAY.links -->
   <script src="/assets/js/toolkits.js?v=2025-12-25"></script>
+
+  <!-- Details toggles (in-page only; no external links) -->
+  <script>
+    (function () {
+      document.querySelectorAll("[data-details-toggle]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var key = btn.getAttribute("data-details-toggle");
+          var box = document.querySelector('[data-details="' + key + '"]');
+          if (!box) return;
+
+          var isOpen = !box.hasAttribute("hidden");
+          if (isOpen) {
+            box.setAttribute("hidden", "");
+            btn.setAttribute("aria-expanded", "false");
+          } else {
+            box.removeAttribute("hidden");
+            btn.setAttribute("aria-expanded", "true");
+          }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
