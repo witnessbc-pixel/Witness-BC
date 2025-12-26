@@ -12,7 +12,10 @@
   const active = (document.body.getAttribute("data-active") || "").trim();
   if (active) {
     document.querySelectorAll("[data-nav]").forEach(a => {
-      if (a.getAttribute("href") === active) a.classList.add("active");
+      if (a.getAttribute("href") === active) {
+        a.classList.add("active");
+        a.setAttribute("aria-current", "page");
+      }
     });
   }
 
