@@ -1,9 +1,19 @@
+/* WitnessBC shell loader • v2025.12.25.3 */
+
 (async function () {
   async function inject(id, url) {
     const el = document.getElementById(id);
     if (!el) return;
-    const res = await fetch(url, { cache: "no-store" });
-    el.innerHTML = await res.text();
+
+    try {
+      const res = await fetch(url, { cache: "force-cache" });
+      if (!res.ok) throw new Error("fetch failed");
+      el.innerHTML = await res.text();
+    } catch (e) {
+      // Fallback (dev / edge cache issues)
+      const res = await fetch(url, { cache: "no-store" });
+      el.innerHTML = await res.text();
+    }
   }
 
   await inject("site-header", "/assets/partials/header.html");
