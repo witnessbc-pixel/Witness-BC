@@ -1,7 +1,7 @@
-<!-- /toolkits/index.html • Toolkits • v2025.12.25.4 -->
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Toolkits • v2025.12.25.3 -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -18,7 +18,7 @@
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#fbfcfe" />
-  <link rel="stylesheet" href="/assets/css/witness-shell.css?v=2025-12-25.4" />
+  <link rel="stylesheet" href="/assets/css/witness-shell.css?v=2025-12-25.3" />
 </head>
 
 <body data-active="/toolkits/">
@@ -38,7 +38,7 @@
         <div class="actions" style="margin-top:16px">
           <a class="btn primary" data-buy="pro">Buy Pro Bundle ($99)</a>
           <a class="btn ghost" href="#toolkits">See all toolkits</a>
-          <a class="btn ghost" href="/toolkits/training/">Training</a>
+          <a class="btn ghost" href="/toolkits/traning/">Training</a>
         </div>
 
         <div class="card" style="margin-top:16px">
@@ -52,6 +52,7 @@
           </div>
         </div>
 
+        <!-- Stripe links map (replace REPLACE_* when ready) -->
         <script>
           window.WITNESS_PAY = {
             links: {
@@ -139,7 +140,9 @@
             <li>If delivery fails, email support and the link is resent.</li>
           </ul>
           <div class="hr"></div>
-          <div class="meta">Educational only. Not legal advice. Not an emergency service.</div>
+          <div class="meta">
+            Educational only. Not legal advice. Not an emergency service.
+          </div>
           <div class="hr"></div>
           <div class="meta">
             Support email:
@@ -157,9 +160,113 @@
         </p>
 
         <div class="productgrid">
-          <!-- (your toolkit cards unchanged) -->
-          <!-- keep exactly as you wrote, only pay binding is now in toolkits.js -->
-          <!-- ... -->
+          <article class="product">
+            <div class="price">
+              <div>
+                <h3>Sourcing Discipline Pack</h3>
+                <div class="meta">Source log + claim/evidence split</div>
+              </div>
+              <strong>$19</strong>
+            </div>
+            <div class="actions">
+              <a class="btn ghost" href="/toolkits/free/sourcing/">Free</a>
+              <a class="btn primary" data-buy="sourcing">Buy Pro</a>
+              <button class="btn ghost" type="button" data-details-toggle="sourcing" aria-expanded="false">Details</button>
+            </div>
+            <div class="meta" data-details="sourcing" hidden>
+              Free page: copy/paste template + quick examples. Pro: printable PDF pack and formatted sheets.
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="price">
+              <div>
+                <h3>Corrections & Update Protocol</h3>
+                <div class="meta">Correction note + change-log</div>
+              </div>
+              <strong>$9</strong>
+            </div>
+            <div class="actions">
+              <a class="btn ghost" href="/toolkits/free/corrections/">Free</a>
+              <a class="btn primary" data-buy="corrections">Buy Pro</a>
+              <button class="btn ghost" type="button" data-details-toggle="corrections" aria-expanded="false">Details</button>
+            </div>
+            <div class="meta" data-details="corrections" hidden>
+              Free page: correction note template and a clean changelog pattern. Pro: ready-to-print protocol pack.
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="price">
+              <div>
+                <h3>Privacy & De-identification Pack</h3>
+                <div class="meta">Checklist + rewrite patterns</div>
+              </div>
+              <strong>$19</strong>
+            </div>
+            <div class="actions">
+              <a class="btn ghost" href="/toolkits/free/privacy/">Free</a>
+              <a class="btn primary" data-buy="privacy">Buy Pro</a>
+              <button class="btn ghost" type="button" data-details-toggle="privacy" aria-expanded="false">Details</button>
+            </div>
+            <div class="meta" data-details="privacy" hidden>
+              Free page: de-identification checklist + safe rewrite patterns. Pro: full checklist + examples.
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="price">
+              <div>
+                <h3>Public Record Checklist</h3>
+                <div class="meta">Archiving + evidence hygiene</div>
+              </div>
+              <strong>$29</strong>
+            </div>
+            <div class="actions">
+              <a class="btn ghost" href="/toolkits/free/public-record/">Free</a>
+              <a class="btn primary" data-buy="publicrec">Buy Pro</a>
+              <button class="btn ghost" type="button" data-details-toggle="publicrec" aria-expanded="false">Details</button>
+            </div>
+            <div class="meta" data-details="publicrec" hidden>
+              Free page: naming rules + what to save. Pro: full printable checklist + archiving workflow.
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="price">
+              <div>
+                <h3>Accountability Story Template</h3>
+                <div class="meta">Scope → sources → limits</div>
+              </div>
+              <strong>$19</strong>
+            </div>
+            <div class="actions">
+              <a class="btn ghost" href="/toolkits/free/story-template/">Free</a>
+              <a class="btn primary" data-buy="storytemp">Buy Pro</a>
+              <button class="btn ghost" type="button" data-details-toggle="storytemp" aria-expanded="false">Details</button>
+            </div>
+            <div class="meta" data-details="storytemp" hidden>
+              Free page: structured outline you can publish today. Pro: formatted template pack + examples.
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="price">
+              <div>
+                <h3>Civic Action Map (General)</h3>
+                <div class="meta">General next steps (non-case)</div>
+              </div>
+              <strong>$29</strong>
+            </div>
+            <div class="actions">
+              <a class="btn ghost" href="/toolkits/free/action-map/">Free</a>
+              <a class="btn primary" data-buy="actionmap">Buy Pro</a>
+              <button class="btn ghost" type="button" data-details-toggle="actionmap" aria-expanded="false">Details</button>
+            </div>
+            <div class="meta" data-details="actionmap" hidden>
+              Free page: simple decision steps. Pro: full map + checklists and scripts.
+            </div>
+          </article>
         </div>
 
         <div class="card" style="margin-top:16px">
@@ -176,7 +283,22 @@
 
   <div id="site-footer"></div>
 
-  <script src="/assets/js/witness-shell.js?v=2025-12-25.4"></script>
-  <script src="/assets/js/toolkits.js?v=2025-12-25.4"></script>
+  <script src="/assets/js/witness-shell.js?v=2025-12-25.3"></script>
+  <script src="/assets/js/toolkits.js?v=2025-12-25.3"></script>
+
+  <script>
+    (function () {
+      document.querySelectorAll("[data-details-toggle]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var key = btn.getAttribute("data-details-toggle");
+          var box = document.querySelector('[data-details="' + key + '"]');
+          if (!box) return;
+          var open = !box.hasAttribute("hidden");
+          if (open) { box.setAttribute("hidden",""); btn.setAttribute("aria-expanded","false"); }
+          else { box.removeAttribute("hidden"); btn.setAttribute("aria-expanded","true"); }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
