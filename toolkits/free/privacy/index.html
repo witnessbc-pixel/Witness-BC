@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Free Toolkit • v2025.12.25.3 -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Privacy & De-identification (Free) – WitnessBC Toolkits</title>
+  <meta name="description" content="Free privacy checklist + safe rewrite patterns for de-identification. Educational only." />
+  <link rel="canonical" href="https://www.witnessbc.com/toolkits/free/privacy/" />
+
+  <meta property="og:site_name" content="WitnessBC" />
+  <meta property="og:title" content="Privacy & De-identification (Free) – WitnessBC Toolkits" />
+  <meta property="og:description" content="Free privacy checklist and patterns. Educational only." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.witnessbc.com/toolkits/free/privacy/" />
+  <meta property="og:image" content="https://www.witnessbc.com/assets/img/og.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#fbfcfe" />
+  <link rel="stylesheet" href="/assets/css/witness-shell.css?v=2025-12-25.3" />
+</head>
+
+<body data-active="/toolkits/">
+  <div class="bg-veil" aria-hidden="true"></div>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="section">
+      <div class="wrap">
+        <div class="kicker"><span class="kdot"></span><span>Toolkits · Free</span></div>
+        <h1 class="h1">Privacy & De-identification (Free)</h1>
+        <p class="lead">A practical checklist to reduce accidental identification risk. Educational only.</p>
+
+        <div class="actions" style="margin-top:16px">
+          <a class="btn ghost" href="/toolkits/">Back to Toolkits</a>
+          <a class="btn primary" data-buy="privacy">Buy Pro ($19)</a>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h3 style="margin:0 0 6px">Quick checklist</h3>
+          <ul style="margin:0;padding-left:18px;color:var(--muted)">
+            <li>Remove unique time + place combinations.</li>
+            <li>Remove exact job titles if they identify a single person.</li>
+            <li>Replace rare details with category-level descriptions.</li>
+            <li>Do not publish private IDs, signatures, or full addresses.</li>
+            <li>If unsure: keep the record private; publish the pattern.</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h3 style="margin:0 0 6px">Copy patterns</h3>
+          <div class="hr"></div>
+
+          <textarea id="tpl" class="textarea" aria-label="Privacy rewrite patterns">
+REWRITE PATTERNS (SAFE)
+- Exact date → “early 2025” / “mid-2025”
+- Exact location → “Lower Mainland” / “a Vancouver-area workplace”
+- Exact name → “a manager” / “a staff member”
+- Unique department → “operations team” / “admin team”
+- Specific screenshots → “a message exchange” (keep raw evidence private)
+
+SAFE SENTENCE FRAME
+- “A documented exchange exists. Details are de-identified to reduce risk.”
+- “Names and unique identifiers are removed. Meaning and sequence are preserved.”
+- “Where evidence cannot be made public safely, it is retained privately.”
+          </textarea>
+
+          <div class="actions">
+            <button class="btn primary" type="button" data-copy="#tpl">Copy template</button>
+            <a class="btn ghost" href="/toolkits/">See all toolkits</a>
+          </div>
+
+          <div class="meta" style="margin-top:8px">
+            Pro version expands the checklist and includes more rewrite drills and examples.
+          </div>
+
+          <script>
+            window.WITNESS_PAY = window.WITNESS_PAY || { links: {} };
+            window.WITNESS_PAY.links = Object.assign({}, window.WITNESS_PAY.links, {
+              privacy: "https://buy.stripe.com/REPLACE_PRIVACY_19"
+            });
+          </script>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <div class="meta">
+            Educational only. Not legal advice. Not an emergency service.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="/assets/js/witness-shell.js?v=2025-12-25.3"></script>
+  <script src="/assets/js/toolkits.js?v=2025-12-25.3"></script>
+  <script src="/assets/js/toolkits-free.js?v=2025-12-25.3"></script>
+</body>
+</html>
