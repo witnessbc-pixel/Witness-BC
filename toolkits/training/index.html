@@ -1,56 +1,85 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Toolkits • Training Directory • v2025.12.26.1 -->
+  <!-- Toolkits • Training Directory • v2025.12.26.2 -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Training – WitnessBC Toolkits</title>
-  <meta name="description" content="Async training for accountable, privacy-first publishing: Evidence Literacy 101 and Privacy-First Publishing. Built to reduce avoidable mistakes. Educational only — not legal advice." />
+  <title>Training for Privacy-First, Accountable Publishing | WitnessBC</title>
+  <meta name="description" content="Async training to reduce avoidable publishing mistakes: weak sourcing, unclear limits, privacy leaks, and messy corrections. Education only. Not legal advice. No case review." />
   <link rel="canonical" href="https://www.witnessbc.com/toolkits/training/" />
 
   <meta property="og:site_name" content="WitnessBC" />
-  <meta property="og:title" content="Training – WitnessBC Toolkits" />
-  <meta property="og:description" content="Async training for evidence discipline and privacy-first publishing. Educational only — not legal advice." />
+  <meta property="og:title" content="Training for Privacy-First, Accountable Publishing | WitnessBC" />
+  <meta property="og:description" content="Two short async courses: Evidence Literacy 101 and Privacy-First Publishing. Education only. Not legal advice." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.witnessbc.com/toolkits/training/" />
   <meta property="og:image" content="https://www.witnessbc.com/assets/img/og.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#fbfcfe" />
-  <link rel="stylesheet" href="/assets/css/witness-shell.css?v=2025-12-26.1" />
 
-  <!-- Structured data: Training directory + courses -->
+  <!-- Keep existing assets; do not rewrite unless necessary -->
+  <link rel="stylesheet" href="/assets/css/witness-shell.css?v=2025-12-26.2" />
+
+  <!-- Structured data: WebPage + Breadcrumbs + Training ItemList -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"ItemList",
-    "name":"WitnessBC Toolkits – Training",
-    "url":"https://www.witnessbc.com/toolkits/training/",
-    "itemListElement":[
+    "@graph":[
       {
-        "@type":"ListItem",
-        "position":1,
-        "url":"https://www.witnessbc.com/toolkits/training/evidence-literacy-101/",
-        "item":{
-          "@type":"Course",
-          "name":"Evidence Literacy 101",
-          "description":"Claim/evidence discipline, sourcing hygiene, and defensible publishing habits.",
-          "provider":{"@type":"Organization","name":"WitnessBC","url":"https://www.witnessbc.com/"},
-          "offers":{"@type":"Offer","price":"79","priceCurrency":"CAD","availability":"https://schema.org/InStock","url":"https://www.witnessbc.com/toolkits/training/evidence-literacy-101/"}
+        "@type":"WebPage",
+        "@id":"https://www.witnessbc.com/toolkits/training/#webpage",
+        "url":"https://www.witnessbc.com/toolkits/training/",
+        "name":"Training for Privacy-First, Accountable Publishing | WitnessBC",
+        "description":"Async training to reduce avoidable publishing mistakes: weak sourcing, unclear limits, privacy leaks, and messy corrections. Education only. Not legal advice. No case review.",
+        "inLanguage":"en-CA",
+        "isPartOf":{
+          "@type":"WebSite",
+          "@id":"https://www.witnessbc.com/#website",
+          "name":"WitnessBC",
+          "url":"https://www.witnessbc.com/"
         }
       },
       {
-        "@type":"ListItem",
-        "position":2,
-        "url":"https://www.witnessbc.com/toolkits/training/privacy-first-publishing/",
-        "item":{
-          "@type":"Course",
-          "name":"Privacy-First Publishing",
-          "description":"De-identification drills, safe rewrite patterns, and publishing guardrails.",
-          "provider":{"@type":"Organization","name":"WitnessBC","url":"https://www.witnessbc.com/"},
-          "offers":{"@type":"Offer","price":"99","priceCurrency":"CAD","availability":"https://schema.org/InStock","url":"https://www.witnessbc.com/toolkits/training/privacy-first-publishing/"}
-        }
+        "@type":"BreadcrumbList",
+        "@id":"https://www.witnessbc.com/toolkits/training/#breadcrumbs",
+        "itemListElement":[
+          { "@type":"ListItem", "position":1, "name":"Toolkits", "item":"https://www.witnessbc.com/toolkits/" },
+          { "@type":"ListItem", "position":2, "name":"Training", "item":"https://www.witnessbc.com/toolkits/training/" }
+        ]
+      },
+      {
+        "@type":"ItemList",
+        "@id":"https://www.witnessbc.com/toolkits/training/#itemlist",
+        "name":"WitnessBC Toolkits – Training",
+        "url":"https://www.witnessbc.com/toolkits/training/",
+        "itemListElement":[
+          {
+            "@type":"ListItem",
+            "position":1,
+            "url":"https://www.witnessbc.com/toolkits/training/evidence-literacy-101/",
+            "item":{
+              "@type":"Course",
+              "name":"Evidence Literacy 101",
+              "description":"Claim/evidence discipline, sourcing hygiene, and defensible publishing habits.",
+              "provider":{"@type":"Organization","name":"WitnessBC","url":"https://www.witnessbc.com/"},
+              "offers":{"@type":"Offer","price":"79","priceCurrency":"CAD","availability":"https://schema.org/InStock","url":"https://www.witnessbc.com/toolkits/training/evidence-literacy-101/"}
+            }
+          },
+          {
+            "@type":"ListItem",
+            "position":2,
+            "url":"https://www.witnessbc.com/toolkits/training/privacy-first-publishing/",
+            "item":{
+              "@type":"Course",
+              "name":"Privacy-First Publishing",
+              "description":"De-identification drills, safe rewrite patterns, and publishing guardrails.",
+              "provider":{"@type":"Organization","name":"WitnessBC","url":"https://www.witnessbc.com/"},
+              "offers":{"@type":"Offer","price":"99","priceCurrency":"CAD","availability":"https://schema.org/InStock","url":"https://www.witnessbc.com/toolkits/training/privacy-first-publishing/"}
+            }
+          }
+        ]
       }
     ]
   }
@@ -65,27 +94,29 @@
     <section class="section">
       <div class="wrap">
         <div class="kicker"><span class="kdot"></span><span>Toolkits · Training</span></div>
-        <h1 class="h1">Async training for accountable publishing</h1>
-        <p class="lead">
-          Two short courses designed to reduce avoidable mistakes: weak sourcing, unclear limits, privacy leaks, and messy post-publication updates.
-          Educational only — not legal advice. No case review. No outcomes sold.
+        <h1 class="h1">Async training for accountable, privacy-first publishing</h1>
+        <p class="lead tight">
+          Two short courses designed to reduce avoidable mistakes: weak sourcing, unclear limits, privacy leaks,
+          and messy post-publication updates.
+          <strong>Education only — not legal advice. No case review. No outcomes sold.</strong>
         </p>
 
         <div class="actions" style="margin-top:16px">
           <a class="btn ghost" href="/toolkits/">Back to Toolkits</a>
-          <a class="btn ghost" href="/toolkits/#toolkits">Free templates</a>
+          <a class="btn ghost" href="/toolkits/free/privacy/">Start free (Privacy checklist)</a>
           <a class="btn primary" href="#courses">See courses</a>
         </div>
 
         <div class="card" style="margin-top:16px">
           <div class="kv">
             <span class="pill">Async</span>
+            <span class="pill">Drill-based</span>
             <span class="pill">Template-backed</span>
             <span class="pill">Privacy-first</span>
             <span class="pill">No outcomes sold</span>
           </div>
           <div class="meta" style="margin-top:10px">
-            Purchases do not buy coverage, outcomes, or favourable treatment. Email is used only for delivery.
+            Purchases do not buy coverage, outcomes, or favourable treatment. Email is used only for delivery/support.
           </div>
         </div>
 
@@ -102,34 +133,50 @@
 
     <section class="section sm">
       <div class="wrap grid cols-2">
+
         <article class="card">
-          <h3 style="margin:0 0 6px">Recommended path</h3>
-          <div class="meta">A simple workflow that stays “clean” and defensible.</div>
+          <h2 class="h2" style="margin:0 0 8px">Recommended path (simple, defensible)</h2>
+          <p class="meta" style="margin:0 0 10px">
+            Start free, then upgrade only when repetition and habit-building matter.
+          </p>
           <div class="hr"></div>
+
+          <h3 style="margin:0 0 6px">Path A — Privacy-first publishing</h3>
           <ol style="margin:0;padding-left:18px;color:var(--muted)">
-            <li>Start with the free public templates (HTML) to understand the structure.</li>
-            <li>Use training to build habits (and avoid repeat mistakes).</li>
-            <li>Buy Pro packs only when you want printable worksheets + formatted examples.</li>
+            <li><a href="/toolkits/free/privacy/">Run the free privacy checklist</a> before you publish.</li>
+            <li>Use <a href="/toolkits/training/privacy-first-publishing/">Privacy-First Publishing training</a> to build habits via drills.</li>
+            <li>Buy Pro packs when you want printable worksheets + formatted examples (optional).</li>
           </ol>
+
+          <div class="hr"></div>
+
+          <h3 style="margin:0 0 6px">Path B — Evidence discipline</h3>
+          <ol style="margin:0;padding-left:18px;color:var(--muted)">
+            <li>Start with free templates inside <a href="/toolkits/">Toolkits</a> (claim/evidence discipline).</li>
+            <li>Use <a href="/toolkits/training/evidence-literacy-101/">Evidence Literacy 101</a> to reduce avoidable sourcing errors.</li>
+            <li>Use corrections standards from <a href="/corrections/">Corrections</a> to update responsibly.</li>
+          </ol>
+
           <div class="hr"></div>
           <div class="meta">
-            Training is not a substitute for professional advice. It is a publishing discipline layer.
+            Training is a publishing discipline layer. It is not professional advice and not case handling.
           </div>
         </article>
 
         <aside class="card">
-          <h3 style="margin:0 0 6px">What you get</h3>
-          <ul style="margin:0;padding-left:18px;color:var(--muted)">
-            <li>Clear frameworks that map to the Toolkits pages.</li>
-            <li>Repeatable checklists and drills (designed for real life, not theory).</li>
-            <li>Guardrails: what to publish, what to keep private, and how to correct.</li>
+          <h2 class="h2" style="margin:0 0 8px">What you get</h2>
+          <ul class="ul">
+            <li>Short lessons that map to the Toolkits structure (so you can apply immediately).</li>
+            <li>Repeatable drills and checklists designed for real publishing workflows.</li>
+            <li>Guardrails: what to publish, what to keep private, and how to correct responsibly.</li>
           </ul>
           <div class="hr"></div>
           <div class="meta">
-            Support email:
+            Delivery/support:
             <a href="mailto:hello@witnessbc.com?subject=WitnessBC%20—%20Training%20delivery%20issue">hello@witnessbc.com</a>
           </div>
         </aside>
+
       </div>
     </section>
 
@@ -137,10 +184,11 @@
       <div class="wrap">
         <h2 class="h2">Courses</h2>
         <p class="meta" style="margin:0 0 14px">
-          Each course has a dedicated outline page and a single Stripe checkout. No hidden upsells. No case handling.
+          Each course has a dedicated outline page and a single checkout. No hidden upsells. No case handling.
         </p>
 
         <div class="productgrid">
+
           <!-- Evidence Literacy 101 -->
           <article class="product" style="border-color: rgba(37,99,235,.18); background: linear-gradient(180deg, rgba(37,99,235,.06), rgba(255,255,255,0));">
             <div class="price">
@@ -151,18 +199,20 @@
               <strong>$79</strong>
             </div>
 
-            <div class="meta" style="margin-top:8px">
-              Built for creators, community orgs, and small teams who need cleaner sourcing without turning publishing into a full-time job.
-            </div>
+            <p class="meta" style="margin-top:8px">
+              For creators and small teams who need clearer claims, cleaner sources, and visible limits — without turning publishing into a full-time job.
+            </p>
 
             <div class="actions" style="margin-top:12px">
               <a class="btn ghost" href="/toolkits/training/evidence-literacy-101/">View outline</a>
               <a class="btn primary" data-buy="train_evidence101">Buy course</a>
-              <button class="btn ghost" type="button" data-details-toggle="evidence101" aria-expanded="false">What you’ll learn</button>
+              <button class="btn ghost" type="button" data-details-toggle="evidence101" aria-expanded="false" aria-controls="details-evidence101">
+                What you’ll learn
+              </button>
             </div>
 
-            <div class="meta" data-details="evidence101" hidden style="margin-top:10px">
-              <ul style="margin:0;padding-left:18px;color:var(--muted)">
+            <div id="details-evidence101" class="meta" data-details="evidence101" hidden style="margin-top:10px">
+              <ul class="ul">
                 <li>Separate claims from evidence (and label uncertainty clearly).</li>
                 <li>Minimal source workflow that holds up under scrutiny.</li>
                 <li>How to write limits: what is known vs. not known.</li>
@@ -171,10 +221,10 @@
               </ul>
               <div class="hr"></div>
               <div class="meta">
-                Related free templates:
-                <a href="/toolkits/free/sourcing/">Sourcing</a> ·
-                <a href="/toolkits/free/corrections/">Corrections</a> ·
-                <a href="/toolkits/free/story-template/">Story Template</a>
+                Related free entry points:
+                <a href="/toolkits/">Toolkits hub</a> ·
+                <a href="/corrections/">Corrections</a> ·
+                <a href="/principles/">Principles</a>
               </div>
             </div>
           </article>
@@ -189,18 +239,20 @@
               <strong>$99</strong>
             </div>
 
-            <div class="meta" style="margin-top:8px">
-              Built to reduce accidental identification risk and prevent “detail-combination” leaks (time + place + role) in real-world stories.
-            </div>
+            <p class="meta" style="margin-top:8px">
+              Built to reduce accidental identification risk and prevent “detail-combination” leaks (time + place + role) in real-world publishing.
+            </p>
 
             <div class="actions" style="margin-top:12px">
               <a class="btn ghost" href="/toolkits/training/privacy-first-publishing/">View outline</a>
               <a class="btn primary" data-buy="train_privacy">Buy course</a>
-              <button class="btn ghost" type="button" data-details-toggle="privacyfirst" aria-expanded="false">What you’ll learn</button>
+              <button class="btn ghost" type="button" data-details-toggle="privacyfirst" aria-expanded="false" aria-controls="details-privacyfirst">
+                What you’ll learn
+              </button>
             </div>
 
-            <div class="meta" data-details="privacyfirst" hidden style="margin-top:10px">
-              <ul style="margin:0;padding-left:18px;color:var(--muted)">
+            <div id="details-privacyfirst" class="meta" data-details="privacyfirst" hidden style="margin-top:10px">
+              <ul class="ul">
                 <li>Direct vs. indirect identifiers (and why combinations matter).</li>
                 <li>Rewrite drills: keep meaning, remove unique identifiers.</li>
                 <li>Safe handling of timelines, locations, and roles.</li>
@@ -209,32 +261,51 @@
               </ul>
               <div class="hr"></div>
               <div class="meta">
-                Related free templates:
-                <a href="/toolkits/free/privacy/">Privacy</a> ·
-                <a href="/toolkits/free/public-record/">Public Record</a> ·
-                <a href="/toolkits/free/corrections/">Corrections</a>
+                Best free starting point:
+                <a href="/toolkits/free/privacy/">Privacy checklist (free)</a> ·
+                Standards:
+                <a href="/principles/">Principles</a> ·
+                Updates:
+                <a href="/corrections/">Corrections</a>
               </div>
             </div>
           </article>
+
         </div>
 
         <div class="card" style="margin-top:16px">
           <h3 style="margin:0 0 6px">FAQ</h3>
           <div class="meta">
-            <strong>Is this legal advice?</strong> No. Educational only.<br/>
+            <strong>Is this legal advice?</strong> No. Education only. Not legal advice.<br/>
             <strong>Do you review cases or write documents for people?</strong> No. No case review. No outcomes sold.<br/>
-            <strong>Refunds?</strong> Digital goods are generally non-refundable unless delivery fails.<br/>
-            <strong>Team use?</strong> Training purchases are for individual learning unless a separate team license is offered.
+            <strong>What happens after purchase?</strong> Access is provided via delivery email (used only for delivery/support).<br/>
+            <strong>Refunds?</strong> See checkout terms. If delivery fails, contact support.<br/>
+            <strong>Team use?</strong> Purchases are for individual learning unless a separate team license is offered.
           </div>
         </div>
+
+        <div class="card" style="margin-top:16px">
+          <div class="center">
+            <div>
+              <h3 style="margin:0 0 6px">Not ready to buy?</h3>
+              <div class="meta">Start with the free privacy checklist. Upgrade only if you’ll reuse this discipline.</div>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="/toolkits/free/privacy/">Start free</a>
+              <a class="btn ghost" href="/send-a-tip/">Support (does not influence coverage)</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   </main>
 
   <div id="site-footer"></div>
 
-  <script src="/assets/js/witness-shell.js?v=2025-12-26.1"></script>
-  <script src="/assets/js/toolkits.js?v=2025-12-26.1"></script>
+  <!-- Existing site scripts (unchanged) -->
+  <script src="/assets/js/witness-shell.js?v=2025-12-25.3"></script>
+  <script src="/assets/js/toolkits.js?v=2025-12-25.3"></script>
 
   <script>
     (function () {
@@ -243,9 +314,15 @@
           var key = btn.getAttribute("data-details-toggle");
           var box = document.querySelector('[data-details="' + key + '"]');
           if (!box) return;
+
           var open = !box.hasAttribute("hidden");
-          if (open) { box.setAttribute("hidden",""); btn.setAttribute("aria-expanded","false"); }
-          else { box.removeAttribute("hidden"); btn.setAttribute("aria-expanded","true"); }
+          if (open) {
+            box.setAttribute("hidden","");
+            btn.setAttribute("aria-expanded","false");
+          } else {
+            box.removeAttribute("hidden");
+            btn.setAttribute("aria-expanded","true");
+          }
         });
       });
     })();
