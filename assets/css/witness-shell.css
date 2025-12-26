@@ -1,4 +1,4 @@
-/* WitnessBC shell • v2025.12.25.3 */
+/* WitnessBC shell • v2025.12.26.2 */
 
 :root{
   --bg:#fbfcfe;
@@ -54,10 +54,15 @@ img{max-width:100%;height:auto}
 .kdot{width:8px;height:8px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand2))}
 .h1{margin:10px 0 10px;font-size:clamp(30px,4.2vw,46px);line-height:1.08;letter-spacing:-.02em}
 .h2{margin:0 0 10px;letter-spacing:-.01em}
-.lead{margin:0;color:var(--muted);max-width:72ch}
+.lead{margin:0;color:var(--muted);max-width:76ch}
 .meta{font-size:13px;color:var(--muted)}
 .hr{height:1px;background:var(--border);margin:14px 0}
 
+/* Common lists used in pages (fix for existing Home markup) */
+.ul{margin:0;padding-left:18px;color:var(--muted)}
+.ul li{margin:6px 0}
+
+/* Buttons */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:10px;
   padding:11px 14px;border-radius:14px;border:1px solid transparent;
@@ -74,7 +79,7 @@ img{max-width:100%;height:auto}
 .btn.ghost, .btn.btn--ghost{background:transparent;border-color:var(--border);color:var(--ink)}
 .btn.ghost:hover, .btn.btn--ghost:hover{border-color:#cbd5e1}
 
-/* Disabled payment buttons (when Stripe links are not set yet) */
+/* Disabled payment buttons */
 .btn.disabled,
 .btn[aria-disabled="true"]{
   opacity:.55;
@@ -94,7 +99,35 @@ img{max-width:100%;height:auto}
   color:var(--muted);font-size:12px;background:rgba(255,255,255,.65)
 }
 
-/* form controls */
+.kv{display:flex;gap:10px;flex-wrap:wrap}
+
+/* Small utility */
+.stack{display:flex;flex-direction:column;gap:10px}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.tight{max-width:78ch}
+.center{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* Simple table for "Free vs Pro" */
+.table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  overflow:hidden;
+  border:1px solid var(--border);
+  border-radius:16px;
+  background:rgba(255,255,255,.7);
+}
+.table th, .table td{
+  padding:12px 12px;
+  border-bottom:1px solid var(--border);
+  vertical-align:top;
+  text-align:left;
+  font-size:14px;
+}
+.table th{color:var(--muted);font-weight:700;background:rgba(2,6,23,.02)}
+.table tr:last-child td{border-bottom:none}
+
+/* Form controls */
 .input, .select, .textarea{
   width:100%;
   border:1px solid var(--border);
@@ -120,6 +153,7 @@ img{max-width:100%;height:auto}
 
 .grid{display:grid;gap:16px}
 @media(min-width:920px){ .grid.cols-2{grid-template-columns:1.2fr .8fr} }
+@media(min-width:920px){ .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))} }
 
 /* Top nav */
 .nav{
@@ -187,7 +221,7 @@ img{max-width:100%;height:auto}
 .footer a{text-decoration:none}
 .footer a:hover{text-decoration:underline}
 
-/* Stories UI */
+/* Stories UI (unchanged; used elsewhere) */
 .storygrid{display:grid;gap:14px}
 @media(min-width:920px){ .storygrid{grid-template-columns:repeat(2,minmax(0,1fr))} }
 .story{
@@ -204,13 +238,6 @@ img{max-width:100%;height:auto}
 .story h3{margin:0;font-size:18px;line-height:1.25;letter-spacing:-.01em}
 .story p{margin:0;color:var(--muted)}
 .story .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:2px}
-.chip{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:9px 11px;border-radius:999px;border:1px solid var(--border);
-  text-decoration:none;color:var(--ink);background:rgba(255,255,255,.75);
-  font-size:13px;font-weight:650;cursor:pointer;
-}
-.chip:hover{border-color:#cbd5e1}
 
 /* Toolkits UI */
 .productgrid{display:grid;gap:14px}
@@ -226,8 +253,6 @@ img{max-width:100%;height:auto}
   display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
 }
 .price strong{font-size:18px}
-.kv{display:flex;gap:10px;flex-wrap:wrap}
-.kv .pill{background:rgba(2,6,23,.03);color:var(--muted)}
 .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
 
 .codebox{
